@@ -76,11 +76,5 @@ public class TarjetaCredito {
 	}
 
 
-	@Override
-	public String toString() {
-		return "TarjetaCredito [numeroTarjeta=" + numeroTarjeta + ", codigoValidacion=" + codigoValidacion
-				+ ", fechaVencimiento=" + fechaVencimiento + ", propietario=" + propietario + "]";
-	}
-	
-	
+	 
 }

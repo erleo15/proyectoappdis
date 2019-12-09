@@ -29,7 +29,7 @@ public class FacturaDetalle {
 	@ManyToOne(cascade = {CascadeType.ALL}) 
 	@JoinColumn(name = "fdet_pel_id",referencedColumnName = "pel_id")
 	private Pelicula pelicula;
-	
+
 	public int getNumFDetalle() {
 		return numFDetalle;
 	}
@@ -70,10 +70,5 @@ public class FacturaDetalle {
 		this.pelicula = pelicula;
 	}
 	
-	@Override
-	public String toString() {
-		return "FacturaDetalle [numFDetalle=" + numFDetalle + ", cantidad=" + cantidad + ", totalFDet=" + totalFDet
-				+ ", fCabecera=" + fCabecera + ", pelicula=" + pelicula + "]";
-	}
-	
+	 
 }

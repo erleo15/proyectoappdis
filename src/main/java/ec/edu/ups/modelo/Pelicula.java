@@ -127,14 +127,5 @@ public class Pelicula {
 		this.categoria = categoria;
 	}
 
-	@Override
-	public String toString() {
-		return "Pelicula [codigoProducto=" + codigoProducto + ", nombre=" + nombre + ", descripcion=" + descripcion
-				+ ", precio=" + precio + ", anio=" + anio + ", stock=" + stock + ", cantidadVotos=" + cantidadVotos
-				+ ", cantidadVentas=" + cantidadVentas + ", imagenHttp=" + imagenHttp + ", categoria=" + categoria
-				+ "]";
-	}
-	
-	
-	
+	 
 }

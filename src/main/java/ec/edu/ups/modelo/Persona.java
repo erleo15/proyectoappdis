@@ -16,10 +16,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 @Table(name="tie_persona")
 public class Persona {
-	
-	
-	
-
+ 
 	@Id
 	@Column(name="per_cedula",length = 10)
 	private String cedula;
@@ -142,15 +139,6 @@ public class Persona {
 	public void setContrasenia(String contrasenia) {
 		this.contrasenia = contrasenia;
 	}
-	
-	@Override
-	public String toString() {
-		return "Persona [cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono
-				+ ", email=" + email + ", direccion=" + direccion + ", fechaNacimiento=" + fechaNacimiento
-				+ ", fechaRegistro=" + fechaRegistro + ", user=" + user + ", contrasenia=" + contrasenia + "]";
-	}
-	
-	
 
 	 
 }

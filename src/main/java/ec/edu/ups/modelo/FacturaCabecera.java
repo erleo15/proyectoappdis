@@ -41,7 +41,7 @@ public class FacturaCabecera {
 	
 	@ManyToOne(cascade = {CascadeType.ALL}) 
 	@JoinColumn(name = "fcab_cli_id",referencedColumnName = "cli_id")
-	private Cliente cliente; 
+	private Cliente cliente;
 
 	public String getNumeroFactura() {
 		return numeroFactura;
@@ -97,12 +97,7 @@ public class FacturaCabecera {
 
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
-	}
-	
-	@Override
-	public String toString() {
-		return "FacturaCabecera [numeroFactura=" + numeroFactura + ", fecha=" + fecha + ", subtotal=" + subtotal
-				+ ", iva=" + iva + ", total=" + total + ", estado=" + estado + ", cliente=" + cliente + "]";
-	}
-	
+	} 
+
+	 
 }

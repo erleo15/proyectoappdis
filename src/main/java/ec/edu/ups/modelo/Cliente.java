@@ -61,11 +61,6 @@ public class Cliente {
 		this.tarjetaCredito = tarjetaCredito;
 	}
 
-	@Override
-	public String toString() {
-		return "Cliente [idCliente=" + idCliente + ", numeroCompras=" + numeroCompras + ", usuario=" + usuario
-				+ ", tarjetaCredito=" + tarjetaCredito + "]";
-	}
-	
+	 
 	
 }

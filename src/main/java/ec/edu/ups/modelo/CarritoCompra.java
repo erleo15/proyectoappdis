@@ -59,11 +59,6 @@ public class CarritoCompra {
 		this.pelicula = pelicula;
 	}
 
-	@Override
-	public String toString() {
-		return "CarritoCompra [idcarrito=" + idcarrito + ", cantidad=" + cantidad + ", usuario=" + usuario
-				+ ", pelicula=" + pelicula + "]";
-	}
-	
+	 
 	
 }

@@ -1,5 +1,4 @@
 package ec.edu.ups.modelo;
-
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -63,11 +62,5 @@ public class Administrador {
 		this.persona = persona;
 	}
 
-	@Override
-	public String toString() {
-		return "Administrador [idAdministrador=" + idAdministrador + ", fechaIngreso=" + fechaIngreso + ", fechaBaja="
-				+ fechaBaja + ", persona=" + persona + "]";
-	}
-	
 	
 }
