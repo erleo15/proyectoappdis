@@ -20,7 +20,7 @@ public class Administrador {
 	
 	@Temporal(TemporalType.DATE)
 	@Column(name="adm_fecha_ingreso")
-	private Date fechaIngreso;//jiji
+	private Date fechaIngreso;
 	
 	@Temporal(TemporalType.DATE)
 	@Column(name="adm_fecha_baja")
