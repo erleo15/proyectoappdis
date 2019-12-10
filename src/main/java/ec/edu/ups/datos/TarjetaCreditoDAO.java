@@ -9,7 +9,7 @@ import ec.edu.ups.modelo.TarjetaCredito;
 @Stateless
 public class TarjetaCreditoDAO {
 
-	
+	//aqui agregue 
 	@Inject
 	EntityManager em;
 	
