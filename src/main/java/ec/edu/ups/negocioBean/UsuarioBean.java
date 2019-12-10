@@ -1,7 +1,8 @@
 package ec.edu.ups.negocioBean;
 
-import javax.annotation.ManagedBean;
+
 import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
 import javax.inject.Inject;
 
 

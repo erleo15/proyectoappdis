@@ -1,11 +1,11 @@
 package ec.edu.ups.negocioBean;
 
-import javax.annotation.ManagedBean;
+
 import javax.annotation.PostConstruct;
+import javax.faces.bean.ManagedBean;
 import javax.inject.Inject;
 
-import ec.edu.ups.datos.PersonaDAO;
-import ec.edu.ups.datos.UsuarioDAO;
+import ec.edu.ups.datos.PersonaDAO; 
 import ec.edu.ups.modelo.Persona; 
 
 @ManagedBean

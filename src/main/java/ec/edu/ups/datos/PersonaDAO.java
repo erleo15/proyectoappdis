@@ -10,7 +10,7 @@ import ec.edu.ups.modelo.Persona;
 public class PersonaDAO {
 
 	@Inject
-	EntityManager em;
+	private EntityManager em;
 	
 	public void insert(Persona persona) {
 		em.persist(persona);
