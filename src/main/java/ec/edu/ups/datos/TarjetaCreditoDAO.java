@@ -11,7 +11,7 @@ public class TarjetaCreditoDAO {
 
 	//aqui agregue jejekse
 	@Inject//sdas
-	EntityManager em;
+	EntityManager em;//ajefjefwhiu
 	
 	public void insert(TarjetaCredito tarjetaCredito) {
 		em.persist(tarjetaCredito);
