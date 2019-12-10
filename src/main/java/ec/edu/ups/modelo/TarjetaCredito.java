@@ -30,7 +30,7 @@ public class TarjetaCredito {
 	private Date fechaVencimiento;
 	
 	
-	@NotNull
+	@NotNull//sgdf
 	@NotEmpty
 	@Column(name="tar_propietario")
 	private String propietario;
