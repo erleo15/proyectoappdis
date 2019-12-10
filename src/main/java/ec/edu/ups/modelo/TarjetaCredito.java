@@ -14,7 +14,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 @Entity
 @Table(name="tie_tarjeta_credito")
 public class TarjetaCredito {
-	//Oso el mas mantec-Oso	
+	//Oso el mas mantec-Oso	pjejejr
 	@Id
 	@CreditCardNumber
 	@Column(name="tar_numero")
