@@ -58,7 +58,7 @@ public class CarritoCompra {
 	public void setPelicula(Pelicula pelicula) {
 		this.pelicula = pelicula;
 	}
-
-	 
 	
+	
+	 
 }
