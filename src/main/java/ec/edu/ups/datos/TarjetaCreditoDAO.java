@@ -10,7 +10,7 @@ import ec.edu.ups.modelo.TarjetaCredito;
 public class TarjetaCreditoDAO {
 
 	//aqui agregue jejekse
-	@Inject
+	@Inject//sdas
 	EntityManager em;
 	
 	public void insert(TarjetaCredito tarjetaCredito) {
