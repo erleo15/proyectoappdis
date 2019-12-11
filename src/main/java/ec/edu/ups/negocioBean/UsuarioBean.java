@@ -19,7 +19,7 @@ public class UsuarioBean {
 	@Inject
 	private UsuarioDAO usuarioDAO;
 	
-	@PostConstruct
+	@PostConstruct//no hacer nada jejej
 	public void init() {
 		usuario = new Usuario();
 	}
