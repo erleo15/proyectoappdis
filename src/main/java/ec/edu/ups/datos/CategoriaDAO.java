@@ -1,6 +1,5 @@
 package ec.edu.ups.datos;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -8,7 +7,7 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import ec.edu.ups.modelo.Categoria;
+import ec.edu.ups.modelo.Categoria; 
 
 @Stateless
 public class CategoriaDAO {
@@ -24,7 +23,7 @@ public class CategoriaDAO {
 		em.remove(categoria);
 	}
 	
-	public void update(String idViejo,Categoria categoria) {
+	public void update(int idViejo,Categoria categoria) {
 	
 		em.remove(em.find(Categoria.class, idViejo));
 		em.persist(categoria);
@@ -36,11 +35,10 @@ public class CategoriaDAO {
 		return null;
 	}
 	
-	public List<Categoria> getCategorias(){
-		List<Categoria> lista= new ArrayList<Categoria>();  
-		Query query = em.createQuery("Select c.cat_id,c.cat_nombre,c.cat_descripcion from tie_categoria c");
-		lista = query.getResultList();
-		return lista; 
+	public List<Categoria> list(){   
+		
+		Query query = em.createQuery("SELECT c from tie_categoria c", Categoria.class);
+		return query.getResultList();
 	}
 
 }

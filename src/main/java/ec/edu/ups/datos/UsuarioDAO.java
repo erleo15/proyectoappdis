@@ -7,7 +7,6 @@ import javax.persistence.EntityManager;
 import ec.edu.ups.modelo.Usuario;
 
 
-
 @Stateless
 public class UsuarioDAO {
 
@@ -22,16 +21,16 @@ public class UsuarioDAO {
 		em.remove(usuario);
 	}
 	
-	public void update(int idAnterior,Usuario usuario) {
+	public void update(String cedulaAnterior,Usuario usuario) {
 	
-		em.remove(em.find(Usuario.class, idAnterior));
+		em.remove(em.find(Usuario.class, cedulaAnterior));
 		em.persist(usuario);
 		
 	}
 	
-	public  Usuario find(int id) {
-		em.find(Usuario.class, id);
-		return null;
+	public  Usuario find(String cedula) {
+		return em.find(Usuario.class, cedula);
+		
 	}
 
 }

@@ -69,6 +69,14 @@ public class FacturaDetalle {
 	public void setPelicula(Pelicula pelicula) {
 		this.pelicula = pelicula;
 	}
+
+	@Override
+	public String toString() {
+		return "FacturaDetalle [numFDetalle=" + numFDetalle + ", cantidad=" + cantidad + ", totalFDet=" + totalFDet
+				+ ", fCabecera=" + fCabecera + ", pelicula=" + pelicula + "]";
+	}
+
 	
+
 	 
 }

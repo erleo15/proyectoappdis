@@ -8,9 +8,8 @@ import ec.edu.ups.modelo.TarjetaCredito;
 
 @Stateless
 public class TarjetaCreditoDAO {
-
-	//aqui agregue jejekse
-	@Inject//sdas
+ 
+	@Inject
 	EntityManager em;
 	
 	public void insert(TarjetaCredito tarjetaCredito) {
@@ -28,8 +27,7 @@ public class TarjetaCreditoDAO {
 		
 	}
 	
-	public  TarjetaCredito find(int id) {
-		em.find(TarjetaCredito.class, id);
-		return null;
+	public  TarjetaCredito find(int numeroTarjeta) {
+		return em.find(TarjetaCredito.class, numeroTarjeta); 
 	}
 }

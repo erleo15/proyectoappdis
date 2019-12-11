@@ -2,17 +2,19 @@ package ec.edu.ups.modelo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
-@Entity
+@Entity(name="tie_categoria")
 @Table(name="tie_categoria")
 public class Categoria {
 
 	@Id
+	@GeneratedValue
 	@Column(name="cat_id")
 	private int idCategoria;
 	
@@ -50,6 +52,12 @@ public class Categoria {
 		this.descripcion = descripcion;
 	}
 
+	@Override
+	public String toString() {
+		return "Categoria [idCategoria=" + idCategoria + ", nombre=" + nombre + ", descripcion=" + descripcion + "]";
+	}
+
+	
 	 
 	
 }

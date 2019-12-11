@@ -28,7 +28,6 @@ public class PeliculaDAO {
 	}
 	
 	public  Pelicula find(int id) {
-		em.find(Pelicula.class, id);
-		return null;
+		return em.find(Pelicula.class, id); 
 	}
 }
