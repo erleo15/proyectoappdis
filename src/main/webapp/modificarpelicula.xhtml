@@ -1,0 +1,61 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:a="http://xmlns.jcp.org/jsf/passthrough" 
+      template="peliculas.xhtml">
+
+<ui:define name="modificarpelicula">
+
+
+	<h1>Modificar Pelicula</h1>
+<h:form>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Codigo" for="cedula" />
+			<h:inputText value="#{peliculaBean.pelicula.codigoPelicula}" id="cedula"  a:placeholder="#{pelicula.codigoPelicula}" />
+			<h:message for="cedula" />
+		</h:panelGrid>
+		
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Nombre" for="nombre" />
+			<h:inputText value="#{peliculaBean.pelicula.nombre}" id="nombre" a:placeholder="#{pelicula.nombre}"/>
+			<h:message for="nombre" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Descripcion" for="apellido" />
+			<h:inputText value="#{peliculaBean.pelicula.descripcion}" id="apellido" a:placeholder="#{pelicula.descripcion}"/>
+			<h:message for="apellido" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Precio" for="telefono" />
+			<h:inputText value="#{peliculaBean.pelicula.precio}" id="telefono" a:placeholder="#{pelicula.precio}"/>
+			<h:message for="telefono" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Anio" for="email" />
+			<h:inputText value="#{peliculaBean.pelicula.anio}" id="email" a:placeholder="#{pelicula.anio}"/>
+			<h:message for="email" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Cantidad Ventas" for="fnacimiento" a:placeholder="#{pelicula.cantidadVentas}"/>
+			<h:inputText value="#{peliculaBean.pelicula.cantidadVentas}" id="fnacimiento"/> 
+			<h:message for="fnacimiento" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Cantidad Votos" for="fregistro" a:placeholder="#{pelicula.cantidadVotos}"/>
+			<h:inputText value="#{peliculaBean.pelicula.cantidadVotos}" id="fregistro" />
+			<h:message for="fregistro" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Stock" for="user" />
+			<h:inputText value="#{peliculaBean.pelicula.stock}" id="user" a:placeholder="#{pelicula.stock}"/>
+			<h:message for="user" />
+		</h:panelGrid> 
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Imagen" for="numerocompras" />
+			<h:inputText value="#{peliculaBean.pelicula.imagenHttp}" id="numerocompras" a:placeholder="#{pelicula.imagenHttp}"/>
+			<h:message for="numerocompras" />
+		</h:panelGrid>  
+		<h:commandButton action="#{peliculaBean.actualizarPelicula()}" value="Actualizar Pelicula" />
+		<h:commandButton action="peliculas.xhtml" value="Cancelar" />
+		</h:form>
+		
+</ui:define>
+</ui:composition> 

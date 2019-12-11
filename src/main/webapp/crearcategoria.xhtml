@@ -1,0 +1,28 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="peliculas.xhtml">
+
+<ui:define name ="crearcategoria">
+
+	<h1>Crear Categoria</h1>
+
+	<h:form>
+	
+	
+		
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Nombre" for="nombre" />
+			<h:inputText value="#{categoriaBean.categoria.nombre}" id="nombre" />
+			<h:message for="nombre" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Descripcion" for="descripcion" />
+			<h:inputText value="#{categoriaBean.categoria.descripcion}" id="descripcion" />
+			<h:message for="descripcion" />
+		</h:panelGrid>
+
+		<h:commandButton action="#{categoriaBean.guardarCategoria()}"
+			value="Guardar" />
+	</h:form>
+</ui:define>
+
+</ui:composition>

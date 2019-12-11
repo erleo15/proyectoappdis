@@ -1,0 +1,31 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:a="http://xmlns.jcp.org/jsf/passthrough" 
+      template="categorias.xhtml">
+
+<ui:define name="modificarcategoria">
+
+
+	<h1>Modificar Categoria</h1>
+
+	
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Cedula" for="cedula" />
+			<h:inputText value="#{categoriaBean.categoria.idCategoria}" id="cedula"  a:placeholder="#{categoria.idCategoria}" />
+			<h:message for="cedula" />
+		</h:panelGrid>
+		
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Nombre" for="nombre" />
+			<h:inputText value="#{categoriaBean.categoria.nombre}" id="nombre" a:placeholder="#{categoria.nombre}"/>
+			<h:message for="nombre" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Apellido" for="apellido" />
+			<h:inputText value="#{categoriaBean.categoria.descripcion}" id="apellido" a:placeholder="#{categoria.descripcion}"/>
+			<h:message for="apellido" />
+		</h:panelGrid>
+		 
+		<h:commandButton action="#{categoriaBean.actualizarCategoria()}" value="Actualizar Categoria" />
+		<h:commandButton action="categorias.xhtml" value="Cancelar" />
+</ui:define>
+</ui:composition> 

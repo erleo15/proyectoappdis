@@ -1,0 +1,44 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="peliculas.xhtml">
+
+<ui:define name="vercategoria">
+
+<h1>Categorias</h1>
+	<h:form>
+
+			<h:dataTable border="1" value="#{categoriaBean.listarCategoria()}" var="categoria">
+				<h:column id="cat_id">
+					<f:facet name="header">Categoria ID</f:facet>
+						#{categoria.idCategoria} 
+				</h:column>
+				<h:column id="cat_nombre">
+					<f:facet name="header">Nombre</f:facet>
+						#{categoria.nombre} 
+				</h:column>
+				<h:column id="cat_descripcion">
+					<f:facet name="header">Descripcion</f:facet>
+						#{categoria.descripcion} 
+				</h:column>
+				 
+				<h:column id="cat_modificar">
+					<f:facet name="header">Modificar</f:facet>
+						
+						<ui:insert name="modificategoria"> 
+							<h:commandButton  value="Modificar categoria: #{categoria.nombre}" action="modificarcategoria.xhtml"></h:commandButton>
+						 </ui:insert>  
+						
+						
+				</h:column>
+				<h:column id="usu_eliminar">
+					
+						<h:commandButton action="#{categoriaBean.eliminarCategoria(categoria.idCategoria)}" value="Eliminar categoria: #{categoria.nombre}" />
+					 
+				</h:column>
+			</h:dataTable>
+	
+		</h:form>
+	
+	
+	
+</ui:define>
+</ui:composition> 

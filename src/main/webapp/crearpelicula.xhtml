@@ -1,0 +1,103 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="peliculas.xhtml">
+
+
+<ui:define name="crearpelicula">
+
+<h:form>
+
+
+		<h1>Crear Pelicula</h1>
+
+	<h:dataTable border="1" value="#{categoriaBean.listarCategoria()}" var="categoria">
+				<h:column id="cat_id">
+					<f:facet name="header">Categoria ID</f:facet>
+						#{categoria.idCategoria} 
+				</h:column>
+				<h:column id="cat_nombre">
+					<f:facet name="header">Nombre</f:facet>
+						#{categoria.nombre} 
+				</h:column>
+				<h:column id="cat_descripcion">
+					<f:facet name="header">Descripcion</f:facet>
+						#{categoria.descripcion} 
+				</h:column>
+				 
+				<h:column id="cat_modificar">
+					<f:facet name="header">Modificar</f:facet>
+						
+						<ui:insert name="modificategoria"> 
+							<h:commandButton  value="Modificar categoria: #{categoria.nombre}" action="modificarcategoria.xhtml"></h:commandButton>
+						 </ui:insert>  
+						
+						
+				</h:column>
+				<h:column id="usu_eliminar">
+					
+						<h:commandButton action="#{categoriaBean.eliminarCategoria(categoria.idCategoria)}" value="Eliminar categoria: #{categoria.nombre}" />
+					 
+				</h:column>
+			</h:dataTable>
+			<h:panelGrid columns="3">
+			<h:outputLabel value="Codigo Pelicula" for="codigoPelicula" />
+			<h:inputText value="#{peliculaBean.pelicula.codigoPelicula}" id="codigoPelicula" />
+			<h:message for="codigoPelicula" />
+		</h:panelGrid>
+		
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Nombre" for="nombre" />
+			<h:inputText value="#{peliculaBean.pelicula.nombre}" id="nombre" />
+			<h:message for="nombre" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Descripcion" for="descripcion" />
+			<h:inputText value="#{peliculaBean.pelicula.descripcion}" id="descripcion" />
+			<h:message for="descripcion" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Precio" for="precio" />
+			<h:inputText value="#{peliculaBean.pelicula.precio}" id="precio" />
+			<h:message for="precio" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Anio" for="anio" />
+			<h:inputText value="#{peliculaBean.pelicula.anio}" id="anio" />
+			<h:message for="anio" />
+		</h:panelGrid> 
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Stock Disponible" for="stock" />
+			<h:inputText value="#{peliculaBean.pelicula.stock}" id="stock" />
+			<h:message for="fregistro" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Cantidad de votos" for="cantidad_votos" />
+			<h:inputText value="#{peliculaBean.pelicula.cantidadVotos}" id="cantidad_votos" />
+			<h:message for="cantidad_votos" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Cantidad de Ventas" for="cantidad_ventas" />
+			<h:inputText value="#{peliculaBean.pelicula.cantidadVentas}" id="cantidad_ventas" />
+			<h:message for="cantidad_ventas" />
+		</h:panelGrid> 
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Imagen" for="imagen" />
+			<h:inputText value="#{peliculaBean.pelicula.imagenHttp}" id="imagen" />
+			<h:message for="imagen" />
+		</h:panelGrid>
+
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Categoria" for="categoria" />
+			<h:inputText value="#{peliculaBean.pelicula.imagenHttp}" id="categoria" />
+			<h:message for="categoria" />
+		</h:panelGrid>
+		
+	<h:commandButton id="btnCrearPelicula" action="#{peliculaBean.guardarPelicula()}" value="Guardar Pelicula"></h:commandButton>
+		</h:form>
+	 
+	
+		
+		
+</ui:define>
+
+
+</ui:composition> 

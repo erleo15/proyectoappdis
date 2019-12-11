@@ -1,0 +1,80 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" xmlns:a="http://xmlns.jcp.org/jsf/passthrough" 
+      template="usuarios.xhtml">
+
+<ui:define name="modificarusuario">
+
+
+	<h1>Modificar Usuario</h1>
+
+	
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Cedula" for="cedula" />
+			<h:inputText value="#{usuarioBean.usuario.cedula}" id="cedula"  a:placeholder="#{usuario.cedula}" />
+			<h:message for="cedula" />
+		</h:panelGrid>
+		
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Nombre" for="nombre" />
+			<h:inputText value="#{usuarioBean.usuario.nombre}" id="nombre" a:placeholder="#{usuario.nombre}"/>
+			<h:message for="nombre" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Apellido" for="apellido" />
+			<h:inputText value="#{usuarioBean.usuario.apellido}" id="apellido" a:placeholder="#{usuario.apellido}"/>
+			<h:message for="apellido" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Telefono" for="telefono" />
+			<h:inputText value="#{usuarioBean.usuario.telefono}" id="telefono" a:placeholder="#{usuario.telefono}"/>
+			<h:message for="telefono" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Email" for="email" />
+			<h:inputText value="#{usuarioBean.usuario.email}" id="email" a:placeholder="#{usuario.email}"/>
+			<h:message for="email" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Fecha Nacimiento" for="fnacimiento" a:placeholder="#{usuario.fechaNacimiento.toString()}"/>
+			<h:inputText value="#{usuarioBean.usuario.fechaNacimiento}" id="fnacimiento"><f:convertDateTime pattern="dd/MM/yyyy"/></h:inputText>
+			<h:message for="fnacimiento" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Fecha Registro" for="fregistro" a:placeholder="#{usuario.fechaRegistro.toString()}"/>
+			<h:inputText value="#{usuarioBean.usuario.fechaRegistro}" id="fregistro" ><f:convertDateTime pattern="dd/MM/yyyy"/></h:inputText>
+			<h:message for="fregistro" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Nickname" for="user" />
+			<h:inputText value="#{usuarioBean.usuario.user}" id="user" a:placeholder="#{usuario.user}"/>
+			<h:message for="user" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Contrasenia" for="contrasenia" />
+			<h:inputSecret value="#{usuarioBean.usuario.contrasenia}" id="contrasenia" a:placeholder="#{usuario.contrasenia}"/>
+			<h:message for="contrasenia" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Numero Compras" for="numerocompras" />
+			<h:inputText value="#{usuarioBean.usuario.numeroCompra}" id="numerocompras" a:placeholder="#{usuario.numeroCompra}"/>
+			<h:message for="numerocompras" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Dinero Gastado" for="dinerogastado" />
+			<h:inputText value="#{usuarioBean.usuario.dineroGastado}" id="dinerogastado" a:placeholder="#{usuario.dineroGastado}"/>
+			<h:message for="dinerogastado" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Direccion" for="direccion" />
+			<h:inputText value="#{usuarioBean.usuario.direccionUsuario}" id="direccion" a:placeholder="#{usuario.direccionUsuario}"/>
+			<h:message for="direccion" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Tipo" for="tipo" />
+			<h:inputText value="#{usuarioBean.usuario.tipoUsuario}" id="tipo" a:placeholder="#{usuario.tipoUsuario}"/>
+			<h:message for="tipo" />
+		</h:panelGrid>
+		<h:commandButton action="#{usuarioBean.actualizarUsuario()}" value="Actualizar Usuario" />
+		<h:commandButton action="usuarios.xhtml" value="Cancelar" />
+</ui:define>
+</ui:composition> 

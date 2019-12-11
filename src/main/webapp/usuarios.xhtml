@@ -1,0 +1,90 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="index.xhtml">
+
+<ui:define name="contenido">
+
+	<h1>BIENVENIDO Usuarios</h1>
+	
+<h:form>
+			<h:commandButton id="btnRefrescar" action="#{usuarioBean.listarUsuario()}" value="Refrescar"></h:commandButton>
+			<h:dataTable border="1" value="#{usuarioBean.listarUsuario()}" var="usuario">
+				<h:column id="usu_cedula">
+					<f:facet name="header">Cedula</f:facet>
+						#{usuario.cedula} 
+				</h:column>
+				<h:column id="usu_nombre">
+					<f:facet name="header">Nombre</f:facet>
+						#{usuario.nombre} 
+				</h:column>
+				<h:column id="usu_apellido">
+					<f:facet name="header">Apellido</f:facet>
+						#{usuario.apellido} 
+				</h:column>
+				<h:column id="usu_telefono">
+					<f:facet name="header">Telefono</f:facet>
+					#{usuario.telefono} 
+				</h:column>
+				<h:column id="usu_email">
+					<f:facet name="header">Correo</f:facet>
+						#{usuario.email} 
+				</h:column>
+				<h:column id="usu_fnacimiento">
+					<f:facet name="header">Fecha de Nacimiento</f:facet>
+						 #{usuario.fechaNacimiento} 
+					
+				</h:column>
+				<h:column id="usu_fregistro">
+					<f:facet name="header">Fecha de Registro</f:facet>
+						#{usuario.fechaRegistro}
+				</h:column>
+				<h:column id="usu_user">
+					<f:facet name="header">NickName</f:facet>
+						 #{usuario.user} 
+					
+				</h:column>
+				
+				<h:column id="usu_nom_compra">
+					<f:facet name="header">Numero de Compras</f:facet>
+					#{usuario.numeroCompra}
+					
+				</h:column>
+				<h:column id="usu_dinero_gastado">
+					<f:facet name="header">Dinero Gastado</f:facet>
+						#{usuario.dineroGastado}
+					
+				</h:column>
+				<h:column id="usu_direccion">
+					<f:facet name="header">Direccion</f:facet>
+					#{usuario.direccionUsuario}
+					
+				</h:column>
+				<h:column id="usu_tipo">
+					<f:facet name="header">Tipo
+					</f:facet>
+						#{usuario.tipoUsuario}
+				</h:column>
+				<h:column id="usu_modificar">
+					<f:facet name="header">Modificar</f:facet>
+						
+						<ui:insert name="modificarusuario"> 
+							<h:commandButton  value="Modificar usuario: #{usuario.user}" action="modificarusuario.xhtml"></h:commandButton>
+						 </ui:insert>  
+						
+						
+				</h:column>
+				<h:column id="usu_eliminar">
+					
+						<h:commandButton action="#{usuarioBean.eliminarUsuario(usuario.cedula)}" value="Eliminar usuario: #{usuario.user}" />
+					 
+				</h:column>
+			</h:dataTable>
+		</h:form>
+		
+	<h:form>
+	<ui:insert name="crearusuario">
+		<h:commandButton id="btnCrearUsuario" action="crearusuario.xhtml" value="Crear Usuario"></h:commandButton>
+	</ui:insert> 
+				
+	</h:form>
+</ui:define>
+</ui:composition> 
