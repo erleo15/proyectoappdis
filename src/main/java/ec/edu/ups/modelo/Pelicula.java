@@ -1,27 +1,35 @@
 package ec.edu.ups.modelo;
 
+import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull; 
+import javax.validation.constraints.NotNull;
 
-@Entity
+import org.hibernate.validator.constraints.NotEmpty; 
+
+@Entity(name="tie_pelicula")
 @Table(name="tie_pelicula")
-public class Pelicula {
+public class Pelicula implements Serializable{
 	
 	@Id
+	@GeneratedValue
 	@Column(name="pel_id")
-	private int codigoProducto;
+	private int codigoPelicula;
 	
 	@NotNull 
+	@NotEmpty
 	@Column(name="pel_nombre")
 	private String nombre;
 	
 	@NotNull
+	@NotEmpty
 	@Column(name =  "pel_descripcion")
 	private String descripcion;
 	
@@ -40,20 +48,20 @@ public class Pelicula {
 	@Column(name="pel_cantidad_venta")
 	private int cantidadVentas;
 	
+	@NotNull
+	@NotEmpty
 	@Column(name="pel_img_http")
 	private String imagenHttp;
 	
 	@ManyToOne(cascade = {CascadeType.ALL}) 
 	@JoinColumn(name = "pel_cat_id",referencedColumnName = "cat_id")
 	private Categoria categoria;
+	
+	/*
+	@ManyToOne(cascade = {CascadeType.ALL}) 
+	@JoinColumn(name = "pel_tie_id",referencedColumnName = "tie_id")
+	private Tienda tienda;*/
 
-	public int getCodigoProducto() {
-		return codigoProducto;
-	}
-
-	public void setCodigoProducto(int codigoProducto) {
-		this.codigoProducto = codigoProducto;
-	}
 
 	public String getNombre() {
 		return nombre;
@@ -127,14 +135,27 @@ public class Pelicula {
 		this.categoria = categoria;
 	}
 
-	@Override
-	public String toString() {
-		return "Pelicula [codigoProducto=" + codigoProducto + ", nombre=" + nombre + ", descripcion=" + descripcion
-				+ ", precio=" + precio + ", anio=" + anio + ", stock=" + stock + ", cantidadVotos=" + cantidadVotos
-				+ ", cantidadVentas=" + cantidadVentas + ", imagenHttp=" + imagenHttp + ", categoria=" + categoria
-				+ "]";
+	public int getCodigoPelicula() {
+		return codigoPelicula;
 	}
 
+	public void setCodigoPelicula(int codigoPelicula) {
+		this.codigoPelicula = codigoPelicula;
+	}
+
+	/*
+	public Tienda getTienda() {
+		return tienda;
+	}
+
+	public void setTienda(Tienda tienda) {
+		this.tienda = tienda;
+	}
+*/
+	
+
+	
+	
 	
 	 
 }

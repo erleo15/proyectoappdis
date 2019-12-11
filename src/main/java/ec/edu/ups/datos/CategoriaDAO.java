@@ -19,26 +19,24 @@ public class CategoriaDAO {
 		em.persist(categoria);
 	}
 	
-	public void delete(Categoria categoria) {
-		em.remove(categoria);
+	public void delete(int idCategoria) {
+		em.remove(find(idCategoria));
 	}
 	
-	public void update(int idViejo,Categoria categoria) {
+	public void update(Categoria categoria) {
 	
-		em.remove(em.find(Categoria.class, idViejo));
+		em.remove(em.find(Categoria.class, categoria.getIdCategoria()));
 		em.persist(categoria);
 		
 	}
 	
 	public  Categoria find(int id) {
-		em.find(Categoria.class, id);
-		return null;
+		return em.find(Categoria.class, id);
+		
 	}
 	
-	public List<Categoria> list(){   
-		
-		Query query = em.createQuery("SELECT c from tie_categoria c", Categoria.class);
-		return query.getResultList();
+	public List<Categoria> list(){  
+		return em.createQuery("SELECT c from tie_categoria c", Categoria.class).getResultList();
 	}
 
 }

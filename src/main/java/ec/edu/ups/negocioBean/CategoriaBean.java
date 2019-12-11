@@ -17,7 +17,7 @@ import ec.edu.ups.modelo.Categoria;
 public class CategoriaBean {
 
 	private Categoria categoria; 
-	private List<Categoria> listaCategoria;
+	//private List<Categoria> listaCategoria;
 	
 	@Inject
 	private CategoriaDAO categoriaDAO;
@@ -25,7 +25,6 @@ public class CategoriaBean {
 	@PostConstruct
 	public void init() {
 		categoria = new Categoria();
-		listaCategoria = new ArrayList<Categoria>();
 	}
 	
 	public Categoria getCategoria() {
@@ -36,31 +35,26 @@ public class CategoriaBean {
 		this.categoria = categoria;
 	}
 
-	public List<Categoria> getListaCategoria() {
-		return listaCategoria;
-	}
-
-	public void setListaCategoria(List<Categoria> listaCategoria) {
-		this.listaCategoria = listaCategoria;}
-	
+	 
 	public String guardarCategoria() {
 		categoriaDAO.insert(categoria);
-		return null;
+		
+		return "peliculas.xhtml";
 	}
 	
-	public String eliminarCategoria() {
-		categoriaDAO.delete(categoria);
+	public String eliminarCategoria(int id) {
+		categoriaDAO.delete(id);
 		return null;
 	}
 	
 	public String actualizarCategoria() {
-		categoriaDAO.update(categoria.getIdCategoria(),categoria);
+		categoriaDAO.update(categoria);
 		return null;
 	}
 	
-	public String buscarCategoria() {
-		categoria = categoriaDAO.find(categoria.getIdCategoria());
-		return null;
+	public Categoria buscarCategoria() {
+		return  categoriaDAO.find(categoria.getIdCategoria());
+		
 	}
 	
 	public List<Categoria> listarCategoria() {
@@ -68,11 +62,5 @@ public class CategoriaBean {
 	}
  
 
-
-	@Override
-	public String toString() {
-		return "CategoriaBean [categoria=" + categoria + ", listaCategoria=" + listaCategoria + ", categoriaDAO="
-				+ categoriaDAO + "]";
-	}
 	
 }

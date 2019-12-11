@@ -1,10 +1,12 @@
 package ec.edu.ups.modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -14,12 +16,13 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.CreditCardNumber;
 import org.hibernate.validator.constraints.NotEmpty;
 
-@Entity
+@Entity(name="tie_tarjeta_credito")
 @Table(name="tie_tarjeta_credito")
-public class TarjetaCredito {
+public class TarjetaCredito implements Serializable{
 	
 	@Id
 	@CreditCardNumber
+	@GeneratedValue
 	@Column(name="tar_numero")
 	private String numeroTarjeta;
 	

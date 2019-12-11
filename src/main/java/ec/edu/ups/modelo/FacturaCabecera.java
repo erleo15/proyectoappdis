@@ -1,5 +1,6 @@
 package ec.edu.ups.modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
@@ -13,9 +14,9 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
-@Entity
+@Entity(name="tie_fcabecera")
 @Table(name="tie_fcabecera")
-public class FacturaCabecera {
+public class FacturaCabecera implements Serializable{
 
 	@Id
 	@Column(name="fcab_num_factura")

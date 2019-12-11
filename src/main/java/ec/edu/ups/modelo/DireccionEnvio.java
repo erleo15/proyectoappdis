@@ -1,18 +1,22 @@
 package ec.edu.ups.modelo;
 
+import java.io.Serializable;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
-@Entity
+@Entity(name="tie_direccion")
 @Table(name="tie_direccion")
-public class DireccionEnvio {
+public class DireccionEnvio implements Serializable{
 
 	@Id
+	@GeneratedValue
 	@Column(name = "dir_id")
 	private int idDireccion;
 	

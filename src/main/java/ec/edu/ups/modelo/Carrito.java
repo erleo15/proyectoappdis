@@ -1,10 +1,12 @@
 package ec.edu.ups.modelo;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -12,45 +14,46 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType; 
 
-@Entity
+@Entity(name="tie_carrito")
 @Table(name="tie_carrito")
-public class Carrito {
+public class Carrito implements Serializable{
 
 	@Id
-	@Column(name="cdet_numero")
-	private int numFDetalle;
+	@GeneratedValue
+	@Column(name="car_numero")
+	private int idCarrito;
 	
-	@Column(name="cdet_cantidad")
+	@Column(name="car_cantidad")
 	private int cantidad;
 	
-	@Column(name="cdet_total")
+	@Column(name="car_total")
 	private int totalCarrito;
 	
 	@Temporal(TemporalType.DATE)
-	@Column(name="cdet_fecha")
+	@Column(name="car_fecha")
 	private Date fecha;
 	
 	
 	@ManyToOne(cascade = {CascadeType.ALL}) 
-	@JoinColumn(name = "cdet_pel_id",referencedColumnName = "pel_id")
+	@JoinColumn(name = "car_pel_id",referencedColumnName = "pel_id")
 	private Pelicula pelicula;
  
  
 	
 	@ManyToOne(cascade = {CascadeType.ALL}) 
-	@JoinColumn(name = "cdet_usu_cedula",referencedColumnName = "usu_cedula")
+	@JoinColumn(name = "car_usu_cedula",referencedColumnName = "usu_cedula")
 	private Usuario usuario;
 
 
 
-	public int getNumFDetalle() {
-		return numFDetalle;
+	public int getIdCarrito() {
+		return idCarrito;
 	}
 
 
 
-	public void setNumFDetalle(int numFDetalle) {
-		this.numFDetalle = numFDetalle;
+	public void setIdCarrito(int idCarrito) {
+		this.idCarrito = idCarrito;
 	}
 
 
@@ -117,7 +120,7 @@ public class Carrito {
 
 	@Override
 	public String toString() {
-		return "Carrito [numFDetalle=" + numFDetalle + ", cantidad=" + cantidad + ", totalCarrito=" + totalCarrito
+		return "Carrito [idCarrito=" + idCarrito + ", cantidad=" + cantidad + ", totalCarrito=" + totalCarrito
 				+ ", fecha=" + fecha + ", pelicula=" + pelicula + ", usuario=" + usuario + "]";
 	}
 	

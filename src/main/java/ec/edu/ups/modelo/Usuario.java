@@ -17,7 +17,7 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty; 
 
-@Entity
+@Entity(name="tie_usuario")
 @Table(name="tie_usuario")
 public class Usuario {
 	
@@ -68,14 +68,14 @@ public class Usuario {
 	
 	@NotNull
 	@Column(name="usu_dinero_gastado")
-	private int dineroGastado;
+	private double dineroGastado;
 	 
 	@NotNull
 	@Column(name="usu_direccion")
 	private String direccionUsuario;
 	
 	@Column(name = "usu_tipo")
-	private int tipoUsuario;
+	private String tipoUsuario;
 
 	public String getCedula() {
 		return cedula;
@@ -157,11 +157,11 @@ public class Usuario {
 		this.numeroCompra = numeroCompra;
 	}
 
-	public int getDineroGastado() {
+	public double getDineroGastado() {
 		return dineroGastado;
 	}
 
-	public void setDineroGastado(int dineroGastado) {
+	public void setDineroGastado(double dineroGastado) {
 		this.dineroGastado = dineroGastado;
 	}
 
@@ -173,11 +173,11 @@ public class Usuario {
 		this.direccionUsuario = direccionUsuario;
 	}
 
-	public int getTipoUsuario() {
+	public String getTipoUsuario() {
 		return tipoUsuario;
 	}
 
-	public void setTipoUsuario(int tipoUsuario) {
+	public void setTipoUsuario(String tipoUsuario) {
 		this.tipoUsuario = tipoUsuario;
 	}
 

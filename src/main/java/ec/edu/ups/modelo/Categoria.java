@@ -1,5 +1,7 @@
 package ec.edu.ups.modelo;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +13,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 @Entity(name="tie_categoria")
 @Table(name="tie_categoria")
-public class Categoria {
+public class Categoria implements Serializable{
 
 	@Id
 	@GeneratedValue
@@ -55,9 +57,6 @@ public class Categoria {
 	@Override
 	public String toString() {
 		return "Categoria [idCategoria=" + idCategoria + ", nombre=" + nombre + ", descripcion=" + descripcion + "]";
-	}
-
-	
-	 
+	} 
 	
 }
