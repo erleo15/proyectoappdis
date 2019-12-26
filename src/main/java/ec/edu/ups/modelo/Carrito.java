@@ -14,6 +14,12 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType; 
 
+/**
+ * Clase para guardar los datos del carrito
+ * por cada uno de los clientes
+ * @author erleo15
+ *
+ */
 @Entity(name="tie_carrito")
 @Table(name="tie_carrito")
 public class Carrito implements Serializable{
@@ -46,72 +52,110 @@ public class Carrito implements Serializable{
 
 
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public int getIdCarrito() {
 		return idCarrito;
 	}
 
 
-
+	/**
+	 * Metodo que setea el valor de dicho objeto en la clase
+	 * @param el valor del atributo a poner
+	 */
 	public void setIdCarrito(int idCarrito) {
 		this.idCarrito = idCarrito;
 	}
 
 
-
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public int getCantidad() {
 		return cantidad;
 	}
 
 
-
+	/**
+	 * Metodo que setea el valor de dicho objeto en la clase
+	 * @param cantidad el valor del atributo a poner
+	 */
 	public void setCantidad(int cantidad) {
 		this.cantidad = cantidad;
 	}
 
 
-
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el atributo en cuestion
+	 */
 	public int getTotalCarrito() {
 		return totalCarrito;
 	}
 
 
-
+	/**
+	 * Metodo que setea el valor de dicho objeto en la clase
+	 * @param totalCarrito es el valor del atributo en cuestion
+	 */
 	public void setTotalCarrito(int totalCarrito) {
 		this.totalCarrito = totalCarrito;
 	}
 
 
-
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto en cuestion
+	 */
 	public Date getFecha() {
 		return fecha;
 	}
 
 
-
+	/**
+	 * Metodo que setea el valor de dicho objeto en la clase
+	 * @param fecha es el valor del atributo en cuestion
+	 */
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
 
 
-
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto en cuestion
+	 */
 	public Pelicula getPelicula() {
 		return pelicula;
 	}
 
 
-
+	/**
+	 * Metodo que setea el valor de dicho objeto en la clase
+	 * @param pelicula es el valor del atributo en cuestion
+	 */
 	public void setPelicula(Pelicula pelicula) {
 		this.pelicula = pelicula;
 	}
 
 
-
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto en cuestion
+	 */
 	public Usuario getUsuario() {
 		return usuario;
 	}
 
 
 
+	/**
+	 * Metodo que setea el valor de dicho objeto en la clase
+	 * @param usuario es el valor del atributo en cuestion
+	 */
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}

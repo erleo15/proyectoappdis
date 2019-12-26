@@ -8,9 +8,11 @@
 	<h1>Modificar Pelicula</h1>
 <h:form>
 		<h:panelGrid columns="3">
-			<h:outputLabel value="Codigo" for="cedula" />
+		
+		<h:commandButton action="#{peliculaBean.buscarPelicula()}" value="Buscar" />
+			<h:outputLabel value="Codigo" for="codigo" />
 			<h:inputText value="#{peliculaBean.pelicula.codigoPelicula}" id="cedula"  a:placeholder="#{pelicula.codigoPelicula}" />
-			<h:message for="cedula" />
+			<h:message for="codigo" />
 		</h:panelGrid>
 		
 		<h:panelGrid columns="3">
@@ -53,8 +55,7 @@
 			<h:inputText value="#{peliculaBean.pelicula.imagenHttp}" id="numerocompras" a:placeholder="#{pelicula.imagenHttp}"/>
 			<h:message for="numerocompras" />
 		</h:panelGrid>  
-		<h:commandButton action="#{peliculaBean.actualizarPelicula()}" value="Actualizar Pelicula" />
-		<h:commandButton action="peliculas.xhtml" value="Cancelar" />
+		<h:commandButton action="#{peliculaBean.actualizarPelicula()}" value="Actualizar Pelicula" /> 
 		</h:form>
 		
 </ui:define>

@@ -1,0 +1,804 @@
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:15:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:15:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:22:	MethodArgumentCouldBeFinal: Parameter 'objeto' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:22:	MethodArgumentCouldBeFinal: Parameter 'objeto' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:22:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:22:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:31:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:31:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:31:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:31:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:31:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:31:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:40:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:40:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:40:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/CarritoDAO.java:40:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:8:	UnusedImports: Avoid unused imports such as 'javax.persistence.Query'
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:8:	UnusedImports: Avoid unused imports such as 'javax.persistence.Query'
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:13:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:13:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:13:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:13:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:15:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:15:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:16:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:16:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:16:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the em field if you want a default access modifier
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:16:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the em field if you want a default access modifier
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:16:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:16:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:16:	ShortVariable: Avoid variables with short names like em
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:16:	ShortVariable: Avoid variables with short names like em
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:24:	MethodArgumentCouldBeFinal: Parameter 'categoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:24:	MethodArgumentCouldBeFinal: Parameter 'categoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:27:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:27:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:28:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:28:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:29:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:29:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:40:	MethodArgumentCouldBeFinal: Parameter 'idCategoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:40:	MethodArgumentCouldBeFinal: Parameter 'idCategoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:49:	MethodArgumentCouldBeFinal: Parameter 'categoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:49:	MethodArgumentCouldBeFinal: Parameter 'categoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:62:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:62:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:62:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:62:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:73:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/ec/edu/ups/datos/CategoriaDAO.java:73:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:11:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:11:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:11:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:11:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:18:	MethodArgumentCouldBeFinal: Parameter 'objeto' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:18:	MethodArgumentCouldBeFinal: Parameter 'objeto' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:18:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:18:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:27:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:27:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:27:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:27:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:27:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:27:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:36:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:36:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:36:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java:36:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:11:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:11:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:11:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:11:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:18:	MethodArgumentCouldBeFinal: Parameter 'objeto' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:18:	MethodArgumentCouldBeFinal: Parameter 'objeto' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:18:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:18:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:27:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:27:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:27:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:27:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:27:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:27:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:36:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:36:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:36:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java:36:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:11:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:11:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:11:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:11:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:18:	MethodArgumentCouldBeFinal: Parameter 'objeto' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:18:	MethodArgumentCouldBeFinal: Parameter 'objeto' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:18:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:18:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:27:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:27:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:27:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:27:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:27:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:27:	UncommentedEmptyMethodBody: Document empty method body
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:36:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:36:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:36:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java:36:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:10:	UnusedImports: Avoid unused imports such as 'ec.edu.ups.modelo.Usuario'
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:10:	UnusedImports: Avoid unused imports such as 'ec.edu.ups.modelo.Usuario'
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:13:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:13:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:13:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:13:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:15:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:15:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:16:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:16:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:16:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the em field if you want a default access modifier
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:16:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the em field if you want a default access modifier
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:16:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:16:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:16:	ShortVariable: Avoid variables with short names like em
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:16:	ShortVariable: Avoid variables with short names like em
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:25:	MethodArgumentCouldBeFinal: Parameter 'pelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:25:	MethodArgumentCouldBeFinal: Parameter 'pelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:28:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:28:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:29:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:29:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:30:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:30:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:41:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:41:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:41:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:41:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:50:	MethodArgumentCouldBeFinal: Parameter 'pelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:50:	MethodArgumentCouldBeFinal: Parameter 'pelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:63:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:63:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:63:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:63:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:73:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/ec/edu/ups/datos/PeliculaDAO.java:73:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:12:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:12:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:12:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:12:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:14:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:14:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:15:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:15:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:15:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the em field if you want a default access modifier
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:15:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the em field if you want a default access modifier
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:15:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:15:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:15:	ShortVariable: Avoid variables with short names like em
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:15:	ShortVariable: Avoid variables with short names like em
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:23:	MethodArgumentCouldBeFinal: Parameter 'tarjetaCredito' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:23:	MethodArgumentCouldBeFinal: Parameter 'tarjetaCredito' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:33:	MethodArgumentCouldBeFinal: Parameter 'tarjetaCredito' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:33:	MethodArgumentCouldBeFinal: Parameter 'tarjetaCredito' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:42:	MethodArgumentCouldBeFinal: Parameter 'tarjetaCredito' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:42:	MethodArgumentCouldBeFinal: Parameter 'tarjetaCredito' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:54:	MethodArgumentCouldBeFinal: Parameter 'numeroTarjeta' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:54:	MethodArgumentCouldBeFinal: Parameter 'numeroTarjeta' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:64:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java:64:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:8:	UnusedImports: Avoid unused imports such as 'javax.persistence.Query'
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:8:	UnusedImports: Avoid unused imports such as 'javax.persistence.Query'
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:10:	UnusedImports: Avoid unused imports such as 'ec.edu.ups.modelo.Categoria'
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:10:	UnusedImports: Avoid unused imports such as 'ec.edu.ups.modelo.Categoria'
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:15:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:15:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:15:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:15:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:17:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:17:	DefaultPackage: Use explicit scoping instead of the default package private level
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:18:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:18:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:18:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the em field if you want a default access modifier
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:18:	CommentDefaultAccessModifier: To avoid mistakes add a comment at the beginning of the em field if you want a default access modifier
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:18:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:18:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:18:	ShortVariable: Avoid variables with short names like em
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:18:	ShortVariable: Avoid variables with short names like em
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:26:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:26:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:28:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:28:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:30:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:30:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:31:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:31:	AvoidCatchingGenericException: Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:32:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:32:	AvoidPrintStackTrace: Avoid printStackTrace(); use a logger call instead.
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:43:	MethodArgumentCouldBeFinal: Parameter 'cedula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:43:	MethodArgumentCouldBeFinal: Parameter 'cedula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:52:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:52:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:65:	MethodArgumentCouldBeFinal: Parameter 'cedula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:65:	MethodArgumentCouldBeFinal: Parameter 'cedula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:76:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/ec/edu/ups/datos/UsuarioDAO.java:76:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/ec/edu/ups/modelo/Carrito.java:25:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/Carrito.java:25:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/Carrito.java:25:	DataClass: The class 'Carrito' is suspected to be a Data Class (WOC=7.692%, NOPA=0, NOAM=12, WMC=12)
+src/main/java/ec/edu/ups/modelo/Carrito.java:25:	DataClass: The class 'Carrito' is suspected to be a Data Class (WOC=7.692%, NOPA=0, NOAM=12, WMC=12)
+src/main/java/ec/edu/ups/modelo/Carrito.java:25:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/ec/edu/ups/modelo/Carrito.java:25:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/ec/edu/ups/modelo/Carrito.java:30:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Carrito.java:30:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Carrito.java:33:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Carrito.java:33:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Carrito.java:36:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Carrito.java:36:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Carrito.java:40:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Carrito.java:40:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Carrito.java:45:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Carrito.java:45:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Carrito.java:51:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Carrito.java:51:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Carrito.java:68:	MethodArgumentCouldBeFinal: Parameter 'idCarrito' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Carrito.java:68:	MethodArgumentCouldBeFinal: Parameter 'idCarrito' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Carrito.java:86:	MethodArgumentCouldBeFinal: Parameter 'cantidad' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Carrito.java:86:	MethodArgumentCouldBeFinal: Parameter 'cantidad' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Carrito.java:104:	MethodArgumentCouldBeFinal: Parameter 'totalCarrito' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Carrito.java:104:	MethodArgumentCouldBeFinal: Parameter 'totalCarrito' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Carrito.java:122:	MethodArgumentCouldBeFinal: Parameter 'fecha' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Carrito.java:122:	MethodArgumentCouldBeFinal: Parameter 'fecha' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Carrito.java:140:	MethodArgumentCouldBeFinal: Parameter 'pelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Carrito.java:140:	MethodArgumentCouldBeFinal: Parameter 'pelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Carrito.java:159:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Carrito.java:159:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Categoria.java:22:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/Categoria.java:22:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/Categoria.java:22:	DataClass: The class 'Categoria' is suspected to be a Data Class (WOC=14.286%, NOPA=0, NOAM=6, WMC=6)
+src/main/java/ec/edu/ups/modelo/Categoria.java:22:	DataClass: The class 'Categoria' is suspected to be a Data Class (WOC=14.286%, NOPA=0, NOAM=6, WMC=6)
+src/main/java/ec/edu/ups/modelo/Categoria.java:32:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Categoria.java:32:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Categoria.java:37:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Categoria.java:37:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Categoria.java:42:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Categoria.java:42:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Categoria.java:55:	MethodArgumentCouldBeFinal: Parameter 'idCategoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Categoria.java:55:	MethodArgumentCouldBeFinal: Parameter 'idCategoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Categoria.java:71:	MethodArgumentCouldBeFinal: Parameter 'nombre' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Categoria.java:71:	MethodArgumentCouldBeFinal: Parameter 'nombre' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Categoria.java:87:	MethodArgumentCouldBeFinal: Parameter 'descripcion' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Categoria.java:87:	MethodArgumentCouldBeFinal: Parameter 'descripcion' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:16:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:16:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:16:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:16:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:16:	DataClass: The class 'DireccionEnvio' is suspected to be a Data Class (WOC=5.263%, NOPA=0, NOAM=18, WMC=18)
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:16:	DataClass: The class 'DireccionEnvio' is suspected to be a Data Class (WOC=5.263%, NOPA=0, NOAM=18, WMC=18)
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:16:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:16:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:21:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:21:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:27:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:27:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:30:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:30:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:33:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:33:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:36:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:36:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:39:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:39:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:42:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:42:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:46:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:46:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:61:	MethodArgumentCouldBeFinal: Parameter 'idDireccion' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:61:	MethodArgumentCouldBeFinal: Parameter 'idDireccion' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:78:	MethodArgumentCouldBeFinal: Parameter 'calle' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:78:	MethodArgumentCouldBeFinal: Parameter 'calle' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:95:	MethodArgumentCouldBeFinal: Parameter 'sector' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:95:	MethodArgumentCouldBeFinal: Parameter 'sector' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:112:	MethodArgumentCouldBeFinal: Parameter 'numeroCasa' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:112:	MethodArgumentCouldBeFinal: Parameter 'numeroCasa' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:129:	MethodArgumentCouldBeFinal: Parameter 'parroquia' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:129:	MethodArgumentCouldBeFinal: Parameter 'parroquia' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:146:	MethodArgumentCouldBeFinal: Parameter 'ciudad' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:146:	MethodArgumentCouldBeFinal: Parameter 'ciudad' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:163:	MethodArgumentCouldBeFinal: Parameter 'provincia' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:163:	MethodArgumentCouldBeFinal: Parameter 'provincia' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:180:	MethodArgumentCouldBeFinal: Parameter 'zipCode' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:180:	MethodArgumentCouldBeFinal: Parameter 'zipCode' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:196:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/DireccionEnvio.java:196:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:19:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:19:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:19:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:19:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:19:	DataClass: The class 'FacturaCabecera' is suspected to be a Data Class (WOC=4.762%, NOPA=0, NOAM=20, WMC=20)
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:19:	DataClass: The class 'FacturaCabecera' is suspected to be a Data Class (WOC=4.762%, NOPA=0, NOAM=20, WMC=20)
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:19:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:19:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:23:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:23:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:28:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:28:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:32:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:32:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:35:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:35:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:38:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:38:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:41:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:41:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:44:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:44:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:48:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:48:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:52:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:52:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:56:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:56:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:70:	MethodArgumentCouldBeFinal: Parameter 'numeroFactura' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:70:	MethodArgumentCouldBeFinal: Parameter 'numeroFactura' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:86:	MethodArgumentCouldBeFinal: Parameter 'fecha' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:86:	MethodArgumentCouldBeFinal: Parameter 'fecha' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:102:	MethodArgumentCouldBeFinal: Parameter 'subtotal' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:102:	MethodArgumentCouldBeFinal: Parameter 'subtotal' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:118:	MethodArgumentCouldBeFinal: Parameter 'descuento' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:118:	MethodArgumentCouldBeFinal: Parameter 'descuento' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:134:	MethodArgumentCouldBeFinal: Parameter 'iva' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:134:	MethodArgumentCouldBeFinal: Parameter 'iva' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:150:	MethodArgumentCouldBeFinal: Parameter 'total' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:150:	MethodArgumentCouldBeFinal: Parameter 'total' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:166:	MethodArgumentCouldBeFinal: Parameter 'estado' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:166:	MethodArgumentCouldBeFinal: Parameter 'estado' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:182:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:182:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:198:	MethodArgumentCouldBeFinal: Parameter 'tarjetaCredito' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:198:	MethodArgumentCouldBeFinal: Parameter 'tarjetaCredito' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:214:	MethodArgumentCouldBeFinal: Parameter 'direccionEnvio' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaCabecera.java:214:	MethodArgumentCouldBeFinal: Parameter 'direccionEnvio' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:16:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:16:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:16:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:16:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:16:	DataClass: The class 'FacturaDetalle' is suspected to be a Data Class (WOC=9.091%, NOPA=0, NOAM=10, WMC=10)
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:16:	DataClass: The class 'FacturaDetalle' is suspected to be a Data Class (WOC=9.091%, NOPA=0, NOAM=10, WMC=10)
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:16:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:16:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:21:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:21:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:27:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:27:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:31:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:31:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:31:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:31:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:35:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:35:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:49:	MethodArgumentCouldBeFinal: Parameter 'numFDetalle' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:49:	MethodArgumentCouldBeFinal: Parameter 'numFDetalle' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:65:	MethodArgumentCouldBeFinal: Parameter 'cantidad' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:65:	MethodArgumentCouldBeFinal: Parameter 'cantidad' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:81:	MethodArgumentCouldBeFinal: Parameter 'totalFDet' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:81:	MethodArgumentCouldBeFinal: Parameter 'totalFDet' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:97:	MethodArgumentCouldBeFinal: Parameter 'fCabecera' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:97:	MethodArgumentCouldBeFinal: Parameter 'fCabecera' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:113:	MethodArgumentCouldBeFinal: Parameter 'pelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/FacturaDetalle.java:113:	MethodArgumentCouldBeFinal: Parameter 'pelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pedido.java:19:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/Pedido.java:19:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/Pedido.java:19:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/modelo/Pedido.java:19:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/modelo/Pedido.java:19:	DataClass: The class 'Pedido' is suspected to be a Data Class (WOC=9.091%, NOPA=0, NOAM=10, WMC=10)
+src/main/java/ec/edu/ups/modelo/Pedido.java:19:	DataClass: The class 'Pedido' is suspected to be a Data Class (WOC=9.091%, NOPA=0, NOAM=10, WMC=10)
+src/main/java/ec/edu/ups/modelo/Pedido.java:19:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/ec/edu/ups/modelo/Pedido.java:19:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/ec/edu/ups/modelo/Pedido.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pedido.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pedido.java:24:	FieldNamingConventions: The field name 'num_pedido' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/ec/edu/ups/modelo/Pedido.java:24:	FieldNamingConventions: The field name 'num_pedido' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/ec/edu/ups/modelo/Pedido.java:24:	VariableNamingConventions: Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'num_pedido' is not final.
+src/main/java/ec/edu/ups/modelo/Pedido.java:24:	VariableNamingConventions: Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'num_pedido' is not final.
+src/main/java/ec/edu/ups/modelo/Pedido.java:28:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pedido.java:28:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pedido.java:31:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pedido.java:31:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pedido.java:35:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pedido.java:35:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pedido.java:39:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pedido.java:39:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pedido.java:45:	MethodNamingConventions: The instance method name 'getNum_pedido' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/ec/edu/ups/modelo/Pedido.java:45:	MethodNamingConventions: The instance method name 'getNum_pedido' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/ec/edu/ups/modelo/Pedido.java:53:	FormalParameterNamingConventions: The method parameter name 'num_pedido' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/ec/edu/ups/modelo/Pedido.java:53:	FormalParameterNamingConventions: The method parameter name 'num_pedido' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/ec/edu/ups/modelo/Pedido.java:53:	MethodArgumentCouldBeFinal: Parameter 'num_pedido' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pedido.java:53:	MethodArgumentCouldBeFinal: Parameter 'num_pedido' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pedido.java:53:	MethodNamingConventions: The instance method name 'setNum_pedido' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/ec/edu/ups/modelo/Pedido.java:53:	MethodNamingConventions: The instance method name 'setNum_pedido' doesn't match '[a-z][a-zA-Z0-9]*'
+src/main/java/ec/edu/ups/modelo/Pedido.java:53:	VariableNamingConventions: Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'num_pedido' is not final.
+src/main/java/ec/edu/ups/modelo/Pedido.java:53:	VariableNamingConventions: Only variables that are final should contain underscores (except for underscores in standard prefix/suffix), 'num_pedido' is not final.
+src/main/java/ec/edu/ups/modelo/Pedido.java:69:	MethodArgumentCouldBeFinal: Parameter 'fechaEntrega' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pedido.java:69:	MethodArgumentCouldBeFinal: Parameter 'fechaEntrega' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pedido.java:85:	MethodArgumentCouldBeFinal: Parameter 'estado' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pedido.java:85:	MethodArgumentCouldBeFinal: Parameter 'estado' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pedido.java:101:	MethodArgumentCouldBeFinal: Parameter 'facturaCabecera' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pedido.java:101:	MethodArgumentCouldBeFinal: Parameter 'facturaCabecera' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pedido.java:117:	MethodArgumentCouldBeFinal: Parameter 'tienda' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pedido.java:117:	MethodArgumentCouldBeFinal: Parameter 'tienda' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:19:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/Pelicula.java:19:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/Pelicula.java:19:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:19:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:19:	DataClass: The class 'Pelicula' is suspected to be a Data Class (WOC=4.762%, NOPA=0, NOAM=20, WMC=20)
+src/main/java/ec/edu/ups/modelo/Pelicula.java:19:	DataClass: The class 'Pelicula' is suspected to be a Data Class (WOC=4.762%, NOPA=0, NOAM=20, WMC=20)
+src/main/java/ec/edu/ups/modelo/Pelicula.java:29:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:29:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:34:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:34:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:39:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:39:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:42:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:42:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:45:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:45:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:48:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:48:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:51:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:51:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:54:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:54:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:59:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:59:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:64:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:64:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Pelicula.java:79:	MethodArgumentCouldBeFinal: Parameter 'nombre' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:79:	MethodArgumentCouldBeFinal: Parameter 'nombre' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:95:	MethodArgumentCouldBeFinal: Parameter 'descripcion' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:95:	MethodArgumentCouldBeFinal: Parameter 'descripcion' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:111:	MethodArgumentCouldBeFinal: Parameter 'precio' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:111:	MethodArgumentCouldBeFinal: Parameter 'precio' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:126:	MethodArgumentCouldBeFinal: Parameter 'anio' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:126:	MethodArgumentCouldBeFinal: Parameter 'anio' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:142:	MethodArgumentCouldBeFinal: Parameter 'stock' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:142:	MethodArgumentCouldBeFinal: Parameter 'stock' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:158:	MethodArgumentCouldBeFinal: Parameter 'cantidadVotos' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:158:	MethodArgumentCouldBeFinal: Parameter 'cantidadVotos' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:174:	MethodArgumentCouldBeFinal: Parameter 'cantidadVentas' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:174:	MethodArgumentCouldBeFinal: Parameter 'cantidadVentas' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:190:	MethodArgumentCouldBeFinal: Parameter 'imagenHttp' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:190:	MethodArgumentCouldBeFinal: Parameter 'imagenHttp' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:206:	MethodArgumentCouldBeFinal: Parameter 'categoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:206:	MethodArgumentCouldBeFinal: Parameter 'categoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:222:	MethodArgumentCouldBeFinal: Parameter 'codigoPelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Pelicula.java:222:	MethodArgumentCouldBeFinal: Parameter 'codigoPelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:21:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:21:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:21:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:21:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:21:	DataClass: The class 'TarjetaCredito' is suspected to be a Data Class (WOC=9.091%, NOPA=0, NOAM=10, WMC=10)
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:21:	DataClass: The class 'TarjetaCredito' is suspected to be a Data Class (WOC=9.091%, NOPA=0, NOAM=10, WMC=10)
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:21:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:21:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:27:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:27:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:31:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:31:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:36:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:36:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:42:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:42:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:46:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:46:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:60:	MethodArgumentCouldBeFinal: Parameter 'numeroTarjeta' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:60:	MethodArgumentCouldBeFinal: Parameter 'numeroTarjeta' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:76:	MethodArgumentCouldBeFinal: Parameter 'codigoValidacion' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:76:	MethodArgumentCouldBeFinal: Parameter 'codigoValidacion' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:92:	MethodArgumentCouldBeFinal: Parameter 'fechaVencimiento' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:92:	MethodArgumentCouldBeFinal: Parameter 'fechaVencimiento' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:108:	MethodArgumentCouldBeFinal: Parameter 'propietario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:108:	MethodArgumentCouldBeFinal: Parameter 'propietario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:123:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/TarjetaCredito.java:123:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Tienda.java:6:	UnusedImports: Avoid unused imports such as 'javax.persistence.CascadeType'
+src/main/java/ec/edu/ups/modelo/Tienda.java:6:	UnusedImports: Avoid unused imports such as 'javax.persistence.CascadeType'
+src/main/java/ec/edu/ups/modelo/Tienda.java:11:	UnusedImports: Avoid unused imports such as 'javax.persistence.JoinColumn'
+src/main/java/ec/edu/ups/modelo/Tienda.java:11:	UnusedImports: Avoid unused imports such as 'javax.persistence.JoinColumn'
+src/main/java/ec/edu/ups/modelo/Tienda.java:12:	UnusedImports: Avoid unused imports such as 'javax.persistence.ManyToOne'
+src/main/java/ec/edu/ups/modelo/Tienda.java:12:	UnusedImports: Avoid unused imports such as 'javax.persistence.ManyToOne'
+src/main/java/ec/edu/ups/modelo/Tienda.java:19:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/Tienda.java:19:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/Tienda.java:19:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/modelo/Tienda.java:19:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/modelo/Tienda.java:19:	DataClass: The class 'Tienda' is suspected to be a Data Class (WOC=9.091%, NOPA=0, NOAM=10, WMC=10)
+src/main/java/ec/edu/ups/modelo/Tienda.java:19:	DataClass: The class 'Tienda' is suspected to be a Data Class (WOC=9.091%, NOPA=0, NOAM=10, WMC=10)
+src/main/java/ec/edu/ups/modelo/Tienda.java:19:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/ec/edu/ups/modelo/Tienda.java:19:	MissingSerialVersionUID: Classes implementing Serializable should set a serialVersionUID
+src/main/java/ec/edu/ups/modelo/Tienda.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Tienda.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Tienda.java:27:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Tienda.java:27:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Tienda.java:30:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Tienda.java:30:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Tienda.java:33:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Tienda.java:33:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Tienda.java:37:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Tienda.java:37:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Tienda.java:48:	MethodArgumentCouldBeFinal: Parameter 'idTienda' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Tienda.java:48:	MethodArgumentCouldBeFinal: Parameter 'idTienda' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Tienda.java:60:	MethodArgumentCouldBeFinal: Parameter 'nombre' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Tienda.java:60:	MethodArgumentCouldBeFinal: Parameter 'nombre' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Tienda.java:72:	MethodArgumentCouldBeFinal: Parameter 'direccion' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Tienda.java:72:	MethodArgumentCouldBeFinal: Parameter 'direccion' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Tienda.java:84:	MethodArgumentCouldBeFinal: Parameter 'propietario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Tienda.java:84:	MethodArgumentCouldBeFinal: Parameter 'propietario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Tienda.java:99:	MethodArgumentCouldBeFinal: Parameter 'fechaCreacion' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Tienda.java:99:	MethodArgumentCouldBeFinal: Parameter 'fechaCreacion' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:27:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/Usuario.java:27:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/modelo/Usuario.java:27:	DataClass: The class 'Usuario' is suspected to be a Data Class (WOC=3.704%, NOPA=0, NOAM=26, WMC=26)
+src/main/java/ec/edu/ups/modelo/Usuario.java:27:	DataClass: The class 'Usuario' is suspected to be a Data Class (WOC=3.704%, NOPA=0, NOAM=26, WMC=26)
+src/main/java/ec/edu/ups/modelo/Usuario.java:36:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:36:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:41:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:41:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:46:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:46:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:50:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:50:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:55:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:55:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:60:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:60:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:65:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:65:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:69:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:69:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:73:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:73:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:77:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:77:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:81:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:81:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:85:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:85:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:88:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:88:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/modelo/Usuario.java:103:	MethodArgumentCouldBeFinal: Parameter 'cedula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:103:	MethodArgumentCouldBeFinal: Parameter 'cedula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:120:	MethodArgumentCouldBeFinal: Parameter 'nombre' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:120:	MethodArgumentCouldBeFinal: Parameter 'nombre' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:139:	MethodArgumentCouldBeFinal: Parameter 'apellido' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:139:	MethodArgumentCouldBeFinal: Parameter 'apellido' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:157:	MethodArgumentCouldBeFinal: Parameter 'telefono' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:157:	MethodArgumentCouldBeFinal: Parameter 'telefono' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:175:	MethodArgumentCouldBeFinal: Parameter 'email' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:175:	MethodArgumentCouldBeFinal: Parameter 'email' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:193:	MethodArgumentCouldBeFinal: Parameter 'fechaNacimiento' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:193:	MethodArgumentCouldBeFinal: Parameter 'fechaNacimiento' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:211:	MethodArgumentCouldBeFinal: Parameter 'fechaRegistro' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:211:	MethodArgumentCouldBeFinal: Parameter 'fechaRegistro' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:229:	MethodArgumentCouldBeFinal: Parameter 'user' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:229:	MethodArgumentCouldBeFinal: Parameter 'user' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:247:	MethodArgumentCouldBeFinal: Parameter 'contrasenia' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:247:	MethodArgumentCouldBeFinal: Parameter 'contrasenia' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:265:	MethodArgumentCouldBeFinal: Parameter 'numeroCompra' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:265:	MethodArgumentCouldBeFinal: Parameter 'numeroCompra' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:283:	MethodArgumentCouldBeFinal: Parameter 'dineroGastado' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:283:	MethodArgumentCouldBeFinal: Parameter 'dineroGastado' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:301:	MethodArgumentCouldBeFinal: Parameter 'direccionUsuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:301:	MethodArgumentCouldBeFinal: Parameter 'direccionUsuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:319:	MethodArgumentCouldBeFinal: Parameter 'tipoUsuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/modelo/Usuario.java:319:	MethodArgumentCouldBeFinal: Parameter 'tipoUsuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:1:	PackageCase: Package name contains upper case characters
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:1:	PackageCase: Package name contains upper case characters
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:18:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:18:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:20:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:20:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:20:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:20:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:20:	SingularField: Perhaps 'carrito' could be replaced by a local variable.
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:20:	SingularField: Perhaps 'carrito' could be replaced by a local variable.
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:20:	UnusedPrivateField: Avoid unused private fields such as 'carrito'.
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:20:	UnusedPrivateField: Avoid unused private fields such as 'carrito'.
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:23:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:23:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:23:	UnusedPrivateField: Avoid unused private fields such as 'carritoDAO'.
+src/main/java/ec/edu/ups/negocioBean/CarritoBean.java:23:	UnusedPrivateField: Avoid unused private fields such as 'carritoDAO'.
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:1:	PackageCase: Package name contains upper case characters
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:1:	PackageCase: Package name contains upper case characters
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:4:	UnusedImports: Avoid unused imports such as 'java.util.ArrayList'
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:4:	UnusedImports: Avoid unused imports such as 'java.util.ArrayList'
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:23:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:23:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:25:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:25:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:28:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:28:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:28:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:28:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:50:	MethodArgumentCouldBeFinal: Parameter 'categoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:50:	MethodArgumentCouldBeFinal: Parameter 'categoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:70:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:70:	MethodArgumentCouldBeFinal: Parameter 'id' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:70:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:70:	ShortVariable: Avoid variables with short names like id
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:105:	CommentRequired: Public method and constructor comments are required
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:105:	CommentRequired: Public method and constructor comments are required
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:105:	MethodArgumentCouldBeFinal: Parameter 'categoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java:105:	MethodArgumentCouldBeFinal: Parameter 'categoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:1:	PackageCase: Package name contains upper case characters
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:1:	PackageCase: Package name contains upper case characters
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:19:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:19:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:21:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:21:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:21:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:21:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:21:	SingularField: Perhaps 'direccionEnvio' could be replaced by a local variable.
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:21:	SingularField: Perhaps 'direccionEnvio' could be replaced by a local variable.
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:21:	UnusedPrivateField: Avoid unused private fields such as 'direccionEnvio'.
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:21:	UnusedPrivateField: Avoid unused private fields such as 'direccionEnvio'.
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:24:	UnusedPrivateField: Avoid unused private fields such as 'direccionEnvioDAO'.
+src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java:24:	UnusedPrivateField: Avoid unused private fields such as 'direccionEnvioDAO'.
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:1:	PackageCase: Package name contains upper case characters
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:1:	PackageCase: Package name contains upper case characters
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:19:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:19:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:21:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:21:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:21:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:21:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:21:	SingularField: Perhaps 'facturaCabecera' could be replaced by a local variable.
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:21:	SingularField: Perhaps 'facturaCabecera' could be replaced by a local variable.
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:21:	UnusedPrivateField: Avoid unused private fields such as 'facturaCabecera'.
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:21:	UnusedPrivateField: Avoid unused private fields such as 'facturaCabecera'.
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:24:	LongVariable: Avoid excessively long variable names like facturaCabeceraDAO
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:24:	LongVariable: Avoid excessively long variable names like facturaCabeceraDAO
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:24:	UnusedPrivateField: Avoid unused private fields such as 'facturaCabeceraDAO'.
+src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java:24:	UnusedPrivateField: Avoid unused private fields such as 'facturaCabeceraDAO'.
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:1:	PackageCase: Package name contains upper case characters
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:1:	PackageCase: Package name contains upper case characters
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:19:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:19:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:21:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:21:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:21:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:21:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:21:	SingularField: Perhaps 'facturaDetalle' could be replaced by a local variable.
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:21:	SingularField: Perhaps 'facturaDetalle' could be replaced by a local variable.
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:21:	UnusedPrivateField: Avoid unused private fields such as 'facturaDetalle'.
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:21:	UnusedPrivateField: Avoid unused private fields such as 'facturaDetalle'.
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:24:	UnusedPrivateField: Avoid unused private fields such as 'facturaDetalleDAO'.
+src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java:24:	UnusedPrivateField: Avoid unused private fields such as 'facturaDetalleDAO'.
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:1:	PackageCase: Package name contains upper case characters
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:1:	PackageCase: Package name contains upper case characters
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:11:	UnusedImports: Avoid unused imports such as 'ec.edu.ups.modelo.Categoria'
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:11:	UnusedImports: Avoid unused imports such as 'ec.edu.ups.modelo.Categoria'
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:22:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:22:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:27:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:27:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:27:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:27:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:49:	MethodArgumentCouldBeFinal: Parameter 'pelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:49:	MethodArgumentCouldBeFinal: Parameter 'pelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:58:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:58:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:69:	MethodArgumentCouldBeFinal: Parameter 'idPelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:69:	MethodArgumentCouldBeFinal: Parameter 'idPelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:70:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:70:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:105:	CommentRequired: Public method and constructor comments are required
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:105:	CommentRequired: Public method and constructor comments are required
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:105:	MethodArgumentCouldBeFinal: Parameter 'pelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:105:	MethodArgumentCouldBeFinal: Parameter 'pelicula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:106:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:106:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:106:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:106:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:106:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java:106:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:1:	PackageCase: Package name contains upper case characters
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:1:	PackageCase: Package name contains upper case characters
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:10:	UnusedImports: Avoid unused imports such as 'javax.persistence.Query'
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:10:	UnusedImports: Avoid unused imports such as 'javax.persistence.Query'
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:13:	UnusedImports: Avoid unused imports such as 'ec.edu.ups.modelo.Categoria'
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:13:	UnusedImports: Avoid unused imports such as 'ec.edu.ups.modelo.Categoria'
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:24:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:24:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:26:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:26:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:29:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:29:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:29:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:29:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:51:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:51:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:70:	MethodArgumentCouldBeFinal: Parameter 'cedula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:70:	MethodArgumentCouldBeFinal: Parameter 'cedula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:104:	CommentRequired: Public method and constructor comments are required
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:104:	CommentRequired: Public method and constructor comments are required
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:104:	MethodArgumentCouldBeFinal: Parameter 'cedula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:104:	MethodArgumentCouldBeFinal: Parameter 'cedula' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:108:	CommentRequired: Public method and constructor comments are required
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:108:	CommentRequired: Public method and constructor comments are required
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:108:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java:108:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:21:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:21:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:21:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:21:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:24:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:24:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:24:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:26:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:26:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:26:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:26:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:28:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:28:	BeanMembersShouldSerialize: Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:28:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:28:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:38:	AvoidDuplicateLiterals: The String literal "application/json" appears 9 times in this file; the first occurrence is on line 38
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:38:	AvoidDuplicateLiterals: The String literal "application/json" appears 9 times in this file; the first occurrence is on line 38
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:40:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:40:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:53:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:53:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:68:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:68:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:69:	LocalVariableCouldBeFinal: Local variable 'r' could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:69:	LocalVariableCouldBeFinal: Local variable 'r' could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:69:	ShortVariable: Avoid variables with short names like r
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:69:	ShortVariable: Avoid variables with short names like r
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:71:	LocalVariableCouldBeFinal: Local variable 'aux' could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:71:	LocalVariableCouldBeFinal: Local variable 'aux' could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:72:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:72:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:73:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:73:	LawOfDemeter: Potential violation of Law of Demeter (method chain calls)
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:73:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:73:	LawOfDemeter: Potential violation of Law of Demeter (object not created locally)
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:76:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:76:	OnlyOneReturn: A method should have only one exit point, and that should be the last statement in the method
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:93:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:93:	MethodArgumentCouldBeFinal: Parameter 'usuario' is not assigned and could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:95:	LocalVariableCouldBeFinal: Local variable 'r' could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:95:	LocalVariableCouldBeFinal: Local variable 'r' could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:95:	ShortVariable: Avoid variables with short names like r
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:95:	ShortVariable: Avoid variables with short names like r
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:118:	CommentRequired: Public method and constructor comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:118:	CommentRequired: Public method and constructor comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:119:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:119:	SystemPrintln: System.out.println is used
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:128:	CommentRequired: Public method and constructor comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:128:	CommentRequired: Public method and constructor comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:128:	MethodArgumentCouldBeFinal: Parameter 'categoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:128:	MethodArgumentCouldBeFinal: Parameter 'categoria' is not assigned and could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:130:	LocalVariableCouldBeFinal: Local variable 'r' could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:130:	LocalVariableCouldBeFinal: Local variable 'r' could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:130:	ShortVariable: Avoid variables with short names like r
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:130:	ShortVariable: Avoid variables with short names like r
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:146:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:146:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:146:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:146:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:146:	DataClass: The class 'Respuesta' is suspected to be a Data Class (WOC=14.286%, NOPA=0, NOAM=6, WMC=6)
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:146:	DataClass: The class 'Respuesta' is suspected to be a Data Class (WOC=14.286%, NOPA=0, NOAM=6, WMC=6)
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:148:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:148:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:149:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:149:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:150:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:150:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:154:	MethodArgumentCouldBeFinal: Parameter 'codigo' is not assigned and could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:154:	MethodArgumentCouldBeFinal: Parameter 'codigo' is not assigned and could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:160:	MethodArgumentCouldBeFinal: Parameter 'estado' is not assigned and could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:160:	MethodArgumentCouldBeFinal: Parameter 'estado' is not assigned and could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:166:	MethodArgumentCouldBeFinal: Parameter 'mensaje' is not assigned and could be declared final
+src/main/java/ec/edu/ups/servicios/ServicioProducto.java:166:	MethodArgumentCouldBeFinal: Parameter 'mensaje' is not assigned and could be declared final
+src/main/java/ec/edu/ups/utilidades/Aplicaciones.java:7:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/utilidades/Aplicaciones.java:7:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/utilidades/Aplicaciones.java:7:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/utilidades/Aplicaciones.java:7:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/utilidades/Resources.java:7:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/utilidades/Resources.java:7:	AtLeastOneConstructor: Each class should declare at least one constructor
+src/main/java/ec/edu/ups/utilidades/Resources.java:7:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/utilidades/Resources.java:7:	CommentRequired: Header comments are required
+src/main/java/ec/edu/ups/utilidades/Resources.java:15:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/utilidades/Resources.java:15:	CommentRequired: Field comments are required
+src/main/java/ec/edu/ups/utilidades/Resources.java:15:	ShortVariable: Avoid variables with short names like em
+src/main/java/ec/edu/ups/utilidades/Resources.java:15:	ShortVariable: Avoid variables with short names like em
+src/main/java/ec/edu/ups/utilidades/Resources.java:15:	UnusedPrivateField: Avoid unused private fields such as 'em'.
+src/main/java/ec/edu/ups/utilidades/Resources.java:15:	UnusedPrivateField: Avoid unused private fields such as 'em'.

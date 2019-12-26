@@ -1,204 +1,366 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.3" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
-  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="ec.edu.ups.modelo.Carrito" project="ProyectoAppDis" 
-    file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/Carrito.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="389" width="160" x="121" y="50"/>    
+  realizations="true" associations="true" dependencies="true" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="ec.edu.ups.datos.CategoriaDAO" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/datos/CategoriaDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="687" y="283"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="ec.edu.ups.modelo.Tienda" project="ProyectoAppDis" 
-    file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/Tienda.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="173" width="136" x="831" y="1106"/>    
+  <class id="2" language="java" name="ec.edu.ups.datos.TarjetaCreditoDAO" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/datos/TarjetaCreditoDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="187" width="210" x="375" y="109"/>    
+    <display autosize="false" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="ec.edu.ups.datos.CarritoDAO" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/datos/CarritoDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1038" y="9"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="ec.edu.ups.modelo.Pedido" project="ProyectoAppDis" 
-    file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/Pedido.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="137" width="130" x="831" y="50"/>    
+  <class id="4" language="java" name="ec.edu.ups.datos.FacturaCabeceraDAO" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/datos/FacturaCabeceraDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="122" y="18"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="ec.edu.ups.modelo.DireccionEnvio" project="ProyectoAppDis" 
+  <class id="5" language="java" name="ec.edu.ups.negocioBean.CarritoBean" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/negocioBean/CarritoBean.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1656" y="89"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="6" language="java" name="ec.edu.ups.negocioBean" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/negocioBean" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="590" width="1108" x="1226" y="-41"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="7" language="java" name="ec.edu.ups.modelo" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="2538" width="1851" x="51" y="599"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="8" language="java" name="ec.edu.ups.modelo.DireccionEnvio" project="ProyectoAppDis" 
     file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/DireccionEnvio.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="569" width="178" x="352" y="1106"/>    
+    <position height="-1" width="-1" x="1276" y="1888"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="ec.edu.ups.modelo.Pelicula" project="ProyectoAppDis" 
-    file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/Pelicula.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="245" width="129" x="394" y="479"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="6" language="java" name="ec.edu.ups.modelo.Usuario" project="ProyectoAppDis" 
-    file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/Usuario.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="803" width="199" x="452" y="1715"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="7" language="java" name="ec.edu.ups.modelo.TarjetaCredito" project="ProyectoAppDis" 
-    file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/TarjetaCredito.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="353" width="200" x="570" y="1106"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="8" language="java" name="ec.edu.ups.modelo.FacturaCabecera" project="ProyectoAppDis" 
+  <class id="9" language="java" name="ec.edu.ups.modelo.FacturaCabecera" project="ProyectoAppDis" 
     file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/FacturaCabecera.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="587" width="236" x="574" y="479"/>    
+    <position height="-1" width="-1" x="764" y="1866"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="ec.edu.ups.modelo.Categoria" project="ProyectoAppDis" 
+  <class id="10" language="java" name="ec.edu.ups.modelo.Categoria" project="ProyectoAppDis" 
     file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/Categoria.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="263" width="170" x="142" y="1106"/>    
+    <position height="-1" width="-1" x="1377" y="1435"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="ec.edu.ups.modelo.FacturaDetalle" project="ProyectoAppDis" 
+  <class id="11" language="java" name="ec.edu.ups.datos.PeliculaDAO" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/datos/PeliculaDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="297" y="54"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="ec.edu.ups.modelo.Pedido" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/Pedido.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="262" y="1861"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="ec.edu.ups.negocioBean.DireccionEnvioBean" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/negocioBean/DireccionEnvioBean.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1873" y="273"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="ec.edu.ups.datos.DireccionEnvioDAO" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/datos/DireccionEnvioDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1046" y="105"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="ec.edu.ups.negocioBean.FacturaCabeceraBean" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/negocioBean/FacturaCabeceraBean.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1408" y="92"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="ec.edu.ups.modelo.FacturaDetalle" project="ProyectoAppDis" 
     file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/FacturaDetalle.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="335" width="224" x="484" y="50"/>    
+    <position height="-1" width="-1" x="715" y="1179"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <association id="11">    
-    <bendpoint x="800" y="1106"/>    
+  <class id="17" language="java" name="ec.edu.ups.negocioBean.CategoriaBean" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/negocioBean/CategoriaBean.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1374" y="310"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="ec.edu.ups.modelo.Carrito" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/Carrito.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1743" y="918"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="ec.edu.ups.negocioBean.FacturaDetalleBean" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/negocioBean/FacturaDetalleBean.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1882" y="91"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="ec.edu.ups.negocioBean.PeliculaBean" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/negocioBean/PeliculaBean.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="2123" y="151"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="ec.edu.ups.modelo.Pelicula" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/Pelicula.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1361" y="925"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="ec.edu.ups.modelo.Usuario" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/Usuario.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="968" y="2640"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="23" language="java" name="ec.edu.ups.datos" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/datos" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="94" width="712" x="478" y="477"/>    
+    <display autosize="false" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="24" language="java" name="ec.edu.ups.modelo.TarjetaCredito" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/modelo/TarjetaCredito.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="220" y="2396"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="25" language="java" name="ec.edu.ups.datos.FacturaDetalleDAO" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/datos/FacturaDetalleDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="975" y="215"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="ec.edu.ups.negocioBean.UsuarioBean" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/negocioBean/UsuarioBean.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1632" y="321"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="27" language="java" name="ec.edu.ups.datos.UsuarioDAO" project="ProyectoAppDis" 
+    file="/ProyectoAppDis/src/main/java/ec/edu/ups/datos/UsuarioDAO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="931" y="378"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="28">    
+    <end type="SOURCE" refId="24" navigable="false">      
+      <attribute id="29" name="usuario"/>      
+      <multiplicity id="30" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="31">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="1"/>  
+  </dependency>  
+  <association id="32">    
+    <end type="SOURCE" refId="21" navigable="false">      
+      <attribute id="33" name="categoria"/>      
+      <multiplicity id="34" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="35">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <association id="36">    
     <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="12" name="usuario"/>      
-      <multiplicity id="13" minimum="0" maximum="1"/>    
+      <attribute id="37" name="usuario"/>      
+      <multiplicity id="38" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
+    <end type="TARGET" refId="22" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="14">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="15" name="fCabecera"/>      
-      <multiplicity id="16" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="17">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="18" name="pelicula"/>      
-      <multiplicity id="19" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="20">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="21" name="tarjetaCredito"/>      
-      <multiplicity id="22" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="23">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="24" name="categoria"/>      
-      <multiplicity id="25" minimum="0" maximum="1"/>    
+  <association id="39">    
+    <end type="SOURCE" refId="12" navigable="false">      
+      <attribute id="40" name="facturaCabecera"/>      
+      <multiplicity id="41" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="26">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="27" name="usuario"/>      
-      <multiplicity id="28" minimum="0" maximum="1"/>    
+  <association id="42">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="43" name="fCabecera"/>      
+      <multiplicity id="44" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
+    <end type="TARGET" refId="9" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="29">    
-    <bendpoint x="111" y="479"/>    
-    <bendpoint x="111" y="1106"/>    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="30" name="usuario"/>      
-      <multiplicity id="31" minimum="0" maximum="1"/>    
+  <dependency id="45">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="4"/>  
+  </dependency>  
+  <dependency id="46">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="25"/>  
+  </dependency>  
+  <association id="47">    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="48" name="pelicula"/>      
+      <multiplicity id="49" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
+    <end type="TARGET" refId="21" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="32">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="33" name="facturaCabecera"/>      
-      <multiplicity id="34" minimum="0" maximum="1"/>    
+  <dependency id="50">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="51">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="27"/>  
+  </dependency>  
+  <association id="52">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="53" name="usuario"/>      
+      <multiplicity id="54" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="22" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="55">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <association id="56">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="57" name="direccionEnvio"/>      
+      <multiplicity id="58" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="8" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="35">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="36" name="tienda"/>      
-      <multiplicity id="37" minimum="0" maximum="1"/>    
+  <association id="59">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="60" name="tarjetaCredito"/>      
+      <multiplicity id="61" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="24" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="38">    
-    <bendpoint x="840" y="479"/>    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="39" name="tienda"/>      
-      <multiplicity id="40" minimum="0" maximum="1"/>    
+  <dependency id="62">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <association id="63">    
+    <bendpoint x="724" y="924"/>    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="64" name="pelicula"/>      
+      <multiplicity id="65" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
+    <end type="TARGET" refId="21" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="41">    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="42" name="direccionEnvio"/>      
-      <multiplicity id="43" minimum="0" maximum="1"/>    
+  <association id="66">    
+    <bendpoint x="1742" y="2602"/>    
+    <end type="SOURCE" refId="18" navigable="false">      
+      <attribute id="67" name="usuario"/>      
+      <multiplicity id="68" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="4" navigable="true"/>    
+    <end type="TARGET" refId="22" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="44">    
-    <end type="SOURCE" refId="4" navigable="false">      
-      <attribute id="45" name="usuario"/>      
-      <multiplicity id="46" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="47">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="48" name="pelicula"/>      
-      <multiplicity id="49" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
+  <dependency id="69">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="3"/>  
+  </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

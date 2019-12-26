@@ -36,6 +36,11 @@ public class Tienda implements Serializable{
 	@Column(name = "tie_fcreacion")
 	private Date fechaCreacion;
 
+	
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public int getIdTienda() {
 		return idTienda;
 	}
@@ -44,6 +49,10 @@ public class Tienda implements Serializable{
 		this.idTienda = idTienda;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public String getNombre() {
 		return nombre;
 	}
@@ -52,6 +61,10 @@ public class Tienda implements Serializable{
 		this.nombre = nombre;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public String getDireccion() {
 		return direccion;
 	}
@@ -60,6 +73,10 @@ public class Tienda implements Serializable{
 		this.direccion = direccion;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public String getPropietario() {
 		return propietario;
 	}
@@ -68,10 +85,17 @@ public class Tienda implements Serializable{
 		this.propietario = propietario;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public Date getFechaCreacion() {
 		return fechaCreacion;
 	}
-
+/**
+ * Metodo que setea un valor en un atributo
+ * @param fechaCreacion el valor del atributo en cuestion
+ */
 	public void setFechaCreacion(Date fechaCreacion) {
 		this.fechaCreacion = fechaCreacion;
 	}

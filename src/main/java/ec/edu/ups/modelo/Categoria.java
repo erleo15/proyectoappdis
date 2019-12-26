@@ -11,9 +11,20 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+/**
+ * Clase para administrar los datos de la entidad categoria
+ * a nivel de objetos
+ * @author erleo15
+ *
+ */
 @Entity(name="tie_categoria")
 @Table(name="tie_categoria")
 public class Categoria implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 4539278146825404479L;
 
 	@Id
 	@GeneratedValue
@@ -30,26 +41,49 @@ public class Categoria implements Serializable{
 	@Column(name = "cat_descripcion")
 	private String descripcion;
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto en cuestion
+	 */
 	public int getIdCategoria() {
 		return idCategoria;
 	}
-
+	/**
+	 * Metodo que setea el valor de dicho objeto en la clase
+	 * @param idCategoria es el valor del atributo en cuestion
+	 */
 	public void setIdCategoria(int idCategoria) {
 		this.idCategoria = idCategoria;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto en cuestion
+	 */
 	public String getNombre() {
 		return nombre;
 	}
 
+	/**
+	 * Metodo que setea el valor de dicho objeto en la clase
+	 * @param nombre es el valor del atributo en cuestion
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto en cuestion
+	 */
 	public String getDescripcion() {
 		return descripcion;
 	}
 
+	/**
+	 * Metodo que setea el valor de dicho objeto en la clase
+	 * @param descripcion es el valor del atributo en cuestion
+	 */
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}

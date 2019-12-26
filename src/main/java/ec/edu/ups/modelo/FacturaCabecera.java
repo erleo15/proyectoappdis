@@ -55,82 +55,162 @@ public class FacturaCabecera implements Serializable{
 	@JoinColumn(name = "fcab_dir_id",referencedColumnName = "dir_id")
 	private DireccionEnvio direccionEnvio;
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public String getNumeroFactura() {
 		return numeroFactura;
 	}
 
+	/**
+	 * Metodo que setea un valor en un atributo
+	 * @param numeroFactura el valor del atributo en cuestion
+	 */
 	public void setNumeroFactura(String numeroFactura) {
 		this.numeroFactura = numeroFactura;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public Date getFecha() {
 		return fecha;
 	}
 
+	/**
+	 * Metodo que setea un valor en un atributo
+	 * @param fecha el valor del atributo en cuestion
+	 */
 	public void setFecha(Date fecha) {
 		this.fecha = fecha;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public double getSubtotal() {
 		return subtotal;
 	}
 
+	/**
+	 * Metodo que setea un valor en un atributo
+	 * @param subtotal el valor del atributo en cuestion
+	 */
 	public void setSubtotal(double subtotal) {
 		this.subtotal = subtotal;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public double getDescuento() {
 		return descuento;
 	}
 
+	/**
+	 * Metodo que setea un valor en un atributo
+	 * @param descuento el valor del atributo en cuestion
+	 */
 	public void setDescuento(double descuento) {
 		this.descuento = descuento;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public double getIva() {
 		return iva;
 	}
 
+	/**
+	 * Metodo que setea un valor en un atributo
+	 * @param iva el valor del atributo en cuestion
+	 */
 	public void setIva(double iva) {
 		this.iva = iva;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public double getTotal() {
 		return total;
 	}
 
+	/**
+	 * Metodo que setea un valor en un atributo
+	 * @param total el valor del atributo en cuestion
+	 */
 	public void setTotal(double total) {
 		this.total = total;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public String getEstado() {
 		return estado;
 	}
-
+	
+	/**
+	 * Metodo que setea un valor en un atributo
+	 * @param estado el valor del atributo en cuestion
+	 */
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public Usuario getUsuario() {
 		return usuario;
 	}
 
+	/**
+	 * Metodo que setea un valor en un atributo
+	 * @param usuario el valor del atributo en cuestion
+	 */
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public TarjetaCredito getTarjetaCredito() {
 		return tarjetaCredito;
 	}
 
+	/**
+	 * Metodo que setea un valor en un atributo
+	 * @param tarjetaCredito el valor del atributo en cuestion
+	 */
 	public void setTarjetaCredito(TarjetaCredito tarjetaCredito) {
 		this.tarjetaCredito = tarjetaCredito;
 	}
 
+	/**
+	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * @return el objeto buscado
+	 */
 	public DireccionEnvio getDireccionEnvio() {
 		return direccionEnvio;
 	}
 
+	/**
+	 * Metodo que setea un valor en un atributo
+	 * @param direccionEnvio el valor del atributo en cuestion
+	 */
 	public void setDireccionEnvio(DireccionEnvio direccionEnvio) {
 		this.direccionEnvio = direccionEnvio;
 	}

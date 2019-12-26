@@ -8,6 +8,12 @@ import javax.inject.Inject;
 import ec.edu.ups.datos.FacturaDetalleDAO;
 import ec.edu.ups.modelo.FacturaDetalle;
 
+/**
+ * Clse que administra desde la vista 
+ * la clase en cuestion
+ * @author erleo15
+ *
+ */
 @ManagedBean
 @ViewScoped
 public class FacturaDetalleBean {
@@ -17,6 +23,9 @@ public class FacturaDetalleBean {
 	@Inject
 	private FacturaDetalleDAO facturaDetalleDAO;
 	
+	/**
+	 * Metodo que inicializalos los objetos modelos
+	 */
 	@PostConstruct
 	public void init() {
 		facturaDetalle = new FacturaDetalle();
