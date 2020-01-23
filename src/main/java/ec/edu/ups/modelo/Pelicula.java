@@ -2,19 +2,16 @@ package ec.edu.ups.modelo;
 
 import java.io.Serializable;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.Id; 
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty; 
 
-@Entity(name="tie_pelicula")
+@Entity
 @Table(name="tie_pelicula")
 public class Pelicula implements Serializable{
 	
@@ -59,9 +56,11 @@ public class Pelicula implements Serializable{
 	private String imagenHttp;
 	
 	
-	@ManyToOne(cascade = {CascadeType.ALL}) 
-	@JoinColumn(name = "pel_cat_id",referencedColumnName = "cat_id")
-	private Categoria categoria;
+	@NotNull
+	@Column(name = "pel_cat_id")
+	private int idCategoria;
+	
+	
 	
 
 	/**
@@ -191,21 +190,7 @@ public class Pelicula implements Serializable{
 		this.imagenHttp = imagenHttp;
 	}
 
-	/**
-	 * Metodo que obtiene el objeto en cuestion de la clase
-	 * @return el objeto buscado
-	 */
-	public Categoria getCategoria() {
-		return categoria;
-	}
-
-	/**
-	 * Metodo que setea un valor en un atributo
-	 * @param categoria el valor del atributo en cuestion
-	 */
-	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
-	}
+	 
 
 	/**
 	 * Metodo que obtiene el objeto en cuestion de la clase
@@ -223,13 +208,22 @@ public class Pelicula implements Serializable{
 		this.codigoPelicula = codigoPelicula;
 	}
 
+	public int getIdCategoria() {
+		return idCategoria;
+	}
+
+	public void setIdCategoria(int idCategoria) {
+		this.idCategoria = idCategoria;
+	}
+
 	@Override
 	public String toString() {
 		return "Pelicula [codigoPelicula=" + codigoPelicula + ", nombre=" + nombre + ", descripcion=" + descripcion
 				+ ", precio=" + precio + ", anio=" + anio + ", stock=" + stock + ", cantidadVotos=" + cantidadVotos
-				+ ", cantidadVentas=" + cantidadVentas + ", imagenHttp=" + imagenHttp + ", categoria=" + categoria
+				+ ", cantidadVentas=" + cantidadVentas + ", imagenHttp=" + imagenHttp + ", idCategoria=" + idCategoria
 				+ "]";
 	}
+
 	
 
 	

@@ -73,7 +73,7 @@ public class UsuarioDAO {
 	 * @return una lista con todos los resultados
 	 */
 	public List<Usuario> list(){    
-		return  em.createQuery("SELECT c from tie_usuario c", Usuario.class).getResultList(); 
+		return  em.createQuery("SELECT c from Usuario c", Usuario.class).getResultList(); 
 	}
 
 }

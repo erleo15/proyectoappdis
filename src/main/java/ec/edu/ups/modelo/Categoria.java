@@ -1,11 +1,16 @@
 package ec.edu.ups.modelo;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -17,7 +22,7 @@ import org.hibernate.validator.constraints.NotEmpty;
  * @author erleo15
  *
  */
-@Entity(name="tie_categoria")
+@Entity
 @Table(name="tie_categoria")
 public class Categoria implements Serializable{
 
@@ -40,6 +45,10 @@ public class Categoria implements Serializable{
 	@NotEmpty
 	@Column(name = "cat_descripcion")
 	private String descripcion;
+	
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+	@JoinColumn(name = "pel_cat_id")
+	private List<Pelicula> listaPeliculas;
 
 	/**
 	 * Metodo que obtiene el objeto en cuestion de la clase
@@ -87,10 +96,18 @@ public class Categoria implements Serializable{
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-
+	public List<Pelicula> getListaPeliculas() {
+		return listaPeliculas;
+	}
+	public void setListaPeliculas(List<Pelicula> listaPeliculas) {
+		this.listaPeliculas = listaPeliculas;
+	}
 	@Override
 	public String toString() {
-		return "Categoria [idCategoria=" + idCategoria + ", nombre=" + nombre + ", descripcion=" + descripcion + "]";
-	} 
+		return "Categoria [idCategoria=" + idCategoria + ", nombre=" + nombre + ", descripcion=" + descripcion
+				+ ", listaPeliculas=" + listaPeliculas + "]";
+	}
+	
+	
 	
 }

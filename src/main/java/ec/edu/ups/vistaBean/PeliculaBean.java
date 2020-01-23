@@ -1,4 +1,4 @@
-package ec.edu.ups.negocioBean;
+package ec.edu.ups.vistaBean;
 
 import java.util.List;
 
@@ -7,8 +7,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.inject.Inject;
 
-import ec.edu.ups.datos.PeliculaDAO;
-import ec.edu.ups.modelo.Categoria;
+import ec.edu.ups.datos.PeliculaDAO; 
 import ec.edu.ups.modelo.Pelicula; 
 
 /**
@@ -24,7 +23,7 @@ public class PeliculaBean {
 	private Pelicula pelicula; 
 	
 	@Inject
-	private PeliculaDAO peliculaDAO;
+	private PeliculaDAO pl;
 	
 	/**
 	 * Metodo que inicializalos los objetos modelos
@@ -56,7 +55,7 @@ public class PeliculaBean {
 	  */
 	public String guardarPelicula() {
 		System.out.println("crear pelicula: "+pelicula);
-		peliculaDAO.insert(pelicula);
+		pl.insert(pelicula);
 		return null;
 	}
 	
@@ -68,7 +67,7 @@ public class PeliculaBean {
 	 */
 	public String eliminarPelicula(int idPelicula) { 
 		System.out.println(idPelicula+" vamo a ver");
-		peliculaDAO.delete(idPelicula);
+		pl.delete(idPelicula);
 		return null;
 	}
 	
@@ -78,7 +77,7 @@ public class PeliculaBean {
 	 * @return una cadena que redirecciona
 	 */
 	public String actualizarPelicula() {
-		peliculaDAO.update(pelicula);
+		pl.update(pelicula);
 		return null;
 	}
 	
@@ -88,7 +87,7 @@ public class PeliculaBean {
 	 * @return el objeto encontrado
 	 */
 	public Pelicula buscarPelicula() {
-		this.pelicula= peliculaDAO.find(pelicula.getCodigoPelicula()); 
+		this.pelicula= pl.find(pelicula.getCodigoPelicula()); 
 		return pelicula;
 	}
 	
@@ -99,12 +98,12 @@ public class PeliculaBean {
 	 * clase en cuestion
 	 */
 	public List<Pelicula> listarPelicula() {   	
-		return peliculaDAO.list();
+		return pl.list();
 	}
 
 	public boolean guardarPelicula(Pelicula pelicula) {
-		System.out.println("crear pelicula: "+pelicula.getCategoria().getIdCategoria());
-		return peliculaDAO.insert(pelicula);
+		System.out.println("crear pelicula: "+pelicula.getIdCategoria());
+		return pl.insert(pelicula);
 		
 	}
 

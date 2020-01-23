@@ -1,4 +1,4 @@
-package ec.edu.ups.negocioBean;
+package ec.edu.ups.vistaBean;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;

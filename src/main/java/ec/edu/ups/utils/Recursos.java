@@ -1,20 +1,14 @@
-package ec.edu.ups.utilidades; 
+package ec.edu.ups.utils;
 
 import javax.enterprise.inject.Produces;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-public class Resources {
+public class Recursos {
 
 	
-
+	@Produces
+	@PersistenceContext
+	private EntityManager em;
 	
-		
-		@Produces
-		@PersistenceContext
-		private EntityManager em;
-		
-	
-	
-
 }

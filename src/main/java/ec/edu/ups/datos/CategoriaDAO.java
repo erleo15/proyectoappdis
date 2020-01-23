@@ -13,7 +13,7 @@ import ec.edu.ups.modelo.Categoria;
 public class CategoriaDAO {
 	
 	@Inject
-	EntityManager em;
+	private EntityManager em;
 	
 	/**
 	 * Metodo que inserta un nuevo objeto de la clase 
@@ -70,7 +70,13 @@ public class CategoriaDAO {
 	 * @return una lista con todos los resultados
 	 */
 	public List<Categoria> list(){  
-		return em.createQuery("SELECT c from tie_categoria c", Categoria.class).getResultList();
+		return em.createQuery("SELECT c from Categoria c", Categoria.class).getResultList();
+	}
+	
+	public int getLastIdCategoria() {
+		String jpql = "Select MAX(e.idCategoria) from Categoria e";
+		Query q = em.createQuery(jpql, Integer.class);
+		return (int) q.getSingleResult();
 	}
 
 }

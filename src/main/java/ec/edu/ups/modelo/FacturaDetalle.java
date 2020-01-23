@@ -5,15 +5,22 @@ import java.io.Serializable;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
-@Entity(name="tie_fdetalle")
+@Entity
 @Table(name="tie_fdetalle")
 public class FacturaDetalle implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 3958982004501004158L;
 
 	@Id
 	@GeneratedValue
@@ -26,13 +33,15 @@ public class FacturaDetalle implements Serializable{
 	@Column(name="fdet_total")
 	private int totalFDet;
 	
-	@ManyToOne(cascade = {CascadeType.ALL}) 
-	@JoinColumn(name = "fdet_fcab_num_factura",referencedColumnName = "fcab_num_factura")
-	private FacturaCabecera fCabecera;
+	@NotNull
+	@Column(name="fdet_fcab_num_factura")
+	private String numeroFactura;
 	
-	@ManyToOne(cascade = {CascadeType.ALL}) 
-	@JoinColumn(name = "fdet_pel_id",referencedColumnName = "pel_id")
+	@NotNull
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@JoinColumn(name="fdet_pel_id")
 	private Pelicula pelicula;
+	
 
 	/**
 	 * Metodo que obtiene el objeto en cuestion de la clase
@@ -82,34 +91,18 @@ public class FacturaDetalle implements Serializable{
 		this.totalFDet = totalFDet;
 	}
 
-	/**
-	 * Metodo que obtiene el objeto en cuestion de la clase
-	 * @return el objeto buscado
-	 */
-	public FacturaCabecera getfCabecera() {
-		return fCabecera;
-	}
-	/**
-	 * Metodo que setea un valor en un atributo
-	 * @param fCabecera el valor del atributo en cuestion
-	 */
-
-	public void setfCabecera(FacturaCabecera fCabecera) {
-		this.fCabecera = fCabecera;
+	public String getNumeroFactura() {
+		return numeroFactura;
 	}
 
-	/**
-	 * Metodo que obtiene el objeto en cuestion de la clase
-	 * @return el objeto buscado
-	 */
+	public void setNumeroFactura(String numeroFactura) {
+		this.numeroFactura = numeroFactura;
+	}
+
 	public Pelicula getPelicula() {
 		return pelicula;
 	}
 
-	/**
-	 * Metodo que setea un valor en un atributo
-	 * @param pelicula el valor del atributo en cuestion
-	 */
 	public void setPelicula(Pelicula pelicula) {
 		this.pelicula = pelicula;
 	}
@@ -117,10 +110,11 @@ public class FacturaDetalle implements Serializable{
 	@Override
 	public String toString() {
 		return "FacturaDetalle [numFDetalle=" + numFDetalle + ", cantidad=" + cantidad + ", totalFDet=" + totalFDet
-				+ ", fCabecera=" + fCabecera + ", pelicula=" + pelicula + "]";
+				+ ", numeroFactura=" + numeroFactura + ", pelicula=" + pelicula + "]";
 	}
 
-	
 
+
+	 
 	 
 }

@@ -13,9 +13,9 @@ import javax.ws.rs.Produces;
 import ec.edu.ups.modelo.Categoria;
 import ec.edu.ups.modelo.Pelicula;
 import ec.edu.ups.modelo.Usuario;
-import ec.edu.ups.negocioBean.CategoriaBean;
-import ec.edu.ups.negocioBean.PeliculaBean;
-import ec.edu.ups.negocioBean.UsuarioBean;
+import ec.edu.ups.vistaBean.CategoriaBean;
+import ec.edu.ups.vistaBean.PeliculaBean;
+import ec.edu.ups.vistaBean.UsuarioBean;
 
 @Path("/servicios")
 public class ServicioProducto {

@@ -5,6 +5,7 @@ import java.util.List;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 import ec.edu.ups.modelo.Pelicula;
 import ec.edu.ups.modelo.Usuario;
@@ -70,7 +71,14 @@ public class PeliculaDAO {
 	 * @return una lista con todos los resultados
 	 */
 	public List<Pelicula> list(){    
-		return  em.createQuery("SELECT c from tie_pelicula c", Pelicula.class).getResultList(); 
+		return  em.createQuery("SELECT c from Pelicula c", Pelicula.class).getResultList(); 
 	}
+	
+	public int getLastNumeroDetalle() {
+		String jpql = "Select MAX(e.codigoPelicula) from Pelicula e";
+		Query q = em.createQuery(jpql, Integer.class);
+		return  (int)q.getSingleResult();
+	}
+	
 	
 }

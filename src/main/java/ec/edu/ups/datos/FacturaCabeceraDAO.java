@@ -3,19 +3,30 @@ package ec.edu.ups.datos;
 import java.util.List;
 
 import javax.ejb.Stateless;
-
-import ec.edu.ups.modelo.Carrito;
+import javax.inject.Inject;
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+ 
 import ec.edu.ups.modelo.FacturaCabecera;
 
 @Stateless
 public class FacturaCabeceraDAO {
 
+	@Inject
+	private EntityManager em;
 	/**
 	 * metodo que inserta el objeto de esta clase en la base
 	 * 
 	 * @param objeto es la instancia de la clase en cuestiopn a administrar
 	 */
-	public void insert(Carrito objeto) {
+	public boolean insert(FacturaCabecera facturaCabecera) {
+		try {
+			em.persist(facturaCabecera);
+			return true;
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		return false;
 		
 	}
 	
@@ -24,8 +35,8 @@ public class FacturaCabeceraDAO {
 	 * 
 	 * @param id es la instancia de la clase en cuestiopn a administrar
 	 */
-	public void actualizar(int id) {
-		
+	public void actualizar(FacturaCabecera facturaCabecera) {
+		em.merge(facturaCabecera);
 	}
 	
 	/**
@@ -33,8 +44,8 @@ public class FacturaCabeceraDAO {
 	 * @param id es la instancia de la clase en cuestiopn a administrar
 	 * @return retorna un objeto a la clase
 	 */
-	public FacturaCabecera find(int id ) {
-		return null;
+	public FacturaCabecera find(String numeroFactura ) {
+		return em.find(FacturaCabecera.class, numeroFactura);
 	}
 	
 	/**
@@ -43,6 +54,13 @@ public class FacturaCabeceraDAO {
 	 * @return una lista con todos los resultados
 	 */
 	public List<FacturaCabecera> list(){
-		return null;
+		 
+			return em.createQuery("SELECT c from FacturaCabecera c", FacturaCabecera.class).getResultList();
+		}
+		
+	public String getLastNumeroCategoria() {
+		String jpql = "Select MAX(e.numeroFactura) from FacturaCabecera e";
+		Query q = em.createQuery(jpql, Integer.class);
+		return  q.getSingleResult().toString();
 	}
 }

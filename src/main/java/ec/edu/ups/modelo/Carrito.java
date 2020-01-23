@@ -3,13 +3,10 @@ package ec.edu.ups.modelo;
 import java.io.Serializable;
 import java.util.Date;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType; 
@@ -20,9 +17,14 @@ import javax.persistence.TemporalType;
  * @author erleo15
  *
  */
-@Entity(name="tie_carrito")
+@Entity
 @Table(name="tie_carrito")
 public class Carrito implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 9206737450519557902L;
 
 	@Id
 	@GeneratedValue
@@ -40,16 +42,12 @@ public class Carrito implements Serializable{
 	private Date fecha;
 	
 	
-	@ManyToOne(cascade = {CascadeType.ALL}) 
-	@JoinColumn(name = "car_pel_id",referencedColumnName = "pel_id")
-	private Pelicula pelicula;
- 
- 
+	@Column(name = "car_pel_id")
+	private int idPelicula;
+  
 	
-	@ManyToOne(cascade = {CascadeType.ALL}) 
-	@JoinColumn(name = "car_usu_cedula",referencedColumnName = "usu_cedula")
-	private Usuario usuario;
-
+	@Column(name = "car_usu_cedula")
+	private String cedulaUsuario;
 
 
 	/**
@@ -124,48 +122,30 @@ public class Carrito implements Serializable{
 	}
 
 
-	/**
-	 * Metodo que obtiene el objeto en cuestion de la clase
-	 * @return el objeto en cuestion
-	 */
-	public Pelicula getPelicula() {
-		return pelicula;
+	public int getIdPelicula() {
+		return idPelicula;
 	}
 
 
-	/**
-	 * Metodo que setea el valor de dicho objeto en la clase
-	 * @param pelicula es el valor del atributo en cuestion
-	 */
-	public void setPelicula(Pelicula pelicula) {
-		this.pelicula = pelicula;
+	public void setIdPelicula(int idPelicula) {
+		this.idPelicula = idPelicula;
 	}
 
 
-	/**
-	 * Metodo que obtiene el objeto en cuestion de la clase
-	 * @return el objeto en cuestion
-	 */
-	public Usuario getUsuario() {
-		return usuario;
+	public String getCedulaUsuario() {
+		return cedulaUsuario;
 	}
 
 
-
-	/**
-	 * Metodo que setea el valor de dicho objeto en la clase
-	 * @param usuario es el valor del atributo en cuestion
-	 */
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	public void setCedulaUsuario(String cedulaUsuario) {
+		this.cedulaUsuario = cedulaUsuario;
 	}
-
 
 
 	@Override
 	public String toString() {
 		return "Carrito [idCarrito=" + idCarrito + ", cantidad=" + cantidad + ", totalCarrito=" + totalCarrito
-				+ ", fecha=" + fecha + ", pelicula=" + pelicula + ", usuario=" + usuario + "]";
+				+ ", fecha=" + fecha + ", idPelicula=" + idPelicula + ", cedulaUsuario=" + cedulaUsuario + "]";
 	}
 	
 	

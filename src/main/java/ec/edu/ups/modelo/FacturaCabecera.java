@@ -2,31 +2,39 @@ package ec.edu.ups.modelo;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 
-@Entity(name="tie_fcabecera")
+@Entity
 @Table(name="tie_fcabecera")
 public class FacturaCabecera implements Serializable{
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1569947904429904117L;
+
 	@Id
+	@GeneratedValue
 	@Column(name="fcab_num_factura")
 	private String numeroFactura;
 	
 	@NotNull
 	@Column(name="fcab_fecha")
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date fecha;
-	
+	private Date fecha; 
 	
 	@Column(name="fcab_subtotal",precision = 2)
 	private double subtotal;
@@ -43,17 +51,20 @@ public class FacturaCabecera implements Serializable{
 	@Column(name="fcab_estado")
 	private String estado;
 	
-	@ManyToOne(cascade = {CascadeType.ALL}) 
-	@JoinColumn(name = "fcab_usu_id",referencedColumnName = "usu_cedula")
-	private Usuario usuario;
+	@Column(name = "fcab_numero_tarjeta")
+	private String  numeroTarjetaCredito;
 	
-	@ManyToOne(cascade = {CascadeType.ALL}) 
-	@JoinColumn(name = "fcab_tar_numero",referencedColumnName = "tar_numero")
-	private TarjetaCredito tarjetaCredito;
+	@Column(name = "fcab_direccion")
+	private String direccionEnvio;
 	
-	@ManyToOne(cascade = {CascadeType.ALL}) 
-	@JoinColumn(name = "fcab_dir_id",referencedColumnName = "dir_id")
-	private DireccionEnvio direccionEnvio;
+	@Column(name = "fcab_usu_cedula")
+	private String cedulaUsuario;
+	 
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinColumn(name = "fdet_fcab_num_factura")
+	private List<FacturaDetalle> listaFacturaDetalle;
+	 
+	
 
 	/**
 	 * Metodo que obtiene el objeto en cuestion de la clase
@@ -171,39 +182,23 @@ public class FacturaCabecera implements Serializable{
 	 * Metodo que obtiene el objeto en cuestion de la clase
 	 * @return el objeto buscado
 	 */
-	public Usuario getUsuario() {
-		return usuario;
+	public String getCedulaUsuario() {
+		return cedulaUsuario;
 	}
 
 	/**
 	 * Metodo que setea un valor en un atributo
 	 * @param usuario el valor del atributo en cuestion
 	 */
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
+	public void setCedulaUsuario(String cedulaUsuario) {
+		this.cedulaUsuario = cedulaUsuario;
 	}
 
 	/**
 	 * Metodo que obtiene el objeto en cuestion de la clase
 	 * @return el objeto buscado
 	 */
-	public TarjetaCredito getTarjetaCredito() {
-		return tarjetaCredito;
-	}
-
-	/**
-	 * Metodo que setea un valor en un atributo
-	 * @param tarjetaCredito el valor del atributo en cuestion
-	 */
-	public void setTarjetaCredito(TarjetaCredito tarjetaCredito) {
-		this.tarjetaCredito = tarjetaCredito;
-	}
-
-	/**
-	 * Metodo que obtiene el objeto en cuestion de la clase
-	 * @return el objeto buscado
-	 */
-	public DireccionEnvio getDireccionEnvio() {
+	public String getDireccionEnvio() {
 		return direccionEnvio;
 	}
 
@@ -211,19 +206,33 @@ public class FacturaCabecera implements Serializable{
 	 * Metodo que setea un valor en un atributo
 	 * @param direccionEnvio el valor del atributo en cuestion
 	 */
-	public void setDireccionEnvio(DireccionEnvio direccionEnvio) {
+	public void setDireccionEnvio(String direccionEnvio) {
 		this.direccionEnvio = direccionEnvio;
+	}
+
+	public String getNumeroTarjetaCredito() {
+		return numeroTarjetaCredito;
+	}
+
+	public void setNumeroTarjetaCredito(String numeroTarjetaCredito) {
+		this.numeroTarjetaCredito = numeroTarjetaCredito;
+	}
+
+	public List<FacturaDetalle> getListaFacturaDetalle() {
+		return listaFacturaDetalle;
+	}
+
+	public void setListaFacturaDetalle(List<FacturaDetalle> listaFacturaDetalle) {
+		this.listaFacturaDetalle = listaFacturaDetalle;
 	}
 
 	@Override
 	public String toString() {
 		return "FacturaCabecera [numeroFactura=" + numeroFactura + ", fecha=" + fecha + ", subtotal=" + subtotal
-				+ ", descuento=" + descuento + ", iva=" + iva + ", total=" + total + ", estado=" + estado + ", usuario="
-				+ usuario + ", tarjetaCredito=" + tarjetaCredito + ", direccionEnvio=" + direccionEnvio + "]";
+				+ ", descuento=" + descuento + ", iva=" + iva + ", total=" + total + ", estado=" + estado
+				+ ", numeroTarjetaCredito=" + numeroTarjetaCredito + ", direccionEnvio=" + direccionEnvio
+				+ ", cedulaUsuario=" + cedulaUsuario + ", listaFacturaDetalle=" + listaFacturaDetalle + "]";
 	}
-	
-	
- 
 
 	 
 }
