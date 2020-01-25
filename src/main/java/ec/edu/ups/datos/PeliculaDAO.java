@@ -7,8 +7,7 @@ import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
-import ec.edu.ups.modelo.Pelicula;
-import ec.edu.ups.modelo.Usuario;
+import ec.edu.ups.modelo.Pelicula; 
 
 @Stateless
 public class PeliculaDAO {
@@ -39,8 +38,14 @@ public class PeliculaDAO {
 	 * @param id Representa la la primary key 
 	 * de la tabla para que elimine el objeto
 	 */
-	public void delete(int id) {
+	public boolean delete(int id) {
+		try {
 		em.remove(find(id));
+		return true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 	
 	/**
@@ -48,10 +53,14 @@ public class PeliculaDAO {
 	 * 
 	 * @param pelicula es la instancia de la clase en cuestiopn a administrar
 	 */
-	public void update(Pelicula pelicula) {
-	
-		em.remove(em.find(Pelicula.class, pelicula.getCodigoPelicula()));
-		em.persist(pelicula);
+	public boolean update(Pelicula pelicula) {
+	try {
+		em.merge(pelicula);
+		return true;
+	}catch (Exception e){
+		e.printStackTrace();
+		return false;
+	}
 		
 	}
 	

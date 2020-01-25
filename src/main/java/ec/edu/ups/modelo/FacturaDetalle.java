@@ -31,11 +31,11 @@ public class FacturaDetalle implements Serializable{
 	private int cantidad;
 	
 	@Column(name="fdet_total")
-	private int totalFDet;
+	private double totalFDet;
 	
 	@NotNull
 	@Column(name="fdet_fcab_num_factura")
-	private String numeroFactura;
+	private int numeroFactura;
 	
 	@NotNull
 	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
@@ -79,7 +79,7 @@ public class FacturaDetalle implements Serializable{
 	 * Metodo que obtiene el objeto en cuestion de la clase
 	 * @return el objeto buscado
 	 */
-	public int getTotalFDet() {
+	public double getTotalFDet() {
 		return totalFDet;
 	}
 
@@ -87,15 +87,15 @@ public class FacturaDetalle implements Serializable{
 	 * Metodo que setea un valor en un atributo
 	 * @param totalFDet el valor del atributo en cuestion
 	 */
-	public void setTotalFDet(int totalFDet) {
+	public void setTotalFDet(double totalFDet) {
 		this.totalFDet = totalFDet;
 	}
 
-	public String getNumeroFactura() {
+	public int getNumeroFactura() {
 		return numeroFactura;
 	}
 
-	public void setNumeroFactura(String numeroFactura) {
+	public void setNumeroFactura(int numeroFactura) {
 		this.numeroFactura = numeroFactura;
 	}
 

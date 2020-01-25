@@ -4,10 +4,7 @@ import java.util.List;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
-
-import ec.edu.ups.modelo.Categoria;
+import javax.persistence.EntityManager; 
 import ec.edu.ups.modelo.Usuario;
 
 
@@ -40,8 +37,14 @@ public class UsuarioDAO {
 	 * @param cedula Representa la la primary key 
 	 * de la tabla para que elimine el objeto
 	 */
-	public void delete(String cedula) {
-		em.remove(find(cedula));
+	public boolean delete(String cedula) {
+		try {
+			em.remove(find(cedula));
+			return true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 	
 	/**
@@ -49,10 +52,15 @@ public class UsuarioDAO {
 	 * 
 	 * @param usuario es la instancia de la clase en cuestiopn a administrar
 	 */
-	public void update(Usuario usuario) {
+	public boolean update(Usuario usuario) {
 	
-		em.remove(em.find(Usuario.class, usuario.getCedula()));
-		em.persist(usuario);
+		try {
+			em.merge(usuario);
+			return true;
+		}catch(Exception e) {
+			return false;
+		}
+		
 		
 	}
 	

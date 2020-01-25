@@ -1,5 +1,5 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="index.xhtml">
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="../index.xhtml">
 
 <ui:define name="contenido">
 
@@ -8,7 +8,7 @@
 <h:form>
 			
 			
-			<h:dataTable border="1" value="#{peliculaBean.listarPelicula()}" var="pelicula">
+			<h:dataTable border="1" value="#{gestionTiendaBean.listarPeliculas()}" var="pelicula">
 				<h:column id="pel_id">
 					<f:facet name="header">Pelicula ID</f:facet>
 						#{pelicula.codigoPelicula} 
@@ -66,13 +66,13 @@
 		
 		<h:form>
 	<ui:insert name="crearcategoria">
-		<h:commandButton id="btnCrearCategoria" action="crearcategoria.xhtml" value="Crear Categoria"></h:commandButton>
+		<h:commandButton id="btnCrearCategoria" action="../categorias/crearcategoria.xhtml" value="Crear Categoria"></h:commandButton>
 	</ui:insert> 	
 	</h:form>
 		
 		<ui:insert name="vercategoria">
 	<h:form>
-	<h:commandButton id="btnVerCategorias" action="categoria.xhtml" value="Ver categorias"></h:commandButton>
+	<h:commandButton id="btnVerCategorias" action="../categorias/categoria.xhtml" value="Ver categorias"></h:commandButton>
 	</h:form>
 	</ui:insert> 
 	

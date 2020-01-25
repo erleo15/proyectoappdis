@@ -37,8 +37,14 @@ public class CategoriaDAO {
 	 * @param idCategoria Representa la la primary key 
 	 * de la tabla para que elimine el objeto
 	 */
-	public void delete(int idCategoria) {
-		em.remove(find(idCategoria));
+	public boolean delete(int idCategoria) {
+		try{
+			em.remove(find(idCategoria));
+			return true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 	
 	/**
@@ -46,10 +52,16 @@ public class CategoriaDAO {
 	 * 
 	 * @param categoria es la instancia de la clase en cuestiopn a administrar
 	 */
-	public void update(Categoria categoria) {
+	public boolean update(Categoria categoria) {
 	
-		em.remove(em.find(Categoria.class, categoria.getIdCategoria()));
-		em.persist(categoria);
+		try {
+			em.merge(categoria);
+			return true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		
 		
 	}
 	

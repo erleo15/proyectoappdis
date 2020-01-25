@@ -1,13 +1,13 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
-      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="index.xhtml">
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html" template="../index.xhtml">
 
 <ui:define name="contenido">
 
 	<h1>BIENVENIDO Usuarios</h1>
 	
 <h:form>
-			<h:commandButton id="btnRefrescar" action="#{usuarioBean.listarUsuario()}" value="Refrescar"></h:commandButton>
-			<h:dataTable border="1" value="#{usuarioBean.listarUsuario()}" var="usuario">
+			<h:commandButton id="btnRefrescar" action="#{gestionTiendaBean.listarUsuarios()}" value="Refrescar"></h:commandButton>
+			<h:dataTable border="1" value="#{gestionTiendaBean.listarUsuarios()}" var="usuario">
 				<h:column id="usu_cedula">
 					<f:facet name="header">Cedula</f:facet>
 						#{usuario.cedula} 

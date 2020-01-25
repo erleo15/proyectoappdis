@@ -14,6 +14,7 @@ public class FacturaCabeceraDAO {
 
 	@Inject
 	private EntityManager em;
+	
 	/**
 	 * metodo que inserta el objeto de esta clase en la base
 	 * 
@@ -35,8 +36,14 @@ public class FacturaCabeceraDAO {
 	 * 
 	 * @param id es la instancia de la clase en cuestiopn a administrar
 	 */
-	public void actualizar(FacturaCabecera facturaCabecera) {
-		em.merge(facturaCabecera);
+	public boolean actualizar(FacturaCabecera facturaCabecera) {
+		try{
+			em.merge(facturaCabecera);
+			return true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 	
 	/**
@@ -44,9 +51,31 @@ public class FacturaCabeceraDAO {
 	 * @param id es la instancia de la clase en cuestiopn a administrar
 	 * @return retorna un objeto a la clase
 	 */
-	public FacturaCabecera find(String numeroFactura ) {
+	public FacturaCabecera find(int numeroFactura ) {
 		return em.find(FacturaCabecera.class, numeroFactura);
 	}
+	
+	
+	/**
+	 * metodo que actualiza el objeto de esta clase en la BD
+	 * 
+	 * @param id es la instancia de la clase en cuestiopn a administrar
+	 */
+	public boolean eliminar(int numeroFactura) {
+		try{
+			if(find(numeroFactura) != null ){
+				System.out.println(find(numeroFactura));
+				em.remove(find(numeroFactura));
+				return true;
+			}
+			return false;
+		}catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	
 	
 	/**
 	 * Metodo que lista los objetos de esta clase guardados en
@@ -58,9 +87,9 @@ public class FacturaCabeceraDAO {
 			return em.createQuery("SELECT c from FacturaCabecera c", FacturaCabecera.class).getResultList();
 		}
 		
-	public String getLastNumeroCategoria() {
+	public int getLastNumeroFacturaCabecera() {
 		String jpql = "Select MAX(e.numeroFactura) from FacturaCabecera e";
 		Query q = em.createQuery(jpql, Integer.class);
-		return  q.getSingleResult().toString();
+		return  (int)q.getSingleResult();
 	}
 }

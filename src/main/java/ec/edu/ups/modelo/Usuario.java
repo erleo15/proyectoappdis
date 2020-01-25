@@ -337,14 +337,30 @@ public class Usuario implements Serializable{
 		this.tipoUsuario = tipoUsuario;
 	}
 
+	public List<FacturaCabecera> getListaFacturaCabecera() {
+		return listaFacturaCabecera;
+	}
+	public void setListaFacturaCabecera(List<FacturaCabecera> listaFacturaCabecera) {
+		this.listaFacturaCabecera = listaFacturaCabecera;
+	}
+	public List<Carrito> getListaCarrito() {
+		return listaCarrito;
+	}
+	public void setListaCarrito(List<Carrito> listaCarrito) {
+		this.listaCarrito = listaCarrito;
+	}
 	@Override
 	public String toString() {
 		return "Usuario [cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono
 				+ ", email=" + email + ", fechaNacimiento=" + fechaNacimiento + ", fechaRegistro=" + fechaRegistro
 				+ ", user=" + user + ", contrasenia=" + contrasenia + ", numeroCompra=" + numeroCompra
 				+ ", dineroGastado=" + dineroGastado + ", direccionUsuario=" + direccionUsuario + ", tipoUsuario="
-				+ tipoUsuario + "]";
-	} 
+				+ tipoUsuario + ", listaFacturaCabecera=" + listaFacturaCabecera + ", listaCarrito=" + listaCarrito
+				+ "]";
+	}
+	
+	
+	
 	
 	
 }

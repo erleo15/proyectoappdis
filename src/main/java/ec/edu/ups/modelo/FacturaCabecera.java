@@ -26,10 +26,10 @@ public class FacturaCabecera implements Serializable{
 	 */
 	private static final long serialVersionUID = 1569947904429904117L;
 
-	@Id
+	@Id 
 	@GeneratedValue
 	@Column(name="fcab_num_factura")
-	private String numeroFactura;
+	private int numeroFactura;
 	
 	@NotNull
 	@Column(name="fcab_fecha")
@@ -70,7 +70,7 @@ public class FacturaCabecera implements Serializable{
 	 * Metodo que obtiene el objeto en cuestion de la clase
 	 * @return el objeto buscado
 	 */
-	public String getNumeroFactura() {
+	public int getNumeroFactura() {
 		return numeroFactura;
 	}
 
@@ -78,7 +78,7 @@ public class FacturaCabecera implements Serializable{
 	 * Metodo que setea un valor en un atributo
 	 * @param numeroFactura el valor del atributo en cuestion
 	 */
-	public void setNumeroFactura(String numeroFactura) {
+	public void setNumeroFactura(int numeroFactura) {
 		this.numeroFactura = numeroFactura;
 	}
 

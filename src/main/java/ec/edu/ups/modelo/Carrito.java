@@ -35,7 +35,7 @@ public class Carrito implements Serializable{
 	private int cantidad;
 	
 	@Column(name="car_total")
-	private int totalCarrito;
+	private double totalCarrito;
 	
 	@Temporal(TemporalType.DATE)
 	@Column(name="car_fecha")
@@ -90,7 +90,7 @@ public class Carrito implements Serializable{
 	 * Metodo que obtiene el objeto en cuestion de la clase
 	 * @return el atributo en cuestion
 	 */
-	public int getTotalCarrito() {
+	public double getTotalCarrito() {
 		return totalCarrito;
 	}
 
@@ -99,7 +99,7 @@ public class Carrito implements Serializable{
 	 * Metodo que setea el valor de dicho objeto en la clase
 	 * @param totalCarrito es el valor del atributo en cuestion
 	 */
-	public void setTotalCarrito(int totalCarrito) {
+	public void setTotalCarrito(double totalCarrito) {
 		this.totalCarrito = totalCarrito;
 	}
 

@@ -1,5 +1,6 @@
 package ec.edu.ups.datos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.ejb.Stateless;
@@ -39,8 +40,14 @@ public class CarritoDAO {
 	 * 
 	 * @param id es la instancia de la clase en cuestiopn a administrar
 	 */
-	public void actualizar(Carrito carrito) {
-		em.merge(carrito);
+	public boolean actualizar(Carrito carrito) {
+		try{
+			em.merge(carrito);
+			return true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 	
 	/**
@@ -57,14 +64,35 @@ public class CarritoDAO {
 	 * la base de datos
 	 * @return una lista con todos los resultados
 	 */
-	public List<Carrito> getCarrito(){
-		return em.createQuery("SELECT c from tie_categoria c", Carrito.class).getResultList();
+	public List<Carrito> getCarritos(){
+		return em.createQuery("SELECT c from Carrito c", Carrito.class).getResultList();
+	}
+	
+	public boolean remove(int idCarrito ) { 
+		try {
+		em.remove(find(idCarrito));
+		return true;
+		}catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
 	}
 	
 	public int getLastIdCarrito() {
 		String jpql = "Select MAX(e.idCarrito) from Carrito e";
 		Query q = em.createQuery(jpql, Integer.class);
 		return (int) q.getSingleResult();
+	}
+	
+	public List<Carrito> getCarritoXCedula (String cedulaUsuario) {
+		List<Carrito> lista = new ArrayList<Carrito>();
+		
+		for(Carrito carrito: getCarritos()) {
+			if(carrito.getCedulaUsuario().compareTo(cedulaUsuario)==0) {
+				lista.add(carrito);
+			}
+		}
+		return lista.isEmpty() ? null : lista ;
 	}
 	
 }
