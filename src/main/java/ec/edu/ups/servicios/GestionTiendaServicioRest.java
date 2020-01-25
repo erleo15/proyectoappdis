@@ -3,6 +3,8 @@ package ec.edu.ups.servicios;
 
 
 
+import java.util.List;
+
 import javax.inject.Inject;
 import javax.ws.rs.Consumes; 
 import javax.ws.rs.POST;
@@ -89,6 +91,17 @@ public class GestionTiendaServicioRest {
 			}
 		}
 		return "No se encontro el carrito";
+	}
+	
+	
+	
+	@POST
+	@Consumes("application/json")
+	@Produces("application/json")
+	@Path("getCarritoXCedula")
+	public List<Carrito> listarCarritoXCedula(String parametro)  {
+		String cedulaUsuario = parametro.split(":")[1].replaceAll("\"", "").trim(); 
+		 return gl.realizarCompra(cedulaUsuario);
 	}
 	
 	
