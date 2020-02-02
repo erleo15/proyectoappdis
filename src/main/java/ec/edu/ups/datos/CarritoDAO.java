@@ -92,7 +92,7 @@ public class CarritoDAO {
 				lista.add(carrito);
 			}
 		}
-		return lista.isEmpty() ? null : lista ;
+		return  lista ;
 	}
 	
 }

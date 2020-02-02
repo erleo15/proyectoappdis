@@ -37,10 +37,10 @@ public class FacturaCabeceraDAO {
 	 * @param id es la instancia de la clase en cuestiopn a administrar
 	 */
 	public boolean actualizar(FacturaCabecera facturaCabecera) {
-		try{
+		try{ 
 			em.merge(facturaCabecera);
 			return true;
-		}catch(Exception e) {
+		}catch(Exception e) { 
 			e.printStackTrace();
 			return false;
 		}
@@ -82,8 +82,7 @@ public class FacturaCabeceraDAO {
 	 * la base de datos
 	 * @return una lista con todos los resultados
 	 */
-	public List<FacturaCabecera> list(){
-		 
+	public List<FacturaCabecera> list(){ 
 			return em.createQuery("SELECT c from FacturaCabecera c", FacturaCabecera.class).getResultList();
 		}
 		

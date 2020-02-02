@@ -11,7 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull; 
 
 @Entity
 @Table(name="tie_fdetalle")
@@ -33,12 +33,19 @@ public class FacturaDetalle implements Serializable{
 	@Column(name="fdet_total")
 	private double totalFDet;
 	
-	@NotNull
+	//@NotNull
 	@Column(name="fdet_fcab_num_factura")
 	private int numeroFactura;
 	
+	//@JsonIgnore
+	//NotNull 
+	//@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	//@JoinColumn(name="fdet_pel_id")
+	//@Column(name="fdet_pel_id")
+	//private int  idPelicula;
+	
 	@NotNull
-	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name="fdet_pel_id")
 	private Pelicula pelicula;
 	
@@ -100,7 +107,7 @@ public class FacturaDetalle implements Serializable{
 	}
 
 	public Pelicula getPelicula() {
-		return pelicula;
+		return this.pelicula;
 	}
 
 	public void setPelicula(Pelicula pelicula) {
@@ -110,7 +117,7 @@ public class FacturaDetalle implements Serializable{
 	@Override
 	public String toString() {
 		return "FacturaDetalle [numFDetalle=" + numFDetalle + ", cantidad=" + cantidad + ", totalFDet=" + totalFDet
-				+ ", numeroFactura=" + numeroFactura + ", pelicula=" + pelicula + "]";
+				+ ", numeroFactura=" + numeroFactura + ", Pelicula=" + pelicula + "]";
 	}
 
 

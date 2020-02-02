@@ -31,6 +31,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
  */
 @Entity
 @Table(name="tie_usuario")
+//@Proxy(lazy = false)
 public class Usuario implements Serializable{
 	
 	/**
@@ -349,18 +350,17 @@ public class Usuario implements Serializable{
 	public void setListaCarrito(List<Carrito> listaCarrito) {
 		this.listaCarrito = listaCarrito;
 	}
+	
 	@Override
 	public String toString() {
 		return "Usuario [cedula=" + cedula + ", nombre=" + nombre + ", apellido=" + apellido + ", telefono=" + telefono
 				+ ", email=" + email + ", fechaNacimiento=" + fechaNacimiento + ", fechaRegistro=" + fechaRegistro
 				+ ", user=" + user + ", contrasenia=" + contrasenia + ", numeroCompra=" + numeroCompra
 				+ ", dineroGastado=" + dineroGastado + ", direccionUsuario=" + direccionUsuario + ", tipoUsuario="
-				+ tipoUsuario + ", listaFacturaCabecera=" + listaFacturaCabecera + ", listaCarrito=" + listaCarrito
+				+ tipoUsuario + ", listaFacturaCabecera=" + listaFacturaCabecera 
+				+ ", listaCarrito=" + listaCarrito
 				+ "]";
-	}
-	
-	
-	
+	} 
 	
 	
 }

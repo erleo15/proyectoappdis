@@ -145,6 +145,11 @@ public class GestionTiendaBean {
 		// TODO Auto-generated method stub
 		return gl.getPeliculas();
 	}
+	
+	public String generarReporte() {
+		gl.generarReporte();
+		return "/Users/erleo15/opt/wildfly-17.0.1.Final/bin/reporte.pdf";
+	}
 
 	
 	/*
@@ -194,105 +199,15 @@ public class GestionTiendaBean {
 	
 	 
 	public String login(String user, String password) {
-		for(Usuario usuario: listarUsuarios()) {
-			if(usuario.getUser().compareToIgnoreCase(user)==0 && usuario.getContrasenia().compareTo(password)==0)
-			{
-				return usuario.getCedula();
-			}
-			 
-		}
-		return null;
+		return gl.login(user, password);
 	}
 	
-	/*
-	public String addCarrito(int idPelicula, String cedula) {
-		// TODO Auto-generated method stub
-		Usuario u = buscarUsuario(cedula);
-		Pelicula p = buscarPelicula(idPelicula);
-		Carrito c = null;
-		c.setCantidad(1);
-		
-		List<Carrito> lista = u.getListaCarrito();
-		if(lista.isEmpty()) {
-			c = new Carrito();
-			c.setCantidad(1);
-			c.setCedulaUsuario(cedula);
-			c.setFecha(new Date());
-			c.setIdPelicula(idPelicula); 
-			c.setTotalCarrito(p.getPrecio());
-			u.getListaCarrito().add(c);
-			if(gl.updateUsuario(u))
-				return "Se anadio por primera vez al carrito";
-			else
-				return "No se anadio por primera vez al carrito";
-		}
-		
-		
-		for(Carrito car : lista) {
-			if(car.getIdPelicula()==idPelicula) {
-				
-				car.setCantidad(car.getCantidad()+1); 
-				car.setTotalCarrito(car.getCantidad()*p.getPrecio());
-				gl.actualizar(car);
-				return "Se agrego cantidad +1";
-				
-			}
-		}
-		  
-		if(!usuarioDAO.update(u))
-			return "No se agrego el producto al carrito"; 
-		return "Se agrego el producto al carrito";
-	}
-
 	
-	public String realizarCompra(String cedulaUsuario, String direccionEnvio, 
-			String numeroTarjeta, String numeroFactura) {
-		
-		//return "Entrando al ON: \ncedula: "+cedulaUsuario+
-		//		" direccion: "+direccionEnvio+" numeroTrajeta: "+numeroTarjeta+"numeroFactura: "+numeroFactura;
-		
-		List<Carrito> listaCarrito = carritoDAO.getCarritoXCedula(cedulaUsuario);
-		FacturaCabecera fcab = new FacturaCabecera();
-		fcab.setCedulaUsuario(cedulaUsuario);
-		fcab.setDireccionEnvio(direccionEnvio);
-		fcab.setEstado("activa");
-		fcab.setListaFacturaDetalle(new ArrayList<FacturaDetalle>());
-		fcab.setNumeroFactura(numeroFactura);
-		fcab.setNumeroTarjetaCredito(numeroTarjeta);
-		fcab.setFecha(new Date());
-		facturaCabeceraDAO.insert(fcab);		
-		double totalFacturaCabecera = 0.0;
-		FacturaDetalle fdet = new FacturaDetalle();
-		for(Carrito car : listaCarrito) {
-			
-			fdet.setCantidad(car.getCantidad());
-			fdet.setNumeroFactura(numeroFactura);
-			Pelicula pelicula = peliculaDAO.find(car.getIdPelicula());
-			fdet.setPelicula(pelicula);
-			totalFacturaCabecera += car.getTotalCarrito();
-			fdet.setTotalFDet(car.getTotalCarrito());
-			fcab.getListaFacturaDetalle().add(fdet);
-			if(carritoDAO.remove(car.getIdCarrito())) {
-				System.out.println("Eliminado carrito");
-			}else {
-				System.out.println("No eliminado carrito");
-			}
-		}
-		
-		
-		fcab.setTotal(totalFacturaCabecera);
-		
-		if(!facturaCabeceraDAO.actualizar(fcab)) {
-			return "Ocurrio un error al generar la compra";
-		}
-		return "Se genero la compra exitosamente";*/
-	//	return null;
-	//}
 
 	
 	public List<Pelicula> peliculasMasVendidas() {
 		// TODO Auto-generated method stub
-		return null;
+		return gl.peliculasMasVendidas();
 	}
 
  

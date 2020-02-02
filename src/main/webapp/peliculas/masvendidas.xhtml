@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core" xmlns:h="http://java.sun.com/jsf/html">
+
+<h:head>
+	<h:outputText value="PeliStore" id="lblTituloTienda"></h:outputText>
+	<link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/css/slick-theme.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="/css/lick.css" media="screen" />
+</h:head>
+
+<body>
+
+	<h1>BIENVENIDO Peliculas</h1>
+	
+<h:form> 
+			
+			<h:dataTable border="1" value="#{gestionTiendaBean.peliculasMasVendidas()}" var="pelicula">
+				<h:column id="pel_id">
+					<f:facet name="header">Pelicula ID</f:facet>
+						#{pelicula.codigoPelicula} 
+				</h:column>
+				<h:column id="pel_nombre">
+					<f:facet name="header">Nombre</f:facet>
+						#{pelicula.nombre} 
+				</h:column>
+				<h:column id="pel_descripcion">
+					<f:facet name="header">Descripcion</f:facet>
+						#{pelicula.descripcion} 
+				</h:column>
+				<h:column id="usu_telefono">
+					<f:facet name="header">Precio</f:facet>
+					#{pelicula.precio} 
+				</h:column>
+				<h:column id="usu_email">
+					<f:facet name="header">Anio</f:facet>
+						#{pelicula.anio} 
+				</h:column>
+				<h:column id="usu_fnacimiento">
+					<f:facet name="header">Stock</f:facet>
+						 #{pelicula.stock} 
+					
+				</h:column>
+				<h:column id="pel_fregistro">
+					<f:facet name="header">Cantidad Votos</f:facet>
+						#{pelicula.cantidadVotos}
+				</h:column>
+				<h:column id="pel_user">
+					<f:facet name="header">Cantidad Ventas</f:facet>
+						 #{pelicula.cantidadVentas} 
+					
+				</h:column>  
+				
+			</h:dataTable>
+			 
+		<h:commandButton id="masvendidos" action="#{gestionTiendaBean.generarReporte()}" value="Generar Reporte"></h:commandButton> 
+		</h:form> 
+</body>
+</html>

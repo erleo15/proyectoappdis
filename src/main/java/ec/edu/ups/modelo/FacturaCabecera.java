@@ -10,12 +10,12 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumn; 
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;  
 
 @Entity
 @Table(name="tie_fcabecera")
@@ -57,9 +57,10 @@ public class FacturaCabecera implements Serializable{
 	@Column(name = "fcab_direccion")
 	private String direccionEnvio;
 	
+
 	@Column(name = "fcab_usu_cedula")
 	private String cedulaUsuario;
-	 
+	
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "fdet_fcab_num_factura")
 	private List<FacturaDetalle> listaFacturaDetalle;
@@ -183,12 +184,12 @@ public class FacturaCabecera implements Serializable{
 	 * @return el objeto buscado
 	 */
 	public String getCedulaUsuario() {
-		return cedulaUsuario;
+		return this.cedulaUsuario;
 	}
 
 	/**
 	 * Metodo que setea un valor en un atributo
-	 * @param usuario el valor del atributo en cuestion
+	 * @param cedulaUsuario el valor del atributo en cuestion
 	 */
 	public void setCedulaUsuario(String cedulaUsuario) {
 		this.cedulaUsuario = cedulaUsuario;

@@ -58,6 +58,7 @@ public class UsuarioDAO {
 			em.merge(usuario);
 			return true;
 		}catch(Exception e) {
+			e.printStackTrace();
 			return false;
 		}
 		

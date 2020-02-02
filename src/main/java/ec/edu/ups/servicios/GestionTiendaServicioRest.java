@@ -6,13 +6,17 @@ package ec.edu.ups.servicios;
 import java.util.List;
 
 import javax.inject.Inject;
-import javax.ws.rs.Consumes; 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path; 
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 
 import ec.edu.ups.modelo.Carrito;
+import ec.edu.ups.modelo.FacturaCabecera;
 import ec.edu.ups.modelo.Pelicula;
+import ec.edu.ups.modelo.Usuario;
 import ec.edu.ups.negocioInterface.GestionTiendaLocal; 
 
 @Path("/servicios")
@@ -26,10 +30,12 @@ public class GestionTiendaServicioRest {
 	@Produces("application/json")
 	@Path("realizarCompra")
 	public String realizarCompra(String parametro)  {
-		String cedulaUsuario = parametro.split(":")[1].replaceAll("\"", "").trim();
-		String direccionEnvio = parametro.split(":")[2]; 
-		String numeroTarjeta = parametro.split(":")[3]; 
+		System.out.println("paramtreooooo"+ parametro);
+		String cedulaUsuario = parametro.split(":")[2].replaceAll("\"", "").trim();
+		String direccionEnvio = parametro.split(":")[3]; 
+		String numeroTarjeta = parametro.split(":")[4]; 
 		System.out.println(parametro+" en el servicio post");
+		
 		 return gl.realizarCompra(cedulaUsuario, direccionEnvio, numeroTarjeta);
 	}
 	
@@ -38,9 +44,10 @@ public class GestionTiendaServicioRest {
 	@Consumes("application/json")
 	@Produces("application/json")
 	@Path("addCarrito")
-	public String addCarrito(String parametro) {
-		int idPelicula = Integer.parseInt(parametro.split(":")[1].replaceAll("\"", "").trim());
-		String cedula = parametro.split(":")[2];
+	public String addCarrito(String parametro) {//:1:0100500719:
+		//System.out.println("addcarrito= "+parametro.split(":")[2].replaceAll("\"", "").trim()+"|"+parametro.split(":")[3]);
+		int idPelicula = Integer.parseInt(parametro.split(":")[2].replaceAll("\"", "").trim());
+		String cedula = parametro.split(":")[3];
 		System.out.println(parametro + " Llegado a adcarritoServicioRest");
 		return gl.addCarrito(idPelicula, cedula);
 	}
@@ -51,8 +58,8 @@ public class GestionTiendaServicioRest {
 	@Produces("application/json")
 	@Path("removeCarrito")
 	public String removeCarrito(String parametro) {
-		int idPelicula = Integer.parseInt(parametro.split(":")[1].replaceAll("\"", "").trim());
-		String cedula = parametro.split(":")[2];
+		int idPelicula = Integer.parseInt(parametro.split(":")[2].replaceAll("\"", "").trim());
+		String cedula = parametro.split(":")[3];
 		for(Carrito carrito : gl.getCarritos()) {
 			if(carrito.getCedulaUsuario().compareToIgnoreCase(cedula)==0 &&
 				carrito.getIdPelicula() == idPelicula	
@@ -74,9 +81,9 @@ public class GestionTiendaServicioRest {
 	@Produces("application/json")
 	@Path("reduceCarrito")
 	public String reduceCarrito(String parametro) {
-		int idPelicula = Integer.parseInt(parametro.split(":")[1].replaceAll("\"", "").trim());
+		int idPelicula = Integer.parseInt(parametro.split(":")[2].replaceAll("\"", "").trim());
 		Pelicula p = gl.buscarPelicula(idPelicula);
-		String cedula = parametro.split(":")[2]; 
+		String cedula = parametro.split(":")[3]; 
 		for(Carrito carrito : gl.getCarritos()) {
 			if(carrito.getCedulaUsuario().compareToIgnoreCase(cedula)==0 &&
 				carrito.getIdPelicula() == idPelicula	
@@ -95,174 +102,76 @@ public class GestionTiendaServicioRest {
 	
 	
 	
-	@POST
-	@Consumes("application/json")
+	@GET
+	//@Consumes("application/json")
 	@Produces("application/json")
 	@Path("getCarritoXCedula")
-	public List<Carrito> listarCarritoXCedula(String parametro)  {
-		String cedulaUsuario = parametro.split(":")[1].replaceAll("\"", "").trim(); 
-		 return gl.realizarCompra(cedulaUsuario);
-	}
-	
-	
-	/*
-	@POST
-	@Consumes("application/json")
-	@Produces("application/json")
-	@Path("reduceCarrito")
-	public String reduceCarrito(String parametro) {
-		int idPelicula = Integer.parseInt(parametro.split(":")[1].replaceAll("\"", "").trim());
-		Pelicula p = gl.buscarPelicula(idPelicula);
-		String cedula = parametro.split(":")[2];
-		int cantidadNueva = Integer.parseInt(parametro.split(":")[3]);
+	public List<Carrito> listarCarritoXCedula(@QueryParam("parametro") String parametro)  {
+		String cedulaUsuario = parametro.split(":")[2].replaceAll("\"", "").trim(); 
 		
-		int resto = 0;
-		for(Carrito carrito : gl.getCarritos()) {
-			if(carrito.getCedulaUsuario().compareToIgnoreCase(cedula)==0 &&
-				carrito.getIdPelicula() == idPelicula	
-			   ) {
-				resto = carrito.getCantidad()-cantidadNueva;
-				if(resto>0) {
-					
-				}
-				
-				carrito.setCantidad(cantidadNueva);
-				carrito.setTotalCarrito(carrito.getTotalCarrito()-p.getPrecio());
-				if(gl.updateCarrito(carrito)) 
-					return "Se actualizo un carrito REST";
-				else
-					return "No se actualizo el carrito REST";
-			}
-		}
-		return "No se encontro el carrito";
-	}
-	
-	*/
-	
-	/*@Inject
-	private PeliculaBean peliculaBean;
-	@Inject
-	private UsuarioBean usuarioBean;
-	@Inject
-	private CategoriaBean categoriaBean;*/
-	
-	//1
-	/**
-	 * Metodo para listar las peliculas registradas
-	 * en la aplicacion
-	 * @return los resultados obtenidos
-	 */
-	/*@GET
-	@Path("/peliculaObtener")
-	@Produces("application/json")
-	public List<Pelicula> peliculas(){ 
-		System.out.println(peliculaBean.listarPelicula());
-		return peliculaBean.listarPelicula();
-	}*/
-	
-	//2
-		/**
-		 * Metodo para obtener las categorias registradas
-		 * @return lista con los resultados obtenidos
-		 */
-		/*@GET
-		@Path("/categoriasObtener")
-		@Produces("application/json")
-		public List<Categoria> categorias(){ 
-			System.out.println(categoriaBean.listarCategoria());
-			return categoriaBean.listarCategoria();
-		}*/
-		
-		//3
-		/**
-		 * Metodo que permite loguearse en 
-		 * la aplicacion movil
-		 * @param usuario
-		 * @return
-		 */
-		/*@POST
-		@Path("/loguear")
-		@Produces("application/json")
-		@Consumes("application/json")
-		public Respuesta login(Usuario usuario) {
-			Respuesta r = new Respuesta();
-			 r.setCodigo(new Random().nextInt());
-			Usuario aux = usuarioBean.buscarUsuario(usuario.getCedula());
-			System.out.println("usuario:"+usuario+"    auxiliar:"+aux);
-			if(aux.getContrasenia().compareTo(usuario.getContrasenia())==0) {
-				r.setMensaje("Logueo exitoso");
-				 r.setEstado(true);
-				 return r;
-			}
-			r.setMensaje("Logueo no exitoso");
-			r.setEstado(false);
-			return r;
-		}*/
-		
-		//4
-		/**
-		 * Metodo para insertar un usuario
-		 * @param categoria
-		 * @return
-		 */
-		/*@POST
-		@Path("/insertarUsuario")
-		@Produces("application/json")
-		@Consumes("application/json")
-		public Respuesta insertarUsuario(Usuario usuario) {
-			
-			Respuesta r = new Respuesta();
-			r.setCodigo(new Random().nextInt());
-			
-			
-				if(usuarioBean.guardarUsuario(usuario)) {
-					r.setEstado(true);
-					r.setMensaje("si se inserto categoria");
-				}else {
-					r.setEstado(false);
-					r.setMensaje("no se inserto categoria");
-				}
-				
-			 
-			return r;
-		}*/
-		
-		
-	
-	
-	
-	/*@GET
-	@Path("/usuariosObtener")
-	@Produces("application/json")
-	public List<Usuario> usuarios(){ 
-		System.out.println(usuarioBean.listarUsuario());
-		return usuarioBean.listarUsuario();
+		return gl.getCarritoXCedula(cedulaUsuario);
 	}
 	
 	
 	@POST
-	@Path("/insertarCategoria")
-	@Produces("application/json")
 	@Consumes("application/json")
-	public Respuesta insertarPelicula(Categoria categoria) {
+	@Produces("application/json")
+	@Path("anularFactura")
+	public String anularFactura(String parametro)  {
+		int numeroFactura = Integer.parseInt(parametro.split(":")[2].replaceAll("\"", "").trim());  
+		return gl.anularFactura(numeroFactura)?"se anulo la factura": "no se anulo la factura";
 		
-		Respuesta r = new Respuesta();
-		r.setCodigo(new Random().nextInt());
-		
-		
-			if(categoriaBean.guardarCategoria(categoria)) {
-				r.setEstado(true);
-				r.setMensaje("si se inserto categoria");
-			}else {
-				r.setEstado(false);
-				r.setMensaje("no se inserto categoria");
-			}
-			
-		 
-		return r;
-	}*/
+	}
 	
-	public class Respuesta {
+	
+	@POST 
+	@Consumes("application/json")
+	@Produces("application/json")
+	@Path("login")
+	public String login(String parametro)  {
+		System.out.println("parametro login==>"+parametro);
+		String user = parametro.split(":")[2].replaceAll("\"", "").trim();
+		String password = parametro.split(":")[3].replaceAll("\"", "").trim();
+		return gl.login(user, password); 
+	}
+	
+	@GET
+	//@Consumes("application/json")
+	@Produces("application/json")
+	@Path("getComprasXCedula")
+	public List<FacturaCabecera> listarFCabXCedula(@QueryParam("parametro") String parametro)  {
+		String cedulaUsuario = parametro.split(":")[2].replaceAll("\"", "").trim();  
+		return gl.listarFCabXCedula(cedulaUsuario);
+	}
+	
+	
+	@GET
+	//@Consumes("application/json")
+	@Produces("application/json")
+	@Path("getPeliculas")
+	public List<Pelicula> listarPeliculas()  {
+		return gl.getPeliculas();
+	}
+
+	
+	@GET 
+	@Produces("application/json")
+	@Path("getUsuarios")
+	public List<Usuario> getUsuarios() { 
+		return gl.getUsuarios();
+	}
+	
+	
+	@GET
+	//@Consumes("application/json")
+	@Produces("application/json")
+	@Path("getPelicula")
+	public String getPelicula(@QueryParam("id") String id)  {
+		int idp = Integer.parseInt(id.split(":")[2].replaceAll("\"", "").trim()); 
+		return gl.buscarPelicula(Integer.parseInt(idp+"")).getNombre(); 
+	}
+	
+	/*public class Respuesta {
 		
 		private int codigo;
 		private boolean estado;
@@ -289,7 +198,7 @@ public class GestionTiendaServicioRest {
 		public String toString() {
 			return "Respuesta [codigo=" + codigo + ", estado=" + estado + ", mensaje=" + mensaje + "]";
 		}
-		
-	}
+	}*/
+	
 	
 }

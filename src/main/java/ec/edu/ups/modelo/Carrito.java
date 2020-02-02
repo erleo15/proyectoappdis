@@ -2,14 +2,14 @@ package ec.edu.ups.modelo;
 
 import java.io.Serializable;
 import java.util.Date;
-
+ 
 import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.Entity; 
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.Id; 
 import javax.persistence.Table;
 import javax.persistence.Temporal;
-import javax.persistence.TemporalType; 
+import javax.persistence.TemporalType;  
 
 /**
  * Clase para guardar los datos del carrito
@@ -41,10 +41,12 @@ public class Carrito implements Serializable{
 	@Column(name="car_fecha")
 	private Date fecha;
 	
-	
+	/*
 	@Column(name = "car_pel_id")
 	private int idPelicula;
-  
+  */
+	@Column(name = "car_pel_id")
+	private int idPelicula;
 	
 	@Column(name = "car_usu_cedula")
 	private String cedulaUsuario;

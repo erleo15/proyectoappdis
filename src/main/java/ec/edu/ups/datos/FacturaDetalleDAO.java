@@ -82,7 +82,7 @@ public class FacturaDetalleDAO {
 	}
 	
 	public int getLastNumeroDetalle() {
-		String jpql = "Select MAX(e.numFDetalle) from FacturaCabecera e";
+		String jpql = "Select MAX(e.numFDetalle) from FacturaDetalle e";
 		Query q = em.createQuery(jpql, Integer.class);
 		return  (int)q.getSingleResult();
 	}

@@ -83,6 +83,10 @@ public class PeliculaDAO {
 		return  em.createQuery("SELECT c from Pelicula c", Pelicula.class).getResultList(); 
 	}
 	
+	public List<Pelicula> listMayor(){    
+		return  em.createNativeQuery("SELECT * from tie_pelicula p order by p.pel_cantidad_venta", Pelicula.class).getResultList(); 
+	}
+	
 	public int getLastNumeroDetalle() {
 		String jpql = "Select MAX(e.codigoPelicula) from Pelicula e";
 		Query q = em.createQuery(jpql, Integer.class);

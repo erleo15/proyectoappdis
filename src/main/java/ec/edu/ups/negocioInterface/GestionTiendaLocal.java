@@ -31,7 +31,7 @@ public interface GestionTiendaLocal {
 	public boolean updatePelicula(Pelicula pelicula);
 	public boolean eliminarPelicula(int idPelicula);
 	public Pelicula buscarPelicula(int idPelicula);
-	public List<Pelicula> getPeliculas();
+	public List<Pelicula> getPeliculas(); 
 	
 	
 	/*
@@ -86,6 +86,10 @@ public interface GestionTiendaLocal {
 	public String realizarCompra(String cedulaUsuario, String direccionEnvio, 
 			String numeroTarjeta);
 	public List<Pelicula> peliculasMasVendidas();
+	public boolean anularFactura(int numeroFactura);
+	
+	public List<FacturaCabecera> listarFCabXCedula(String cedulaUsuario);
+	public void generarReporte() ;
 	
 	
 }

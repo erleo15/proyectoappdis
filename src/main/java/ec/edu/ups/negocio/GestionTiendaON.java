@@ -1,5 +1,9 @@
 package ec.edu.ups.negocio;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -21,6 +25,12 @@ import ec.edu.ups.modelo.Pelicula;
 import ec.edu.ups.modelo.Usuario;
 import ec.edu.ups.negocioInterface.GestionTiendaLocal;
 import ec.edu.ups.negocioInterface.GestionTiendaRemote;
+import net.sf.jasperreports.engine.JasperExportManager;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperReport;
+import net.sf.jasperreports.engine.util.JRLoader;
+import net.sf.jasperreports.view.JasperViewer;
 
 @Stateless
 public class GestionTiendaON implements GestionTiendaLocal, GestionTiendaRemote{
@@ -66,7 +76,7 @@ public class GestionTiendaON implements GestionTiendaLocal, GestionTiendaRemote{
 	public Usuario buscarUsuario(String cedula) {
 		for(Usuario usuario: getUsuarios()) {
 			if(usuario.getCedula().compareToIgnoreCase(cedula)==0) {
-				System.out.println("Usuario encontrado en ON ");
+				System.out.println("Usuario encontrado en ON "+usuario);
 				return usuario;
 			}
 		}
@@ -79,12 +89,36 @@ public class GestionTiendaON implements GestionTiendaLocal, GestionTiendaRemote{
 	}
 
 	public List<Usuario> getUsuariosLazy(List<Usuario> usuarios) {
-		for(Usuario u : usuarios) {
-			for(FacturaCabecera fcab: u.getListaFacturaCabecera()) {
-				
+		List<Usuario> returnlist = new ArrayList<>();
+		/*for(Usuario u : usuarios) {
+			List<FacturaCabecera> fcabs = new ArrayList<>();
+			System.out.println(u.getListaFacturaCabecera());
+			for(FacturaCabecera fcab :u.getListaFacturaCabecera()) {
+				List<FacturaDetalle> fdetalles = new ArrayList<>(); 
+				for(FacturaDetalle fdet: fcab.getListaFacturaDetalle()) {
+					fdetalles.add(fdet);
+				}
+				fcab.setListaFacturaDetalle(fdetalles);
+				fcabs.add(fcab);
 			}
-		}
+			u.setListaFacturaCabecera(fcabs); 
+			returnlist.add(u);
+		}*/
+		
+		
 		return usuarios;
+		/*List<Usuario> returnlista = new ArrayList<>();
+		for(Usuario u : usuarios) {
+			List<FacturaCabecera> listafcabs = new ArrayList<>();
+			for(FacturaCabecera fcab: u.getListaFacturaCabecera()) {
+				listafcabs.add(fcab);
+			}
+			u.setListaFacturaCabecera(listafcabs);
+			returnlista.add(u);
+		}*/
+		
+		// usuarios.forEach(System.out::println);
+		// return usuarios;
 	}
 	
 
@@ -115,12 +149,12 @@ public class GestionTiendaON implements GestionTiendaLocal, GestionTiendaRemote{
 		// TODO Auto-generated method stub
 		return peliculaDAO.find(idPelicula);
 	}
-
-	@Override
-	public List<Pelicula> getPeliculas() {
+	public List<Pelicula> getPeliculas(){
 		// TODO Auto-generated method stub
 		return peliculaDAO.list();
 	}
+	
+	
 
 	
 	
@@ -217,7 +251,7 @@ public class GestionTiendaON implements GestionTiendaLocal, GestionTiendaRemote{
 
 	@Override
 	public boolean eliminarFCabecera(int numeroFactura) {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub 
 		return facturaCabeceraDAO.eliminar(numeroFactura);
 	}
 
@@ -230,7 +264,18 @@ public class GestionTiendaON implements GestionTiendaLocal, GestionTiendaRemote{
 	@Override
 	public List<FacturaCabecera> getFacturaCabeceras() {
 		// TODO Auto-generated method stub
-		return facturaCabeceraDAO.list();
+		return getFacturaCabecerasLazy(facturaCabeceraDAO.list());
+	}
+	
+	
+	
+	public List<FacturaCabecera> getFacturaCabecerasLazy(List<FacturaCabecera> facturaCabeceras) {
+		for(FacturaCabecera fcab : facturaCabeceras) {
+			for(FacturaDetalle fdet: fcab.getListaFacturaDetalle()) {
+				
+			}
+		}
+		return facturaCabeceras;
 	}
 
 	
@@ -279,15 +324,15 @@ public class GestionTiendaON implements GestionTiendaLocal, GestionTiendaRemote{
 	
 	
 	@Override 
-	public String login(String user, String password) {
+	public String login(String user, String password) { 
 		for(Usuario usuario: getUsuarios()) {
 			if(usuario.getUser().compareToIgnoreCase(user)==0 && usuario.getContrasenia().compareTo(password)==0)
 			{
-				return usuario.getCedula();
+				return usuario.getCedula()+":"+usuario.getTipoUsuario();
 			}
 			 
 		}
-		return null;
+		return "Credenciales incorrectas";
 	}
 	
 	
@@ -352,8 +397,7 @@ public class GestionTiendaON implements GestionTiendaLocal, GestionTiendaRemote{
 		fcab.setNumeroTarjetaCredito(numeroTarjeta);
 		fcab.setFecha(new Date());
 		crearFCabecera(fcab);	
-		numeroFactura = facturaCabeceraDAO.getLastNumeroFacturaCabecera();
-		
+		numeroFactura = fcab.getNumeroFactura();
 		double dineroGastado = 0.0;
 		FacturaDetalle fdet = new FacturaDetalle();
 		Usuario u = buscarUsuario(cedulaUsuario);
@@ -398,6 +442,7 @@ public class GestionTiendaON implements GestionTiendaLocal, GestionTiendaRemote{
 		
 		u.setDineroGastado(u.getDineroGastado()+dineroGastado);
 		u.setNumeroCompra(u.getNumeroCompra()+1);
+		u.getListaCarrito().clear();
 		this.updateUsuario(u);
 		return "Se genero la compra exitosamente";
 	}
@@ -406,8 +451,137 @@ public class GestionTiendaON implements GestionTiendaLocal, GestionTiendaRemote{
 	@Override
 	public List<Pelicula> peliculasMasVendidas() {
 		// TODO Auto-generated method stub
-		return null;
+		List<Pelicula> peliculas = new ArrayList<>();
+		int i =0;
+		for(Pelicula pel : peliculaDAO.listMayor()) {
+			if(i>9)break;
+			
+			peliculas.add(pel);
+			i++;
+		}
+		return peliculas;
 	}
+	
+	
+	
+	//implementados propios
+	
+	@Override
+	public boolean anularFactura(int numeroFactura)  {
+		//int numeroFactura = Integer.parseInt(parametro.split(":")[2].replaceAll("\"", "").trim());  
+		FacturaCabecera fcab = buscarFCabecera(numeroFactura);
+		if(fcab==null || fcab.getEstado().compareTo("anulada")==0) 
+			return false;
+		Usuario u = buscarUsuario(fcab.getCedulaUsuario());
+		//Usuario u = fcab.getUsuario();
+		u.setDineroGastado(u.getDineroGastado()-fcab.getTotal());
+		u.setNumeroCompra(u.getNumeroCompra()-1);
+		fcab.setEstado("anulada");
+	
+		
+		
+		for(FacturaDetalle fdet : fcab.getListaFacturaDetalle()) {
+			Pelicula p = fdet.getPelicula();
+			p.setCantidadVentas(p.getCantidadVentas()-1);
+			p.setStock(p.getStock()+fdet.getCantidad());
+			
+			
+			
+		}
+		fcab.setCedulaUsuario(fcab.getCedulaUsuario());
+		return updateFCabecera(fcab) ;
+		
+		//return gl.eliminarFCabecera(numeroFactura) ? "Se anulo la factura" : "No se anulo la factura";
+	}
+
+	@Override
+	public List<FacturaCabecera> listarFCabXCedula(String cedulaUsuario) {
+		// TODO Auto-generated method stub
+		List<FacturaCabecera> fcabs = new ArrayList<>();
+		for(FacturaCabecera fcab: getFacturaCabeceras()) { 
+			if(fcab.getCedulaUsuario().compareToIgnoreCase(cedulaUsuario)==0 && fcab.getEstado().compareTo("anulada")!=0) {
+				fcabs.add(fcab);
+			}
+		}
+		return fcabs;
+	}
+	
+	
+	@Override
+	public void generarReporte() {
+		Connection con = null;
+        
+        String url = "jdbc:postgresql://localhost:5432/tienda_appdis";
+        try {
+            Class.forName("org.postgresql.Driver");
+            con =  DriverManager.getConnection(url,"postgres","postgres");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+         
+        
+        JasperReport reporte = null;
+        
+        String path = "/Users/erleo15/eclipse-workspace/ProyectoAppDis/reportes/reporteMasVendidos.jasper"; 
+        //System.out.println("partiso: "+new File(path).getAbsolutePath());
+        try {
+            reporte = (JasperReport)JRLoader.loadObject(new File(path));
+            JasperPrint j = JasperFillManager.fillReport(path, null, con);//JasperFillManager.fillReport(path,null,con);
+
+            File pdf = new File("reporte.pdf");//File.createTempFile("output.", ".pdf");
+            //File ol=new File("aqui.pdf");
+            //ol.createNewFile();
+            try{
+            	pdf.delete();
+            }catch(Exception e) {
+            	
+            }
+            try{
+            	pdf.createNewFile();
+            	
+            }catch(Exception e) {
+            	
+            }
+            FileOutputStream f = new FileOutputStream(pdf);
+            //System.out.println(new FileOutputStream(pd f).toString());  
+            JasperExportManager.exportReportToPdfStream(j, f);
+            System.out.println("Realizado");
+            
+            /*JasperViewer vista = new JasperViewer(j,false);
+            vista.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+            vista.setVisible(true);*/
+        } catch (Exception ex) {
+             ex.printStackTrace();
+        }
+		/*Connection con = null;
+        
+        String url = "jdbc:postgresql://localhost:5432/tienda_appdis";
+        try {
+            Class.forName("org.postgresql.Driver");
+            con =  DriverManager.getConnection(url,"postgres","postgres");
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+         
+        
+        JasperReport reporte = null;
+        
+        String path = "reportes/reporteMasVendidos.jasper"; 
+        System.out.println("partiso: "+new File(path).getAbsolutePath());
+        try {
+            reporte = (JasperReport)JRLoader.loadObject(new File(path));
+            JasperPrint j = JasperFillManager.fillReport(path, null, con);//JasperFillManager.fillReport(path,null,con);
+            
+            JasperViewer vista = new JasperViewer(j,false);
+            vista.
+            vista.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+            vista.setVisible(true);
+        } catch (JRException ex) {
+             ex.printStackTrace();
+        }*/
+	}
+
+	
 	
 
  
