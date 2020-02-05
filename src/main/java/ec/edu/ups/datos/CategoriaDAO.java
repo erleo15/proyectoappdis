@@ -81,14 +81,14 @@ public class CategoriaDAO {
 	 * la base de datos
 	 * @return una lista con todos los resultados
 	 */
-	@SuppressWarnings("unchecked")
+	
 	public List<Categoria> list(){  
-		return em.createNativeQuery("SELECT c from Categoria c", Categoria.class).getResultList();
+		return em.createNativeQuery("SELECT * from tie_categoria order by cat_id asc", Categoria.class).getResultList();
 	}
 	
 	public int getLastIdCategoria() {
 		String jpql = "Select MAX(e.idCategoria) from Categoria e";
-		Query q = em.createNativeQuery(jpql, Integer.class);
+		Query q = em.createQuery(jpql, Integer.class);
 		return (int) q.getSingleResult();
 	}
 

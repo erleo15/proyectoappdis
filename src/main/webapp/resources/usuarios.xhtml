@@ -57,11 +57,11 @@
 
 
 					<li><a href="usuarios.xhtml" class="active-link"><i
-							class="fa fa-table "></i>Usuarios</a></li>
-					<li><a href="productos.xhtml"><i class="fa fa-edit "></i>Productos</a></li>
+							class="fa fa-users"></i>Usuarios</a></li>
+					<li><a href="productos.xhtml"><i class="fa fa-video-camera "></i>Peliculas</a></li>
+					<li><a href="categorias.xhtml" ><i class="fa fa-ticket "></i>Categorias</a></li>
 
-
-					<li><a href="clientes.xhtml"><i class="fa fa-edit "></i>Clientes</a></li>
+					<li><a href="reportes.xhtml"><i class="fa fa-dollar "></i>Reportes</a></li>
 				</ul>
 			</div>
 
@@ -166,48 +166,54 @@
 
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Cedula" for="cedula"
-											style="width: 130px;" />
-										<h:inputText class="form-control"
-											a:placeholder="Ingrese la cedula"
-											value="#{gestionTiendaBean.usuario.cedula}" id="cedula" />
+											style="width: 130px; text-align: center;" />
+										<h:inputText class="form-control"  onkeypress="if(event.which &lt; 48 || event.which &gt; 57 ) return false;"
+											
+											style="width: 400px; text-align: center;" a:placeholder="Ingrese la cedula"
+											value="#{gestionTiendaBean.usuario.cedula}" id="cedula"  >
+											
+											</h:inputText>
 										<h:message for="cedula" />
 									</h:panelGrid>
 
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Nombre" for="nombre"
-											style="width: 130px;" />
+											style="width: 130px; text-align: center;" />
 										<h:inputText class="form-control"
 											a:placeholder="Ingrese el nombre"
+											style="width: 400px; text-align: center;"
 											value="#{gestionTiendaBean.usuario.nombre}" id="nombre" />
 										<h:message for="nombre" />
 									</h:panelGrid>
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Apellido" for="apellido"
-											style="width: 130px;" />
+											style="width: 130px;text-align: center;" />
 										<h:inputText class="form-control"
 											a:placeholder="Ingrese el Apellido"
+											style="width: 400px; text-align: center;"
 											value="#{gestionTiendaBean.usuario.apellido}" id="apellido" />
 										<h:message for="apellido" />
 									</h:panelGrid>
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Telefono" for="telefono"
-											style="width: 130px;" />
+											style="width: 130px;text-align: center;" />
 										<h:inputText class="form-control"
-											a:placeholder="Ingrese el Telefono"
+											style="width: 400px; text-align: center;" a:placeholder="Ingrese el Telefono" type="number"
 											value="#{gestionTiendaBean.usuario.telefono}" id="telefono" />
 										<h:message for="telefono" />
 									</h:panelGrid>
 									<h:panelGrid columns="3">
-										<h:outputLabel value="Email" for="email" style="width: 130px;" />
-										<h:inputText class="form-control"
-											a:placeholder="Ingrese el email"
+										<h:outputLabel value="Email" for="email" style="width: 130px;text-align: center;" />
+										<h:inputText class="form-control" 
+											style="width: 400px; text-align: center;"
+											 a:placeholder="Ingrese el email"
 											value="#{gestionTiendaBean.usuario.email}" id="email" />
 										<h:message for="email" />
 									</h:panelGrid>
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Fecha Nacimiento"  for="fnacimiento"
-											style="width: 130px;" />
-										<!--  <h:inputText class="form-control" a:placeholder="Ingrese la fecha de nacimiento" value="#{usuarioBean.usuario.fechaNacimiento}" id="fnacimiento"><f:convertDateTime pattern="dd/MM/yyyy"/></h:inputText>
+											style="width: 130px;text-align: center;" />
+										<!--  <h:inputText class="form-control" style="width: 400px; text-align: center;" a:placeholder="Ingrese la fecha de nacimiento" value="#{usuarioBean.usuario.fechaNacimiento}" id="fnacimiento"><f:convertDateTime pattern="dd/MM/yyyy"/></h:inputText>
 			<h:message for="fnacimiento" /> -->
 
 											<h:inputText t:type="date" value="#{gestionTiendaBean.usuario.fechaNacimiento}" id="fnac" class="form-control-success form-control"> 
@@ -219,33 +225,36 @@
 
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Nickname" for="user"
-											style="width: 130px;" />
+											style="width: 130px;text-align: center;" />
 										<h:inputText class="form-control"
+											style="width: 400px; text-align: center;" 
 											a:placeholder="Ingrese el NickName"
 											value="#{gestionTiendaBean.usuario.user}" id="user" />
 										<h:message for="user" />
 									</h:panelGrid>
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Contrasenia" for="contrasenia"
-											style="width: 130px;" />
+											style="width: 130px;text-align: center;" />
 										<h:inputHidden></h:inputHidden>
 										<h:inputSecret class="form-control"
+											style="width: 400px; text-align: center;" 
 											a:placeholder="Ingrese la contrasenia"
 											value="#{gestionTiendaBean.usuario.contrasenia}" id="contrasenia" />
 										<h:message for="contrasenia" />
 									</h:panelGrid>
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Direccion" for="direccion"
-											style="width: 130px;" />
+											style="width: 130px;text-align: center;" />
 										<h:inputText class="form-control"
-											a:placeholder="Ingrese la direccion" style="width: 250px;"
+											style="width: 600px; text-align: center;" 
+											a:placeholder="Ingrese la direccion" 
 											value="#{gestionTiendaBean.usuario.direccionUsuario}"
 											id="direccion" />
 										<h:message for="direccion" />
 									</h:panelGrid>
 									<h:panelGrid columns="3">
-										<h:outputLabel value="Tipo" for="tipo" style="width: 130px;" />
-										<!--   <h:inputText a:placeholder="Ingrese el tipo"
+										<h:outputLabel value="Tipo" for="tipo" style="width: 130px;text-align: center;" />
+										<!--   <h:inputText style="width: 400px; text-align: center;" a:placeholder="Ingrese el tipo"
 											class="form-control"
 											value="#{usuarioBean.usuario.tipoUsuario}" id="tipo" />-->
 										<h:selectOneMenu class="form-control" value="#{gestionTiendaBean.usuario.tipoUsuario}" >
@@ -316,46 +325,49 @@
 										 
 										<h:panelGrid columns="3">
 										<h:outputLabel value="Cedula" for="cedula"
-											style="width: 130px;" />
+											style="width: 130px;text-align: center;" />
 										<h:inputText class="form-control" 
-											value="#{gestionTiendaBean.usuario.cedula}" id="cedulamod" />
+											value="#{gestionTiendaBean.usuario.cedula}" id="cedulamod" readonly="true"/>
 										<h:message for="cedula" />
 									</h:panelGrid>
 
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Nombre" for="nombre"
-											style="width: 130px;" />
+											style="width: 130px;text-align: center;" />
 										<h:inputText class="form-control" 
-											value="#{gestionTiendaBean.usuario.nombre}" id="nombremod" />
+											value="#{gestionTiendaBean.usuario.nombre}" id="nombremod" 
+											style="width: 250px; text-align: center;" />
 										<h:message for="nombre" />
 									</h:panelGrid>
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Apellido" for="apellido"
-											style="width: 130px;" />
+											style="width: 130px;text-align: center;" />
 										<h:inputText class="form-control" 
-											value="#{gestionTiendaBean.usuario.apellido}" id="apellidomod" />
+											value="#{gestionTiendaBean.usuario.apellido}" id="apellidomod" 
+											style="width: 250px; text-align: center;" />
 										<h:message for="apellido" />
 									</h:panelGrid>
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Telefono" for="telefono"
-											style="width: 130px;" />
+											style="width: 130px;text-align: center;" />
 										<h:inputText class="form-control" 
+										style="width: 250px; text-align: center;" 
 											value="#{gestionTiendaBean.usuario.telefono}" id="telefonomod" />
 										<h:message for="telefono" />
 									</h:panelGrid>
 									<h:panelGrid columns="3">
-										<h:outputLabel value="Email" for="email" style="width: 130px;" />
+										<h:outputLabel value="Email" for="email" style="width: 130px;text-align: center;" />
 										<h:inputText class="form-control" 
+										style="width: 400px; text-align: center;" 
 											value="#{gestionTiendaBean.usuario.email}" id="emailmod" />
 										<h:message for="email" />
 									</h:panelGrid>
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Fecha Nacimiento"  for="fnacimiento"
-											style="width: 130px;" />
-										<!--  <h:inputText class="form-control" a:placeholder="Ingrese la fecha de nacimiento" value="#{usuarioBean.usuario.fechaNacimiento}" id="fnacimiento"><f:convertDateTime pattern="dd/MM/yyyy"/></h:inputText>
-			<h:message for="fnacimiento" /> -->
-
-											<h:inputText t:type="date" value="#{gestionTiendaBean.usuario.fechaNacimiento}" id="fnacmod" class="form-control-success form-control"> 
+											style="width: 130px;text-align: center;" /> 
+											<h:inputText t:type="date"
+											style="width: 250px; text-align: center;" 
+											 value="#{gestionTiendaBean.usuario.fechaNacimiento}" id="fnacmod" class="form-control-success form-control"> 
                                     	    	<f:convertDateTime pattern="yyyy-MM-dd"/>
                                     	    </h:inputText>
 
@@ -364,23 +376,25 @@
 
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Nickname" for="user"
-											style="width: 130px;" />
+											style="width: 130px;text-align: center;" />
 										<h:inputText class="form-control" 
+										style="width: 250px; text-align: center;" 
 											value="#{gestionTiendaBean.usuario.user}" id="usermod" />
 										<h:message for="user" />
 									</h:panelGrid>
 									 
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Direccion" for="direccion"
-											style="width: 130px;" />
+											style="width: 130px;text-align: center;" />
 										<h:inputText class="form-control"
-											a:placeholder="Ingrese la direccion" style="width: 250px;" value="#{gestionTiendaBean.usuario.direccionUsuario}"
+											style="width: 600px; text-align: center;" 
+										 value="#{gestionTiendaBean.usuario.direccionUsuario}"
 											id="direccionmod" />
 										<h:message for="direccion" />
 									</h:panelGrid>
 									<h:panelGrid columns="3">
-										<h:outputLabel value="Tipo" for="tipo" style="width: 130px;" />
-										<!--   <h:inputText a:placeholder="Ingrese el tipo"
+										<h:outputLabel value="Tipo" for="tipo" style="width: 130px;text-align: center;" />
+										<!--   <h:inputText style="width: 400px; text-align: center;" a:placeholder="Ingrese el tipo"
 											class="form-control"
 											value="#{usuarioBean.usuario.tipoUsuario}" id="tipo" />-->
 										<h:selectOneMenu class="form-control" value="#{gestionTiendaBean.usuario.tipoUsuario}" >

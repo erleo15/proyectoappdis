@@ -17,6 +17,7 @@ import ec.edu.ups.modelo.Carrito;
  */
 @Stateless
 public class CarritoDAO {
+	//hola
 
 	@Inject
 	private EntityManager em;
