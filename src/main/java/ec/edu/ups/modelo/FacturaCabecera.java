@@ -54,7 +54,7 @@ public class FacturaCabecera implements Serializable{
 	@Column(name = "fcab_numero_tarjeta")
 	private String  numeroTarjetaCredito;
 	
-	@Column(name = "fcab_direccion")
+	@Column(name = "fcab_direccion" , columnDefinition = "text")
 	private String direccionEnvio;
 	
 

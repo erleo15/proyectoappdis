@@ -81,6 +81,7 @@ public class CategoriaDAO {
 	 * la base de datos
 	 * @return una lista con todos los resultados
 	 */
+	@SuppressWarnings("unchecked")
 	public List<Categoria> list(){  
 		return em.createNativeQuery("SELECT c from Categoria c", Categoria.class).getResultList();
 	}

@@ -5,7 +5,8 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id; 
+import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -32,7 +33,7 @@ public class Pelicula implements Serializable{
 	
 	@NotNull
 	@NotEmpty
-	@Column(name =  "pel_descripcion")
+	@Column(name =  "pel_descripcion" , columnDefinition = "text")
 	private String descripcion;
 	
 	@Column(name="pel_precio")

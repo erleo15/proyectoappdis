@@ -82,7 +82,7 @@ public class UsuarioDAO {
 	 * @return una lista con todos los resultados
 	 */
 	public List<Usuario> list(){    
-		return  em.createQuery("SELECT c from Usuario c", Usuario.class).getResultList(); 
+		return  em.createNativeQuery("SELECT * from tie_usuario order by usu_fecha_registro desc", Usuario.class).getResultList(); 
 	}
 
 }

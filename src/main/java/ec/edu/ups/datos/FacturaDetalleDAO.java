@@ -6,8 +6,7 @@ import javax.ejb.Stateless;
 import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
-
-import ec.edu.ups.modelo.FacturaCabecera;
+ 
 import ec.edu.ups.modelo.FacturaDetalle;
 
 @Stateless

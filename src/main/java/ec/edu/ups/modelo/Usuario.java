@@ -357,7 +357,7 @@ public class Usuario implements Serializable{
 				+ ", email=" + email + ", fechaNacimiento=" + fechaNacimiento + ", fechaRegistro=" + fechaRegistro
 				+ ", user=" + user + ", contrasenia=" + contrasenia + ", numeroCompra=" + numeroCompra
 				+ ", dineroGastado=" + dineroGastado + ", direccionUsuario=" + direccionUsuario + ", tipoUsuario="
-				+ tipoUsuario + ", listaFacturaCabecera=" + listaFacturaCabecera 
+				+ tipoUsuario //+ ", listaFacturaCabecera=" + listaFacturaCabecera 
 				+ ", listaCarrito=" + listaCarrito
 				+ "]";
 	} 

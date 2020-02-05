@@ -1,0 +1,262 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:t="http://xmlns.jcp.org/jsf/passthrough">
+<head>
+      <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos</title>
+	<!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+     <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <!-- CUSTOM STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+     <!-- GOOGLE FONTS-->
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+     
+           
+          
+    <div id="wrapper">
+         <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="adjust-nav">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.xhtml">
+                        <img src="assets/img/logop.png" width="200" />
+                    </a>
+                </div>
+              
+                 <span class="logout-spn" >
+                  <a href="#" style="color:#fff;">LOGOUT</a>  
+
+                </span>
+            </div>
+        </div>
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                 
+					<li ><a href="index.xhtml"><i
+							class="fa fa-desktop "></i>Inicio</a>
+					</li>
+
+
+					<li><a href="usuarios.xhtml"><i class="fa fa-table "></i>Usuarios</a></li>
+					<li><a href="productos.xhtml" class="active-link"><i class="fa fa-edit "></i>Productos</a></li>
+
+
+					<li><a href="clientes.xhtml"><i class="fa fa-edit "></i>Clientes</a></li>
+                </ul>
+                            </div>
+
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                    
+                     <h2>Peliculas </h2> 
+                    <div> <button class="btn btn-primary" data-toggle="modal"
+						data-target="#mediumModal">
+						<i class="fa fa-plus-circle">.</i> Nuevo Usuario
+					</button> </div> 
+                     <h:form>
+			
+			
+					
+					
+			<h:dataTable border="1" value="#{gestionTiendaBean.listarPeliculas()}" var="pelicula" class="table table-striped table-bordered table-hover">
+				<h:column id="pel_id">
+					<f:facet name="header">Pelicula ID</f:facet>
+						#{pelicula.codigoPelicula} 
+				</h:column>
+				<h:column id="pel_nombre">
+					<f:facet name="header">Nombre</f:facet>
+						#{pelicula.nombre} 
+				</h:column>
+				<h:column id="pel_descripcion">
+					<f:facet name="header">Descripcion</f:facet>
+						#{pelicula.descripcion} 
+				</h:column>
+				<h:column id="usu_telefono">
+					<f:facet name="header">Precio</f:facet>
+					#{pelicula.precio} 
+				</h:column>
+				<h:column id="usu_email">
+					<f:facet name="header">Anio</f:facet>
+						#{pelicula.anio} 
+				</h:column>
+				<h:column id="usu_fnacimiento">
+					<f:facet name="header">Stock</f:facet>
+						 #{pelicula.stock} 
+					
+				</h:column>
+				<h:column id="pel_fregistro">
+					<f:facet name="header">Cantidad Votos</f:facet>
+						#{pelicula.cantidadVotos}
+				</h:column>
+				<h:column id="pel_user">
+					<f:facet name="header">Cantidad Ventas</f:facet>
+						 #{pelicula.cantidadVentas} 
+					
+				</h:column> 
+				<h:column>
+				<f:facet name="header">Imagen</f:facet>
+				<img src="#{pelicula.imagenHttp}"  width="50" height="100"/>
+				</h:column>
+				
+				 
+				<h:column id="pel_eliminar">
+					<f:facet name="header">Eliminar</f:facet>
+						<h:commandButton action="#{gestionTiendaBean.eliminarPelicula(pelicula.codigoPelicula)}" class="alert-danger" value="delete" />
+					 
+				</h:column>
+				
+			</h:dataTable>
+		</h:form>
+                    </div>
+                </div>              
+                 <!-- /. ROW  -->
+                  <hr />
+              
+                 <!-- /. ROW  -->           
+    </div>
+             <!-- /. PAGE INNER  -->
+            </div>
+         <!-- /. PAGE WRAPPER  -->
+        </div>
+        
+        
+        
+        
+        
+        <!-- Para crear Usuarios -->
+					<!-- modal medium -->
+					<h:form>
+					
+					<div class="modal fade" id="mediumModal" tabindex="-1"
+						role="dialog" aria-labelledby="mediumModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog modal-lg" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="mediumModalLabel">Crear
+										Usuario</h5>
+									<button type="button" class="close" data-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body">
+
+
+									 
+									 
+									 <h:form>
+
+
+		<h1>Crear Pelicula</h1>
+
+	
+			 
+		
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Nombre" for="nombre" />
+			<h:inputText value="#{gestionTiendaBean.pelicula.nombre}" id="nombre" />
+			<h:message for="nombre" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Descripcion" for="descripcion" />
+			<h:inputText value="#{gestionTiendaBean.pelicula.descripcion}" id="descripcion" />
+			<h:message for="descripcion" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Precio" for="precio" />
+			<h:inputText value="#{gestionTiendaBean.pelicula.precio}" id="precio" />
+			<h:message for="precio" />
+		</h:panelGrid>
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Anio" for="anio" />
+			<h:inputText value="#{gestionTiendaBean.pelicula.anio}" id="anio" />
+			<h:message for="anio" />
+		</h:panelGrid> 
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Stock Disponible" for="stock" />
+			<h:inputText value="#{gestionTiendaBean.pelicula.stock}" id="stock" />
+			<h:message for="fregistro" />
+		</h:panelGrid>  
+		<h:panelGrid columns="3">
+			<h:outputLabel value="Imagen" for="imagen" />
+			<h:inputText value="#{gestionTiendaBean.pelicula.imagenHttp}" id="imagen" />
+			<h:message for="imagen" />
+		</h:panelGrid>
+
+									<h:panelGrid columns="3">
+										<h:outputLabel value="Tipo" for="tipo" style="width: 130px;" /> 
+										<h:selectOneMenu class="form-control" value="#{gestionTiendaBean.listarCategorias()}" >
+											<f:selectItem itemValue="admin" itemLabel="admin" />
+											<f:selectItem itemValue="user" itemLabel="user" /> 
+										</h:selectOneMenu>
+										<h:message for="tipo" />
+									</h:panelGrid>
+		<!--  <h:panelGrid columns="3">
+			<h:outputLabel value="Categoria" for="categoria" />
+			<h:inputText value="#{gestionTiendaBean.pelicula.idCategoria}" id="categoria" />
+			<h:message for="categoria" />
+		</h:panelGrid>-->
+		
+	<h:commandButton id="btnCrearPelicula" action="#{gestionTiendaBean.crearPelicula(gestionTiendaBean.pelicula)}" value="Guardar Pelicula"></h:commandButton>
+		</h:form>
+									 
+									 
+									 
+									 
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-secondary"
+										data-dismiss="modal">Cancelar</button> 
+										
+								<h:commandButton class="btn btn-primary" action="#{gestionTiendaBean.crearUsuario()}" value="Guardarb" />
+					
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					</h:form>
+					<!-- end modal medium -->
+
+					<!-- Termina crear usuarios -->
+        
+        
+        
+        
+        
+        
+    <div class="footer">
+
+        </div>
+          
+
+     <!-- /. WRAPPER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+      <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.min.js"></script>
+      <!-- CUSTOM SCRIPTS -->
+    <script src="assets/js/custom.js"></script>
+    
+   
+</body>
+</html>

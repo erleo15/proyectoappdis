@@ -29,8 +29,7 @@ import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
-import net.sf.jasperreports.engine.util.JRLoader;
-import net.sf.jasperreports.view.JasperViewer;
+import net.sf.jasperreports.engine.util.JRLoader; 
 
 @Stateless
 public class GestionTiendaON implements GestionTiendaLocal, GestionTiendaRemote{
@@ -88,6 +87,7 @@ public class GestionTiendaON implements GestionTiendaLocal, GestionTiendaRemote{
 		return getUsuariosLazy(usuarioDAO.list()); 
 	}
 
+	@SuppressWarnings("unused")
 	public List<Usuario> getUsuariosLazy(List<Usuario> usuarios) {
 		List<Usuario> returnlist = new ArrayList<>();
 		/*for(Usuario u : usuarios) {
@@ -269,6 +269,7 @@ public class GestionTiendaON implements GestionTiendaLocal, GestionTiendaRemote{
 	
 	
 	
+	@SuppressWarnings("unused")
 	public List<FacturaCabecera> getFacturaCabecerasLazy(List<FacturaCabecera> facturaCabeceras) {
 		for(FacturaCabecera fcab : facturaCabeceras) {
 			for(FacturaDetalle fdet: fcab.getListaFacturaDetalle()) {
@@ -507,6 +508,7 @@ public class GestionTiendaON implements GestionTiendaLocal, GestionTiendaRemote{
 	}
 	
 	
+	@SuppressWarnings("unused")
 	@Override
 	public void generarReporte() {
 		Connection con = null;

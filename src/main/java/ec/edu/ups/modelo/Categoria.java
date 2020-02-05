@@ -43,7 +43,7 @@ public class Categoria implements Serializable{
 	
 	@NotNull
 	@NotEmpty
-	@Column(name = "cat_descripcion")
+	@Column(name = "cat_descripcion" , columnDefinition = "text")
 	private String descripcion;
 	
 	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)

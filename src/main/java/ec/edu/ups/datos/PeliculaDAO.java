@@ -80,11 +80,12 @@ public class PeliculaDAO {
 	 * @return una lista con todos los resultados
 	 */
 	public List<Pelicula> list(){    
-		return  em.createQuery("SELECT c from Pelicula c", Pelicula.class).getResultList(); 
+		return  em.createNativeQuery("SELECT * from tie_pelicula order by pel_id asc", Pelicula.class).getResultList(); 
 	}
 	
+	@SuppressWarnings("unchecked")
 	public List<Pelicula> listMayor(){    
-		return  em.createNativeQuery("SELECT * from tie_pelicula p order by p.pel_cantidad_venta", Pelicula.class).getResultList(); 
+		return  em.createNativeQuery("SELECT * from tie_pelicula p order by p.pel_cantidad_venta desc", Pelicula.class).getResultList(); 
 	}
 	
 	public int getLastNumeroDetalle() {
