@@ -84,5 +84,18 @@ public class UsuarioDAO {
 	public List<Usuario> list(){    
 		return  em.createNativeQuery("SELECT * from tie_usuario order by usu_fecha_registro desc", Usuario.class).getResultList(); 
 	}
+	
+	
+	/**
+	 * Metodo que lista los clientes que mas dinero gastan en la empresa
+	 * la base de datos
+	 * @return una lista con todos los resultados
+	 */
+	public List<Usuario> listmascompran(){    
+		return  em.createNativeQuery("SELECT * from tie_usuario order by usu_dinero_gastado DESC limit 10;", Usuario.class).getResultList(); 
+	}
+	
+	
+	
 
 }

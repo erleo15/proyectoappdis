@@ -47,7 +47,7 @@ public class FacturaDetalleDAO {
 	}
 	
 	/**
-	 * Metodo que busca un
+	 * Metodo que busca un objeto de la clase mediante un campo
 	 * @param id es la instancia de la clase en cuestiopn a administrar
 	 * @return retorna un objeto a la clase
 	 */
@@ -80,6 +80,11 @@ public class FacturaDetalleDAO {
 
 	}
 	
+	/**
+	 * Metodo que devuelve el ultimo id de la clase almacenado en
+	 * la base de datos
+	 * @return
+	 */
 	public int getLastNumeroDetalle() {
 		String jpql = "Select MAX(e.numFDetalle) from FacturaDetalle e";
 		Query q = em.createQuery(jpql, Integer.class);

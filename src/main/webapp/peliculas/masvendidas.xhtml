@@ -15,7 +15,7 @@
 	
 <h:form> 
 			
-			<h:dataTable border="1" value="#{gestionTiendaBean.peliculasMasVendidas()}" var="pelicula">
+			<h:dataTable border="1" value="#{gestionTiendaBean.listPeliculaMasComprado(2)}" var="pelicula">
 				<h:column id="pel_id">
 					<f:facet name="header">Pelicula ID</f:facet>
 						#{pelicula.codigoPelicula} 
@@ -47,13 +47,16 @@
 				</h:column>
 				<h:column id="pel_user">
 					<f:facet name="header">Cantidad Ventas</f:facet>
-						 #{pelicula.cantidadVentas} 
-					
+						 #{pelicula.cantidadVentas}  
 				</h:column>  
+				<h:column id="pel_categoria">
+					<f:facet name="header">Categoria</f:facet>
+						 #{gestionTiendaBean.buscarCategoria(pelicula.idCategoria).nombre}  
+				</h:column>
 				
 			</h:dataTable>
 			 
-		<h:commandButton id="masvendidos" action="#{gestionTiendaBean.generarReporte()}" value="Generar Reporte"></h:commandButton> 
+		<h:commandButton id="masvendidos" actionListener="#{gestionTiendaBean.PDF()}" value="Generar Reporte"></h:commandButton> 
 		</h:form> 
 </body>
 </html>

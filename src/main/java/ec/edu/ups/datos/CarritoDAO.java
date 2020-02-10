@@ -17,7 +17,7 @@ import ec.edu.ups.modelo.Carrito;
  */
 @Stateless
 public class CarritoDAO {
-	//hola
+	
 
 	@Inject
 	private EntityManager em;
@@ -69,16 +69,29 @@ public class CarritoDAO {
 		return em.createQuery("SELECT c from Carrito c", Carrito.class).getResultList();
 	}
 	
+	/**
+	 * Metodo que elimina un objeto de la clase almacenado en la base de datos
+	 * @param idCarrito instancia de la clase en cuestion a administrar
+	 * @return 
+	 */
 	public boolean remove(int idCarrito ) { 
 		try {
-		em.remove(find(idCarrito));
-		return true;
+			//Carrito carrito = find(idCarrito);
+			//System.out.println("carrito encontrado"+carrito);
+		return em.createNativeQuery("DELETE FROM tie_carrito where car_numero = "+idCarrito).executeUpdate() != 0;
+			 
+		 
 		}catch(Exception e) {
 			e.printStackTrace();
 			return false;
 		}
 	}
 	
+	
+	/**
+	 * Metodo que devuelve el ultimo id de un objeto
+	 * @return un entero con el campo mayor de una instancias
+	 */
 	public int getLastIdCarrito() {
 		String jpql = "Select MAX(e.idCarrito) from Carrito e";
 		Query q = em.createQuery(jpql, Integer.class);

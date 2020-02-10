@@ -5,7 +5,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
 	xmlns:t="http://xmlns.jcp.org/jsf/passthrough">
-<head>
+<h:head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Productos</title>
@@ -17,7 +17,7 @@
     <link href="assets/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-</head>
+</h:head>
 <body>
      
            
@@ -37,7 +37,7 @@
                 </div>
               
                  <span class="logout-spn" >
-                  <a href="#" style="color:#fff;">LOGOUT</a>  
+                  <a href="login.xhtml" style="color:#fff;">Cerrar Sesion</a>  
 
                 </span>
             </div>
@@ -57,7 +57,8 @@
 
 					<li><a href="categorias.xhtml" ><i class="fa fa-ticket "></i>Categorias</a></li>
 					
-					<li><a href="reportes.xhtml"><i class="fa fa-dollar "></i>Reportes</a></li>
+					<li><a href="consultas.xhtml"><i class="fa fa-dollar "></i>Consultas</a></li>
+					
                 </ul>
                             </div>
 
@@ -70,12 +71,12 @@
                     
                      <h2>Peliculas </h2> 
                     <div> <button class="btn btn-primary" data-toggle="modal"
-						data-target="#mediumModal">
+						data-target="#mediumModal" onclick="#{gestionTiendaBean.limpiarPelicula()}">
 						<i class="fa fa-plus-circle">.</i> Nueva Pelicula
 					</button> </div> 
 					
 					<div> <button class="btn btn-primary" data-toggle="modal"
-						data-target="#mediumModalModificar">
+						data-target="#mediumModalModificar" onclick="#{gestionTiendaBean.limpiarPelicula()}">
 						<i class="fa fa-plus-circle">.</i> Modificar Pelicula
 					</button> </div> 
                      <h:form>
@@ -112,7 +113,7 @@
 				</h:column>
 				<h:column id="pel_fregistro">
 					<f:facet name="header">Cantidad Votos</f:facet>
-						#{pelicula.cantidadVotos}
+						1
 				</h:column>
 				<h:column id="pel_user">
 					<f:facet name="header">Cantidad Ventas</f:facet>
@@ -160,7 +161,7 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<h5 class="modal-title" id="mediumModalLabel">Crear
-										Usuario</h5>
+										Pelicula</h5>
 									<button type="button" class="close" data-dismiss="modal"
 										aria-label="Close"></button>
 								</div>
@@ -176,7 +177,7 @@
 		<h1>Crear Pelicula</h1>
 
 	
-			 
+		 
 		
 		<h:panelGrid columns="3">
 			<h:outputLabel value="Nombre" for="nombre" style="width: 130px; text-align: center;"/>
@@ -279,15 +280,22 @@
 												<h:inputText class="form-control-success form-control"
 													value="#{gestionTiendaBean.pelicula.nombre}" id="pelinombrebuscar" />
 													<h:commandButton value=" Buscar" class="btn btn-primary"   action="#{gestionTiendaBean.buscarPelicula(gestionTiendaBean.pelicula.nombre)}">
-						
+						<f:ajax execute="pelinombrebuscar" 
+						render="pelidremod
+						 pelinombremod 
+						 descripcionmod 
+						 preciomod 
+						 aniomod 
+						 stockmod 
+						 imagenmod 
+						 categoriamod" ></f:ajax>
+					
 					</h:commandButton>
 					
 													 
 											 
 										 
-										 </h:form>
-			 
-		<h:form>
+										 
 				<h:panelGrid columns="3">
 			<h:outputLabel value="Id" for="nombre" style="width: 130px; text-align: center;"/>
 			<h:inputText value="#{gestionTiendaBean.pelicula.codigoPelicula}" id="pelidremod" readonly="true"/>
@@ -301,33 +309,33 @@
 		</h:panelGrid>
 		<h:panelGrid columns="3">
 			<h:outputLabel value="Descripcion" for="descripcion" style="width: 130px; text-align: left;"/>
-			<h:inputTextarea value="#{gestionTiendaBean.pelicula.descripcion}" id="descripcion" />
+			<h:inputTextarea value="#{gestionTiendaBean.pelicula.descripcion}" id="descripcionmod" />
 			<h:message for="descripcion" />
 		</h:panelGrid>
 		<h:panelGrid columns="3">
 			<h:outputLabel value="Precio" for="precio" style="width: 130px; text-align: center;"/>
-			<h:inputText value="#{gestionTiendaBean.pelicula.precio}" id="precio" />
+			<h:inputText value="#{gestionTiendaBean.pelicula.precio}" id="preciomod" />
 			<h:message for="precio" />
 		</h:panelGrid>
 		<h:panelGrid columns="3">
 			<h:outputLabel value="Anio" for="anio" style="width: 130px; text-align: center;"/>
-			<h:inputText value="#{gestionTiendaBean.pelicula.anio}" id="anio" />
+			<h:inputText value="#{gestionTiendaBean.pelicula.anio}" id="aniomod" />
 			<h:message for="anio" />
 		</h:panelGrid> 
 		<h:panelGrid columns="3">
 			<h:outputLabel value="Stock Disponible" for="stock" style="width: 130px; text-align: center;"/>
-			<h:inputText value="#{gestionTiendaBean.pelicula.stock}" id="stock" />
+			<h:inputText value="#{gestionTiendaBean.pelicula.stock}" id="stockmod" />
 			<h:message for="fregistro" />
 		</h:panelGrid>  
 		<h:panelGrid columns="3">
 			<h:outputLabel value="Imagen" for="imagen" style="width: 130px; text-align: center;" />
-			<h:inputText value="#{gestionTiendaBean.pelicula.imagenHttp}" id="imagen" />
+			<h:inputText value="#{gestionTiendaBean.pelicula.imagenHttp}" id="imagenmod" />
 			<h:message for="imagen" />
 		</h:panelGrid>
 
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Categoria" for="tipo" style="width: 130px; text-align: center;" /> 
-										<h:selectOneMenu class="form-control" value="#{gestionTiendaBean.pelicula.idCategoria}" style="width: 130px; text-align: center;">
+										<h:selectOneMenu class="form-control" value="#{gestionTiendaBean.pelicula.idCategoria}" style="width: 130px; text-align: center;" id="categoriamod">
 											<f:selectItems value="#{gestionTiendaBean.listarCategorias()}" 
 											var="categoria" itemValue="#{categoria.idCategoria}" itemLabel="#{categoria.nombre}" style="width: 130px; text-align: center;" /> 
 											</h:selectOneMenu>

@@ -196,7 +196,7 @@ public class FacturaCabecera implements Serializable{
 	}
 
 	/**
-	 * Metodo que obtiene el objeto en cuestion de la clase
+	 * Metodo que obtiene el parametro en cuestion de la clase
 	 * @return el objeto buscado
 	 */
 	public String getDireccionEnvio() {
@@ -211,18 +211,34 @@ public class FacturaCabecera implements Serializable{
 		this.direccionEnvio = direccionEnvio;
 	}
 
+	/**
+	 * Metodo que obtiene el parametro en cuestion de la clase
+	 * @return el objeto en cuestion
+	 */
 	public String getNumeroTarjetaCredito() {
 		return numeroTarjetaCredito;
 	}
 
+	/**
+	 * Metodo que setea un parametro de la clase
+	 * @param numeroTarjetaCredito valor del atributo en cuestion
+	 */
 	public void setNumeroTarjetaCredito(String numeroTarjetaCredito) {
 		this.numeroTarjetaCredito = numeroTarjetaCredito;
 	}
 
+	/**
+	 * Metodo que retorna una lista de objetos de la clase
+	 * @return un objeto de la clase en cuestion
+	 */
 	public List<FacturaDetalle> getListaFacturaDetalle() {
 		return listaFacturaDetalle;
 	}
 
+	/**
+	 * Setea una lista de objetos de la clase
+	 * @param listaFacturaDetalle objeto de la clase en cuestion
+	 */
 	public void setListaFacturaDetalle(List<FacturaDetalle> listaFacturaDetalle) {
 		this.listaFacturaDetalle = listaFacturaDetalle;
 	}

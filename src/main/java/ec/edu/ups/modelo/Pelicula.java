@@ -1,15 +1,21 @@
 package ec.edu.ups.modelo;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id; 
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-import org.hibernate.validator.constraints.NotEmpty; 
+import org.hibernate.validator.constraints.NotEmpty;  
 
 @Entity
 @Table(name="tie_pelicula")
@@ -44,6 +50,7 @@ public class Pelicula implements Serializable{
 	@Column(name="pel_stock")
 	private int stock;
 	
+	
 	@Column(name="pel_cantidad_voto")
 	private int cantidadVotos;
 	
@@ -60,8 +67,19 @@ public class Pelicula implements Serializable{
 	@Column(name = "pel_cat_id")
 	private int idCategoria;
 	
+	/*
+	 @OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+	@JoinColumn(name = "car_usu_cedula") 
+	 */
 	
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@JoinColumn(name = "vot_pel_id")
+	private List<Voto> listaVoto;
 	
+	/*
+	@ManyToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY, mappedBy = "listaPeliculas")
+	private List<Usuario> listaVotos;
+	*/
 
 	/**
 	 * Metodo que obtiene el objeto en cuestion de la clase
@@ -142,21 +160,6 @@ public class Pelicula implements Serializable{
 		this.stock = stock;
 	}
 
-	/**
-	 * Metodo que obtiene el objeto en cuestion de la clase
-	 * @return el objeto buscado
-	 */
-	public int getCantidadVotos() {
-		return cantidadVotos;
-	}
-
-	/**
-	 * Metodo que setea un valor en un atributo
-	 * @param cantidadVotos el valor del atributo en cuestion
-	 */
-	public void setCantidadVotos(int cantidadVotos) {
-		this.cantidadVotos = cantidadVotos;
-	}
 
 	/**
 	 * Metodo que obtiene el objeto en cuestion de la clase
@@ -208,12 +211,52 @@ public class Pelicula implements Serializable{
 		this.codigoPelicula = codigoPelicula;
 	}
 
+	/**
+	 * Metodo que obtiene un atributo de la clase
+	 * @return atributo de la clase
+	 */
 	public int getIdCategoria() {
 		return idCategoria;
 	}
 
+	/**
+	 * Metodo que setea un atributo de la clase
+	 * @param idCategoria atributo a setearse
+	 */
 	public void setIdCategoria(int idCategoria) {
 		this.idCategoria = idCategoria;
+	}
+
+	/**
+	 * Metodo que obtiene un atributo de la clase
+	 * @return returna un atributo de la clase
+	 */
+	public int getCantidadVotos() {
+		return cantidadVotos;
+	}
+	
+	/**
+	 * Metodo que setea un atributo de la clase
+	 * @param cantidadVotos atributo en cuestion
+	 */
+	public void setCantidadVotos(int cantidadVotos) {
+		this.cantidadVotos = cantidadVotos;
+	}
+
+	/**
+	 * Obtiene una lista sobre un objeto de la clase
+	 * @return lista del objeto en cuestion
+	 */
+	public List<Voto> getListaVoto() {
+		return listaVoto;
+	}
+
+	/**
+	 * Setea un objeto de la clase mediante la lista
+	 * @param listaVoto lista del objeto a setearse
+	 */
+	public void setListaVoto(List<Voto> listaVoto) {
+		this.listaVoto = listaVoto;
 	}
 
 	@Override

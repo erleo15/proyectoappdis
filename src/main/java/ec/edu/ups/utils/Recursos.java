@@ -6,7 +6,9 @@ import javax.persistence.PersistenceContext;
 
 public class Recursos {
 
-	
+	/**
+	 * Interfaz utilizada para interactuar con el contexto de persistencia.
+	 */
 	@Produces
 	@PersistenceContext
 	private EntityManager em;

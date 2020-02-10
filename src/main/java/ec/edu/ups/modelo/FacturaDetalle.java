@@ -97,19 +97,35 @@ public class FacturaDetalle implements Serializable{
 	public void setTotalFDet(double totalFDet) {
 		this.totalFDet = totalFDet;
 	}
-
+	
+	/**
+	 * Metodo que obtiene un atributo de la clase
+	 * @return returna el atributo de la clase en cuestion
+	 */
 	public int getNumeroFactura() {
 		return numeroFactura;
 	}
 
+	/**
+	 * Metodo que setra un parametro de la clase
+	 * @param numeroFactura parametro en cuestion
+	 */
 	public void setNumeroFactura(int numeroFactura) {
 		this.numeroFactura = numeroFactura;
 	}
 
+	/**
+	 * Metodo que obtiene un parametro de la clase
+	 * @return 
+	 */
 	public Pelicula getPelicula() {
 		return this.pelicula;
 	}
 
+	/**
+	 * Metodo que setea un objeto de la clase
+	 * @param pelicula devuelve un objeto de la clase en cuestion
+	 */
 	public void setPelicula(Pelicula pelicula) {
 		this.pelicula = pelicula;
 	}

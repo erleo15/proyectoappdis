@@ -5,7 +5,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
 	xmlns:t="http://xmlns.jcp.org/jsf/passthrough">
-<head>
+<h:head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Usuarios</title>
@@ -18,7 +18,7 @@
 <!-- GOOGLE FONTS-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans'
 	rel='stylesheet' type='text/css' />
-</head>
+</h:head>
 <body>
 
 
@@ -38,7 +38,7 @@
 
 				</div>
 
-				<span class="logout-spn"> <a href="#" style="color: #fff;">LOGOUT</a>
+				<span class="logout-spn"> <a href="login.xhtml" style="color: #fff;">Cerrar Sesion</a>
 
 				</span>
 
@@ -61,7 +61,8 @@
 					<li><a href="productos.xhtml"><i class="fa fa-video-camera "></i>Peliculas</a></li>
 					<li><a href="categorias.xhtml" ><i class="fa fa-ticket "></i>Categorias</a></li>
 
-					<li><a href="reportes.xhtml"><i class="fa fa-dollar "></i>Reportes</a></li>
+					<li><a href="consultas.xhtml"><i class="fa fa-dollar "></i>Consultas</a></li>
+					
 				</ul>
 			</div>
 
@@ -78,10 +79,9 @@
 					<button class="btn btn-primary" data-toggle="modal"
 						data-target="#mediumModal">
 						<i class="fa fa-plus-circle">.</i> Nuevo Usuario
-					</button>
-					
+					</button> 
 					<button class="btn btn-primary" data-toggle="modal"
-						data-target="#mediumModalModificar">
+						data-target="#mediumModalModificar" onclick="#{gestionTiendaBean.limpiarUsuario()}">
 						<i class="fa fa-edit">.</i> Modificar Usuario
 					</button>
 					
@@ -213,8 +213,7 @@
 									<h:panelGrid columns="3">
 										<h:outputLabel value="Fecha Nacimiento"  for="fnacimiento"
 											style="width: 130px;text-align: center;" />
-										<!--  <h:inputText class="form-control" style="width: 400px; text-align: center;" a:placeholder="Ingrese la fecha de nacimiento" value="#{usuarioBean.usuario.fechaNacimiento}" id="fnacimiento"><f:convertDateTime pattern="dd/MM/yyyy"/></h:inputText>
-			<h:message for="fnacimiento" /> -->
+										 
 
 											<h:inputText t:type="date" value="#{gestionTiendaBean.usuario.fechaNacimiento}" id="fnac" class="form-control-success form-control"> 
                                     	    	<f:convertDateTime pattern="yyyy-MM-dd"/>
@@ -266,10 +265,10 @@
  
 								</div>
 								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary"
+									<button type="button" class="btn btn-primary"
 										data-dismiss="modal">Cancelar</button> 
 										
-								<h:commandButton class="btn btn-primary" action="#{gestionTiendaBean.crearUsuario()}" value="Guardarb" />
+								<h:commandButton class="btn btn-primary" action="#{gestionTiendaBean.crearUsuario()}" value="Guardar Usuario" />
 					
 								</div>
 							</div>
@@ -311,17 +310,11 @@
 												<h:outputLabel value="Cedula" for="cedula"  />
 												<h:inputText class="form-control-success form-control"
 													value="#{gestionTiendaBean.usuario.cedula}" id="cedulabus" />
-													<h:commandButton value=" Buscar" class="btn btn-primary"   action="#{gestionTiendaBean.buscarUsuario(gestionTiendaBean.usuario.cedula)}">
-						
+													<h:commandButton value="Buscar" class="btn btn-primary"   action="#{gestionTiendaBean.buscarUsuario(gestionTiendaBean.usuario.cedula)}">
+						<f:ajax execute="cedulabus" 
+						render="cedulamod nombremod apellidomod telefonomod emailmod fnacmod direccionmod usermod tipomod" ></f:ajax>
 					</h:commandButton>
-					
-													 
-											 
-										 
-										 </h:form>
-										 
-										 
-									<h:form>	 
+	 
 										 
 										<h:panelGrid columns="3">
 										<h:outputLabel value="Cedula" for="cedula"
@@ -397,20 +390,21 @@
 										<!--   <h:inputText style="width: 400px; text-align: center;" a:placeholder="Ingrese el tipo"
 											class="form-control"
 											value="#{usuarioBean.usuario.tipoUsuario}" id="tipo" />-->
-										<h:selectOneMenu class="form-control" value="#{gestionTiendaBean.usuario.tipoUsuario}" >
+										<h:selectOneMenu class="form-control" value="#{gestionTiendaBean.usuario.tipoUsuario}" id="tipomod" >
 											<f:selectItem itemValue="admin" itemLabel="admin" />
 											<f:selectItem itemValue="user" itemLabel="user" /> 
 										</h:selectOneMenu>
 										<h:message for="tipo" />
 									</h:panelGrid>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-secondary"
+								<div class="modal-footer"> 
+									<button type="button" class="btn btn-primary"
 										data-dismiss="modal">Cancelar</button> 
 										
-								<h:commandButton class="btn btn-primary" id="boton"  action="#{gestionTiendaBean.updateUsuario()}" value="Modificar" />
+								<h:commandButton class="btn btn-primary" action="#{gestionTiendaBean.updateUsuario()}" value="Modificar Usuario" />
 					
+								 
 								</div>
-								</h:form>
+								</h:form> 
 								</div>
 							</div>
 							

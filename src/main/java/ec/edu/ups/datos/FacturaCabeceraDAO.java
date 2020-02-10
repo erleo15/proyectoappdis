@@ -86,6 +86,11 @@ public class FacturaCabeceraDAO {
 			return em.createQuery("SELECT c from FacturaCabecera c", FacturaCabecera.class).getResultList();
 		}
 		
+	/**
+	 * Metodo que devuelve el ultimo id de la clase almacenados
+	 * en la base de datos
+	 * @return
+	 */
 	public int getLastNumeroFacturaCabecera() {
 		String jpql = "Select MAX(e.numeroFactura) from FacturaCabecera e";
 		Query q = em.createQuery(jpql, Integer.class);

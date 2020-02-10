@@ -2,11 +2,14 @@ package ec.edu.ups.modelo;
 
 import java.io.Serializable;
 import java.util.Date;
- 
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity; 
 import javax.persistence.GeneratedValue;
-import javax.persistence.Id; 
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;  
@@ -25,6 +28,7 @@ public class Carrito implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 9206737450519557902L;
+
 
 	@Id
 	@GeneratedValue
@@ -45,8 +49,9 @@ public class Carrito implements Serializable{
 	@Column(name = "car_pel_id")
 	private int idPelicula;
   */
-	@Column(name = "car_pel_id")
-	private int idPelicula;
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "car_pel_id")
+	private Pelicula pelicula;
 	
 	@Column(name = "car_usu_cedula")
 	private String cedulaUsuario;
@@ -123,22 +128,36 @@ public class Carrito implements Serializable{
 		this.fecha = fecha;
 	}
 
+	/**
+	 * Metodo que retorna un  objeto de la clase
+	 * @return objeto en cuestion
+	 */
+	public Pelicula getPelicula() {
+		return pelicula;
+	}
 
-	public int getIdPelicula() {
-		return idPelicula;
+	/**
+	 * Metodo que setea una objeto en la clase
+	 * @param pelicula objeto de la clase en cuestion
+	 */
+	public void setPelicula(Pelicula pelicula) {
+		this.pelicula = pelicula;
 	}
 
 
-	public void setIdPelicula(int idPelicula) {
-		this.idPelicula = idPelicula;
-	}
-
-
+	/**
+	 * Metodo que obtiene un objeto de en la clase
+	 * @return un objeto de la clase en cuesiton
+	 */
 	public String getCedulaUsuario() {
 		return cedulaUsuario;
 	}
 
 
+	/**
+	 * Metodo que obtiene un objeto en la clase
+	 * @param cedulaUsuario objeto de la clase en cuestion
+	 */
 	public void setCedulaUsuario(String cedulaUsuario) {
 		this.cedulaUsuario = cedulaUsuario;
 	}
@@ -147,7 +166,7 @@ public class Carrito implements Serializable{
 	@Override
 	public String toString() {
 		return "Carrito [idCarrito=" + idCarrito + ", cantidad=" + cantidad + ", totalCarrito=" + totalCarrito
-				+ ", fecha=" + fecha + ", idPelicula=" + idPelicula + ", cedulaUsuario=" + cedulaUsuario + "]";
+				+ ", fecha=" + fecha + ", Pelicula=" + pelicula + ", cedulaUsuario=" + cedulaUsuario + "]";
 	}
 	
 	

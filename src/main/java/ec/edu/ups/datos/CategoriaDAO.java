@@ -86,6 +86,11 @@ public class CategoriaDAO {
 		return em.createNativeQuery("SELECT * from tie_categoria order by cat_id asc", Categoria.class).getResultList();
 	}
 	
+	/**
+	 * Metodo que devuelve el ultimo id de esta clase almacenados
+	 * en la base de datos
+	 * @return un entero con el id maximo de la clase.
+	 */
 	public int getLastIdCategoria() {
 		String jpql = "Select MAX(e.idCategoria) from Categoria e";
 		Query q = em.createQuery(jpql, Integer.class);

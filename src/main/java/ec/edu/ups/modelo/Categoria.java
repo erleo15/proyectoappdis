@@ -96,9 +96,19 @@ public class Categoria implements Serializable{
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	
+	/**
+	 * Metodo que retorna una todos los objetos de un lista de objetos
+	 * @return una lista de peliculas
+	 */
 	public List<Pelicula> getListaPeliculas() {
 		return listaPeliculas;
 	}
+	
+	/**
+	 * Metodo que setea un lista de objetos de la clase
+	 * @param listaPeliculas lista de objetos de la clase en cuestion
+	 */
 	public void setListaPeliculas(List<Pelicula> listaPeliculas) {
 		this.listaPeliculas = listaPeliculas;
 	}

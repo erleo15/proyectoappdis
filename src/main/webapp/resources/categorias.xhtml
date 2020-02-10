@@ -5,7 +5,7 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
 	xmlns:t="http://xmlns.jcp.org/jsf/passthrough">
-<head>
+<h:head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Categorias</title>
@@ -18,7 +18,7 @@
 <!-- GOOGLE FONTS-->
 <link href='http://fonts.googleapis.com/css?family=Open+Sans'
 	rel='stylesheet' type='text/css' />
-</head>
+</h:head>
 <body>
 
 
@@ -38,7 +38,7 @@
 
 				</div>
 
-				<span class="logout-spn"> <a href="#" style="color: #fff;">LOGOUT</a>
+				<span class="logout-spn"> <a href="login.xhtml" style="color: #fff;">Cerrar Sesion</a>
 
 				</span>
 
@@ -61,7 +61,7 @@
 					<li><a href="productos.xhtml"><i class="fa fa-video-camera "></i>Peliculas</a></li>
 					<li><a href="categorias.xhtml" class="active-link" ><i class="fa fa-ticket "></i>Categorias</a></li>
 
-					<li><a href="reportes.xhtml"><i class="fa fa-dollar "></i>Reportes</a></li>
+					<li><a href="consultas.xhtml"><i class="fa fa-dollar "></i>Consultas</a></li>
 				</ul>
 			</div>
 
@@ -76,12 +76,12 @@
 
 				<div>
 					<button class="btn btn-primary" data-toggle="modal"
-						data-target="#mediumModal">
+						data-target="#mediumModal" onclick="#{gestionTiendaBean.limpiarCategoria()}">
 						<i class="fa fa-plus-circle">.</i> Nueva Categoria
 					</button>
 					
 					<button class="btn btn-primary" data-toggle="modal"
-						data-target="#mediumModalModificar">
+						data-target="#mediumModalModificar" onclick="#{gestionTiendaBean.limpiarCategoria()}">
 						<i class="fa fa-edit">.</i> Modificar Categoria
 					</button>
 					
@@ -192,43 +192,42 @@
 										 
 												<h:outputLabel value="Nombre Categoria" for="categoria"  />
 												<h:inputText class="form-control-success form-control"
-													value="#{gestionTiendaBean.categoria.nombre}" id="catidbus" />
-													<h:commandButton value=" Buscar" class="btn btn-primary"   action="#{gestionTiendaBean.buscarCategoria(gestionTiendaBean.categoria.nombre)}">
+													value="#{gestionTiendaBean.categoria.nombre}" id="catnombrebus" />
+													<h:commandButton value="Buscar" class="btn btn-primary"   action="#{gestionTiendaBean.buscarCategoria(gestionTiendaBean.categoria.nombre)}">
 						
+						<f:ajax execute="catnombrebus" 
+						render="idcatmod nombrecatmod descripcioncatmod" ></f:ajax>
 					</h:commandButton>
 					
 													 
 											 
-										 
-										 </h:form>
-										 
-										 
-									<h:form>	 
+										 	 
 										 
 										<h1>Modificar Categoria</h1>
 
 	
 		<h:panelGrid columns="3">
-			<h:outputLabel value="idCategoria" for="cedula" />
+			<h:outputLabel value="Categoria ID" for="idcategoriamod" />
 			<h:inputText value="#{gestionTiendaBean.categoria.idCategoria}" id="idcatmod"  readonly="true"/>
-			<h:message for="cedula" />
+			<h:message for="idcategoriamod" />
 		</h:panelGrid>
 		
 		<h:panelGrid columns="3">
 			<h:outputLabel value="Nombre" for="nombre" />
-			<h:inputText value="#{gestionTiendaBean.categoria.nombre}" id="nombre" />
+			<h:inputText value="#{gestionTiendaBean.categoria.nombre}" id="nombrecatmod" />
 			<h:message for="nombre" />
 		</h:panelGrid>
+		
 		<h:panelGrid columns="3">
-			<h:outputLabel value="Apellido" for="apellido" />
-			<h:inputText value="#{gestionTiendaBean.categoria.descripcion}" id="apellido" />
-			<h:message for="apellido" />
+			<h:outputLabel value="Descripcion" for="descripcion" />
+			<h:inputText value="#{gestionTiendaBean.categoria.descripcion}" id="descripcioncatmod" />
+			<h:message for="descripcion" />
 		</h:panelGrid>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-secondary"
 										data-dismiss="modal">Cancelar</button> 
 										
-								<h:commandButton class="btn btn-primary" id="boton"  action="#{gestionTiendaBean.updateCategoria(gestionTiendaBean.categoria)}" value="Modificar" />
+								<h:commandButton class="btn btn-primary" id="botonmod"  action="#{gestionTiendaBean.updateCategoria(gestionTiendaBean.categoria)}" value="Modificar" />
 					
 								</div>
 								</h:form>
@@ -288,5 +287,8 @@
 
 
 </body>
+  
+  
+  
   
 </html>

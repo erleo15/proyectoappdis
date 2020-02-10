@@ -10,7 +10,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumn; 
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -103,7 +103,13 @@ public class Usuario implements Serializable{
 	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 	@JoinColumn(name = "car_usu_cedula")  
 	private List<Carrito> listaCarrito = new ArrayList<>();
-
+	
+	@JsonIgnore
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	@JoinColumn(name = "vot_usu_cedula")
+	private List<Voto> listaVoto;
+	
+ 
 	
 	/**
 	 * metodo que obtine un atributo especifico
@@ -338,18 +344,41 @@ public class Usuario implements Serializable{
 		this.tipoUsuario = tipoUsuario;
 	}
 
+	/**
+	 * Metodo que retorna un objeto de una lista de objetos
+	 * de otra clase
+	 * @return objeto de una clase
+	 */
 	public List<FacturaCabecera> getListaFacturaCabecera() {
 		return listaFacturaCabecera;
 	}
+	
+	/**
+	 * Setea un objeto de la otra clase mediante una lista de esa clase
+	 * @param listaFacturaCabecera objeto a setearse
+	 */
 	public void setListaFacturaCabecera(List<FacturaCabecera> listaFacturaCabecera) {
 		this.listaFacturaCabecera = listaFacturaCabecera;
 	}
+	/**
+	 * Obtiene un objeto de otra clase mediante una lista de esa clase
+	 * @return ub ojeto de una clase
+	 */
 	public List<Carrito> getListaCarrito() {
 		return listaCarrito;
 	}
+	
+	/**
+	 * Setea un objeto de una clase
+	 * @param listaCarrito objeto a setearse
+	 */
 	public void setListaCarrito(List<Carrito> listaCarrito) {
 		this.listaCarrito = listaCarrito;
 	}
+	
+ 
+ 
+	
 	
 	@Override
 	public String toString() {
@@ -357,7 +386,7 @@ public class Usuario implements Serializable{
 				+ ", email=" + email + ", fechaNacimiento=" + fechaNacimiento + ", fechaRegistro=" + fechaRegistro
 				+ ", user=" + user + ", contrasenia=" + contrasenia + ", numeroCompra=" + numeroCompra
 				+ ", dineroGastado=" + dineroGastado + ", direccionUsuario=" + direccionUsuario + ", tipoUsuario="
-				+ tipoUsuario //+ ", listaFacturaCabecera=" + listaFacturaCabecera 
+				+ tipoUsuario + ", listaFacturaCabecera=" + listaFacturaCabecera 
 				+ ", listaCarrito=" + listaCarrito
 				+ "]";
 	} 

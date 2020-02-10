@@ -84,15 +84,20 @@ public class PeliculaDAO {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<Pelicula> listMayor(){    
-		return  em.createNativeQuery("SELECT * from tie_pelicula p order by p.pel_cantidad_venta desc", Pelicula.class).getResultList(); 
+	public List<Pelicula> listMasComprado(int numeroRegistros){    
+		return  em.createNativeQuery("SELECT * from tie_pelicula p order by p.pel_cantidad_venta desc limit "+numeroRegistros, Pelicula.class).getResultList(); 
 	}
 	
-	public int getLastNumeroDetalle() {
-		String jpql = "Select MAX(e.codigoPelicula) from Pelicula e";
-		Query q = em.createQuery(jpql, Integer.class);
-		return  (int)q.getSingleResult();
+	/**
+	 * Metodo que lista los objetos de esta clase guardados en
+	 * la base de datos
+	 * @return una lista con todos los resultados
+	 */
+	public List<Pelicula> listMasVotados(int numeroRegistros){    
+		return  em.createNativeQuery("SELECT * from tie_pelicula order by pel_cantidad_voto desc limit "+numeroRegistros, Pelicula.class).getResultList(); 
 	}
+	
+	
 	
 	
 }
